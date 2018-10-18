@@ -11,18 +11,33 @@ opt = getopt(matrix(c(
     'outfile',  'o', 1, "character"
 ), byrow=TRUE, ncol=4))
 
-# get data:
-data <- occ_search(scientificName = opt$root)
+# define columns to retain and write as header
+columns <- c("key", "decimalLatitude", "decimalLongitude", "basisOfRecord", "name", "taxonKey")
+cat(paste(columns, collapse='\t'), '\n',  file=opt$outfile)
 
-# page through records
+# get data, starting at first record, fetch 500 records
+start <- 0
+data <- occ_search(scientificName=opt$root, start=start, hasGeospatialIssue=F)
+
+# page in steps of 500
 endOfRecords <- FALSE
-start <- 500
-columns <- c("name", "key", "decimalLatitude", "decimalLongitude", "basisOfRecord", "taxonKey")
-cat(paste(columns, collapse="	"), '\n',  file = opt$outfile) # write header
 while ( !endOfRecords ) {
-    subset <- data$data[columns] # retain selected columns
-    write.table(subset, file=opt$outfile, append=T, sep="	", row.names=F, col.names=F, quote=F) # write TSV
-    data <- occ_search(scientificName = opt$root, start = start) # rerun request
-    endOfRecords <- data$meta$endOfRecords # update flag
-    start <- start + 500 # update page
+	
+	# append current page to TSV
+    write.table(
+    	data$data[columns], 
+    	file=opt$outfile, 
+    	sep='\t',
+    	append=T, 
+    	row.names=F, 
+    	col.names=F, 
+    	quote=F
+    )
+    
+	# rerun request for next page
+	start <- start + 500
+    data <- occ_search(scientificName=opt$root, start=start, hasGeospatialIssue=F)
+    
+    # update flag
+    endOfRecords <- data$meta$endOfRecords
 }
