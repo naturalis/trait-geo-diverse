@@ -23,7 +23,7 @@ data <- occ_search(scientificName=opt$root, start=start, hasGeospatialIssue=F)
 endOfRecords <- FALSE
 while ( !endOfRecords ) {
 	
-	# append current page to TSV
+    # append current page to TSV
     write.table(
     	data$data[columns], 
     	file=opt$outfile, 
@@ -34,8 +34,8 @@ while ( !endOfRecords ) {
     	quote=F
     )
     
-	# rerun request for next page
-	start <- start + 500
+    # rerun request for next page
+    start <- start + 500
     data <- occ_search(scientificName=opt$root, start=start, hasGeospatialIssue=F)
     
     # update flag
