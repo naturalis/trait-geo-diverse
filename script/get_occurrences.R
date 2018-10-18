@@ -20,8 +20,8 @@ endOfRecords <- FALSE
 start <- 0
 while ( !endOfRecords ) {
 	
-	# fetch records
-	data <- occ_search(scientificName=opt$root, start=start, hasGeospatialIssue=F)
+    # fetch records
+    data <- occ_search(scientificName=opt$root, start=start, hasGeospatialIssue=F)
 	
     # append current page to TSV
     write.table(
