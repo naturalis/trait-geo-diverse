@@ -15,13 +15,13 @@ opt = getopt(matrix(c(
 columns <- c("key", "decimalLatitude", "decimalLongitude", "basisOfRecord", "name", "taxonKey")
 cat(paste(columns, collapse='\t'), '\n',  file=opt$outfile)
 
-# get data, starting at first record, fetch 500 records
-start <- 0
-data <- occ_search(scientificName=opt$root, start=start, hasGeospatialIssue=F)
-
 # page in steps of 500
 endOfRecords <- FALSE
+start <- 0
 while ( !endOfRecords ) {
+	
+	# fetch records
+	data <- occ_search(scientificName=opt$root, start=start, hasGeospatialIssue=F)
 	
     # append current page to TSV
     write.table(
@@ -34,10 +34,9 @@ while ( !endOfRecords ) {
     	quote=F
     )
     
-    # rerun request for next page
+    # update record start
     start <- start + 500
-    data <- occ_search(scientificName=opt$root, start=start, hasGeospatialIssue=F)
-    
+
     # update flag
     endOfRecords <- data$meta$endOfRecords
 }
