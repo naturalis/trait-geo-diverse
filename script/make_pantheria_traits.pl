@@ -2,6 +2,7 @@
 use strict;
 use warnings;
 use Getopt::Long;
+use Scalar::Util 'looks_like_number';
 
 # process command line arguments
 my $infile;   # PanTHERIA_1-0_WR05_Aug2008.txt
@@ -24,6 +25,7 @@ my $flag;
 my $taxid;
 my %taxa;
 while(<$in>) {
+	local $/ = "\r\n";
 	chomp;
 	my @line = split /\t/, $_;
 	
@@ -47,7 +49,7 @@ while(<$in>) {
 		
 		# write state by state
 		for my $i ( $binomial_idx + 1 .. $#line ) {
-			if ( $line[$i] != -999.00 ) {
+			if ( $line[$i] =~ /;/ or ( looks_like_number($line[$i]) && $line[$i] != -999.00 ) ) {
 				print $out $taxa{$binomial}, "\t", ( $i - $binomial_idx ), "\t", $line[$i], "\n";
 			}
 		}
