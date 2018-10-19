@@ -6,6 +6,8 @@ use Getopt::Long;
 use Archive::Zip;
 use File::Temp qw(tempfile);
 
+# extracts a DarwinCore archive from GBIF, exports selected columns from 
+# the occurrence.txt file as well as a normalized taxa table.
 # process command line arguments
 my $infile;   # zip file downloaded from GBIF
 my $outfile;  # simplified occurrences as TSV
