@@ -19,6 +19,7 @@ cat(paste(columns, collapse='\t'), '\n',  file=opt$outfile)
 endOfRecords <- FALSE
 start <- 0
 while ( !endOfRecords ) {
+    writeLines(paste("record",start))
 	
     # fetch records
     data <- occ_search(scientificName=opt$root, start=start, hasGeospatialIssue=F)
