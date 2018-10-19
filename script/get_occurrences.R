@@ -2,6 +2,7 @@
 library(getopt)
 library(rgbif)
 
+# note that this has a hard limit of 200,000 records
 # downloads occurrence data from GBIF using the rgbif package
 # usage: $ ./get_occurrences.R --root=<root taxon> --outfile=<occurrence outfile>
 
