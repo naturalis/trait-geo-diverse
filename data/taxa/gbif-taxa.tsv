@@ -3653,3 +3653,1636 @@ taxon_key	scientific_name	genus	specific_epithet	taxon_rank
 9673802	Prothoatherium colombianus (Hoffstetter & Soria, 1986)	Lambdaconus	colombianus	SPECIES
 9685106	Axis kuhlii (Müller, 1840)	Axis	kuhlii	SPECIES
 9769028	Cervus somonensis (Cuvier, 1800)	Dama	somonensis	SPECIES
+795	Perissodactyla			ORDER
+5479	Equidae			FAMILY
+9415	Rhinocerotidae			FAMILY
+9416	Tapiridae			FAMILY
+2440872	Diceros Gray, 1821	Diceros		GENUS
+2440874	Rhinoceros Linnaeus, 1758	Rhinoceros		GENUS
+2440877	Dicerorhinus Gloger, 1841	Dicerorhinus		GENUS
+2440878	Dicerorhinus sumatrensis (G.Fischer, 1814)	Dicerorhinus	sumatrensis	SPECIES
+2440879	Ceratotherium Gray, 1867	Ceratotherium		GENUS
+2440880	Ceratotherium simum (Burchell, 1817)	Ceratotherium	simum	SPECIES
+2440882	Equus onager Boddaert, 1785	Equus	onager	SPECIES
+2440885	Equus burchellii (Gray, 1824)	Equus	burchellii	SPECIES
+2440886	Equus caballus Linnaeus, 1758	Equus	caballus	SPECIES
+2440887	Equus kiang Moorcroft, 1841	Equus	kiang	SPECIES
+2440888	Equus zebra Linnaeus, 1758	Equus	zebra	SPECIES
+2440891	Equus asinus Linnaeus, 1758	Equus	asinus	SPECIES
+2440892	Equus quagga Boddaert, 1785	Equus	quagga	SPECIES
+2440893	Equus hemionus Pallas, 1775	Equus	hemionus	SPECIES
+2440894	Equus grevyi Oustalet, 1882	Equus	grevyi	SPECIES
+2440895	Tapirus Brünnich, 1771	Tapirus		GENUS
+2440896	Tapirus indicus Desmarest, 1819	Acrocodia	indicus	SPECIES
+2440897	Tapirus bairdii (Gill, 1865)	Tapirella	bairdii	SPECIES
+2440898	Tapirus terrestris (Linnaeus, 1758)	Tapirus	terrestris	SPECIES
+2440899	Tapirus pinchaque (Roulin, 1829)	Tapirus	pinchaque	SPECIES
+3239435	Eomoropidae			FAMILY
+3239436	Grangeria Zdansky, 1930	Grangeria		GENUS
+3239437	Lophialetidae			FAMILY
+3239438	Schlosseria Matthew & Granger, 1926	Schlosseria		GENUS
+3239439	Menoceras Troxell, 1921	Menoceras		GENUS
+3239442	Teleoceras Hatcher, 1894	Teleoceras		GENUS
+3239445	Brachypotherium Roger, 1904	Brachypotherium		GENUS
+3239447	Baluchitherium Forster-Cooper, 1913	Baluchitherium		GENUS
+3239449	Brontotheriidae			FAMILY
+3239450	Metarhinus Osborn, 1908	Metarhinus		GENUS
+3239451	Microtitan Granger & Gregory, 1943	Microtitan		GENUS
+3239455	Lunania Chow, 1957	Lunania		GENUS
+3239457	Chalicotheriidae			FAMILY
+3239458	Anisodon Lartet, 1849	Anisodon		GENUS
+3239461	Megahippus McGrew, 1938	Megahippus		GENUS
+3239462	Zebra J.A.Allen, 1909	Equus		GENUS
+3239466	Microhippus Matschie, 1922	Equus		GENUS
+3239467	Hyracotherium Owen, 1840	Hyracotherium		GENUS
+3239469	Pachynolophidae			FAMILY
+3239470	Leptolophus Remy, 1965	Leptolophus		GENUS
+3239472	Anchilophidae			FAMILY
+3239473	Lophiodon Cuvier, 1821-22	Lophiodon		GENUS
+3239474	Deperetellidae			FAMILY
+3239477	Hyracodontidae			FAMILY
+3239483	Palaeotheriidae			FAMILY
+3239484	Plagiolophus Pomel, 1847	Plagiolophus		GENUS
+3239485	Titanotheriidae			FAMILY
+3240743	Parahipparion Kretzoi, 1953	Parahipparion		GENUS
+4267357	Ceratotherium simum cottoni Lydekker, 1908	Ceratotherium	simum	SUBSPECIES
+4267362	Dicerorhinus sumatrensis sumatrensis	Dicerorhinus	sumatrensis	SUBSPECIES
+4267365	Tapirus indicus brevetianus Kuiper, 1926	Acrocodia	indicus	SUBSPECIES
+4267366	Tapirus terrestris colombianus Hershkovitz, 1954	Tapirus	terrestris	SUBSPECIES
+4267368	Tapirus terrestris aenigmaticus Gray, 1872	Tapirus	terrestris	SUBSPECIES
+4267369	Tapirus terrestris spegazzinii Amhegino, 1909	Tapirus	terrestris	SUBSPECIES
+4267372	Equus hemionus kulan (Groves & Mazák, 1967)	Equus	hemionus	SUBSPECIES
+4267373	Equus asinus africanus Heuglin & Fitzinger, 1866	Equus	asinus	SUBSPECIES
+4267375	Equus burchelli burchelli	Equus	burchelli	SUBSPECIES
+4267376	Equus burchelli crawshaii de Winton, 1896	Equus	burchelli	SUBSPECIES
+4267377	Equus caballus przewalskii Poliakov, 1881	Equus	caballus	SUBSPECIES
+4267379	Equus hemionus khur Lesson, 1827	Equus	hemionus	SUBSPECIES
+4267380	Equus hemionus onager Boddaert, 1785	Equus	hemionus	SUBSPECIES
+4267383	Equus burchellii boehmi Matschie, 1892	Equus	burchellii	SUBSPECIES
+4267385	Equus caballus ferus Boddaert, 1785	Equus	caballus	SUBSPECIES
+4267388	Equus asinus somalicus P.L.Sclater, 1885	Equus	asinus	SUBSPECIES
+4267389	Equus burchellii antiquorum (C.H.Smith, 1841)	Equus	burchellii	SUBSPECIES
+4409270	Equus ferus Boddaert, 1785	Equus	ferus	SPECIES
+4573449	Pachynolophus Pomel, 1847	Pachynolophus		GENUS
+4576047	Gobitherium Kretzoi, 1943	Gobitherium		GENUS
+4577072	Embolotherium Osborn, 1929	Embolotherium		GENUS
+4826690	Hipphaplous Ameghino, 1885	Hipphaplous		GENUS
+4830271	Anchilophus Gervais, 1848-52	Anchilophus		GENUS
+4830278	Cremohipparion Qiu Zhanxiang, Huang Weilong & Guo Zhihui, 1987	Cremohipparion		GENUS
+4830283	Zhongjianoletes Ye Jie, 1983	Zhongjianoletes		GENUS
+4830286	Eoletes Biryukov, 1974	Eoletes		GENUS
+4830289	Lophialetes Matthew & Granger, 1925	Lophialetes		GENUS
+4830290	Breviodon Radinsky, 1965	Breviodon		GENUS
+4830291	Hallensia Franzen & Haubold, 1986	Hallensia		GENUS
+4830292	Yimengia Wang Jingwen, 1988	Yimengia		GENUS
+4830294	Gansuodon Wu & Chen, 1976	Gansuodon		GENUS
+4830295	Hoploaceratherium Ginsburg & Heissig, 1989	Hoploaceratherium		GENUS
+4830296	Sifrhippus Froehlich, 2002	Sifrhippus		GENUS
+4830301	Nestoritherium Kaup, 1859	Nestoritherium		GENUS
+4830302	Tylocephalonyx Coombs, 1979	Tylocephalonyx		GENUS
+4830304	Macrotherium Lartet, 1837	Macrotherium		GENUS
+4830305	Phyllotillon Pilgrim, 1910	Phyllotillon		GENUS
+4830306	Chalicotherium Kaup, 1833	Chalicotherium		GENUS
+4830309	Ancylotherium Gaudry, 1863	Ancylotherium		GENUS
+4830310	Schizotherium Gervais, 1876	Schizotherium		GENUS
+4830312	Moropus Marsh, 1877	Moropus		GENUS
+4830313	Chemositia Pickford, 1979	Chemositia		GENUS
+4830314	Arctotian Wang, 1978	Arctotian		GENUS
+4830316	Dilophodon Scott, 1883	Dilophodon		GENUS
+4830317	Dilophodon leotanus (Peterson, 1931)	Heteraletes	leotanus	SPECIES
+4830319	Helaletidae			FAMILY
+4830321	Colodon Marsh, 1890	Colodon		GENUS
+4830322	Selenaletes Radinsky, 1966	Selenaletes		GENUS
+4830324	Helaletes Marsh, 1872	Helaletes		GENUS
+4830325	Desmatotherium Scott, 1883	Desmatotherium		GENUS
+4830327	Heptodon Cope, 1882	Heptodon		GENUS
+4830331	Megatapirus (Matthew & Granger, 1923)	Megatapirus		GENUS
+4830334	Teleolophus Matthew & Granger, 1925	Teleolophus		GENUS
+4830337	Miotapirus Schlaikjer, 1937	Miotapirus		GENUS
+4830338	Palaeotapirus Filhol, 1888	Palaeotapirus		GENUS
+4830340	Heteraletes Peterson, 1932	Heteraletes		GENUS
+4830342	Protapirus Filhol, 1877	Protapirus		GENUS
+4830351	Tapir Blumenbach, 1779	Tapirus		GENUS
+4830354	Tapiravus Marsh, 1877	Tapiravus		GENUS
+4830357	Juxia Chow & Chiu, 1964	Juxia		GENUS
+4830358	Lophiodontidae			FAMILY
+4830370	Menops Marsh, 1887	Menops		GENUS
+4830371	Telmatotherium Marsh, 1880	Telmatherium		GENUS
+4830373	Protitanotherium Hatcher, 1895	Protitanotherium		GENUS
+4830375	Eotitanops Osborn, 1907	Eotitanops		GENUS
+4830376	Pseudodiplacodon Mader, 2000	Pseudodiplacodon		GENUS
+4830377	Palaeosyops Leidy, 1870	Palaeosyops		GENUS
+4830378	Nanotitanops Qi & Beard, 1998	Nanotitanops		GENUS
+4830382	Sthenodectes Gregory, 1912	Sthenodectes		GENUS
+4830384	Duchesneodus Lucas & Schoch, 1982	Duchesneodus		GENUS
+4830387	Sphenocoelus Osborn, 1895	Sphenocoelus		GENUS
+4830388	Megacerops Leidy, 1870	Megacerops		GENUS
+4830390	Protitan Granger & Gregory, 1943	Protitan		GENUS
+4830391	Lambdotherium Cope, 1880	Lambdotherium		GENUS
+4830392	Titanotherium Leidy, 1852	Titanotherium		GENUS
+4830393	Dolichorhinus Hatcher, 1895	Dolichorhinus		GENUS
+4830394	Sivatitanops Pilgrim, 1925	Sivatitanops		GENUS
+4830395	Menodus Pomel, 1849	Menodus		GENUS
+4830396	Rhinotitan Granger & Gregory, 1943	Rhinotitan		GENUS
+4830400	Mulkrajanops Kumar & Sahni, 1985	Mulkrajanops		GENUS
+4830403	Rhadinorhinus Riggs, 1912	Rhadinorhinus		GENUS
+4830404	Brontotherium Marsh, 1873	Brontotherium		GENUS
+4830406	Manteoceras Hatcher, 1895	Manteoceras		GENUS
+4830407	Protitanops Stock, 1936	Protitanops		GENUS
+4830408	Diplacodon Marsh, 1875	Diplacodon		GENUS
+4830411	Telmatherium Marsh, 1872	Telmatherium		GENUS
+4830412	Metatelmatherium Granger & Gregory, 1938	Metatelmatherium		GENUS
+4830413	Teleodus Marsh, 1890	Teleodus		GENUS
+4830417	Mesatirhinus Osborn, 1908	Mesatirhinus		GENUS
+4830418	Metatitan Granger & Gregory, 1943	Metatitan		GENUS
+4830421	Brontops Marsh, 1887	Brontops		GENUS
+4830427	Kalimantsia Geraads, Spassov & Kovachev, 2001	Kalimantsia		GENUS
+4830430	Grammohippus Hulbert, 1988	Grammohippus		GENUS
+4830434	Amynodontidae			FAMILY
+4830437	Paramynodon Mathew, 1929	Paramynodon		GENUS
+4830438	Amynodon Marsh, 1877	Amynodon		GENUS
+4830440	Cadurcodon Kretzoi, 1942	Cadurcodon		GENUS
+4830441	Cadurcotherium Gervais, 1873	Cadurcotherium		GENUS
+4830442	Amynodontopsis Stock, 1933	Amynodontopsis		GENUS
+4830443	Metamynodon Scott & Osborn, 1887	Metamynodon		GENUS
+4830444	Procadurcodon Gromova, 1960	Procadurcodon		GENUS
+4830445	Sianodon Xu, 1965	Sianodon		GENUS
+4830446	Dinohippus Quinn, 1955	Dinohippus		GENUS
+4830447	Scaphohippus Pagnac, 2006	Scaphohippus		GENUS
+4830450	Cormohipparion Skinner & MacFadden, 1977	Cormohipparion		GENUS
+4830451	Anchippus Leidy, 1868	Anchippus		GENUS
+4830452	Neohipparion Gidley, 1903	Neohipparion		GENUS
+4830453	Stylohipparion van Hoepen, 1932	Stylohipparion		GENUS
+4830454	Parahippus Leidy, 1858	Parahippus		GENUS
+4830455	Parahippus tyleri (Loomis, 1908)	Desmatippus	tyleri	SPECIES
+4830456	Acritohippus Kelly, 1995	Acritohippus		GENUS
+4830457	Desmatippus Scott, 1893	Desmatippus		GENUS
+4830458	Hippidion Owen, 1869	Hippidion		GENUS
+4830459	Hippidium Burmeister, 1875	Hippidion		GENUS
+4830461	Orohippus Marsh, 1872	Orohippus		GENUS
+4830462	Proboscidipparion Sefve, 1927	Proboscidipparion		GENUS
+4830464	Plesiohipparion Qiu, Huang & Guo, 1987	Plesiohipparion		GENUS
+4830465	Propalaeotherium Gervais, 1849	Propalaeotherium		GENUS
+4830466	Hypohippus Leidy, 1858	Hypohippus		GENUS
+4830468	Archaeohippus Gidley, 1906	Archaeohippus		GENUS
+4830470	Nannippus Matthew, 1926	Nannippus		GENUS
+4830471	Hyperhippidium Sefve, 1910	Hyperhippidium		GENUS
+4830472	Pliohippus Marsh, 1874	Pliohippus		GENUS
+4830473	Calippus Matthew & Stirton, 1930	Calippus		GENUS
+4830474	Astrohippus Stirton, 1940	Astrohippus		GENUS
+4830475	Plesippus Matthew, 1924	Plesippus		GENUS
+4830476	Mesohippus Marsh, 1875	Mesohippus		GENUS
+4830477	Mesohippus hypostylus Osborn, 1904	Mesohippus	hypostylus	SPECIES
+4830478	Mesohippus bairdi (Leidy, 1850)	Mesohippus	bairdi	SPECIES
+4830479	Mesohippus barbouri Schlaikjer, 1931	Mesohippus	barbouri	SPECIES
+4830480	Mesohippus trigonostylus (Osborn, 1918)	Mesohippus	trigonostylus	SPECIES
+4830482	Minippus Froehlich, 2002	Minippus		GENUS
+4830484	Eohippus Marsh, 1876	Hyracotherium		GENUS
+4830485	Merychippus Leidy, 1856	Merychippus		GENUS
+4830486	Merychippus isonesus (Cope, 1889)	Acritohippus	isonesus	SPECIES
+4830488	Merychippus paniensis (Cope, 1874)	Merychippus	paniensis	SPECIES
+4830489	Notiocradohipparion Hulbert, 1988	Notiocradohipparion		GENUS
+4830490	Hipparion Christol, 1832	Hipparion		GENUS
+4830492	Hipparion primigenium (von Meyer, 1829)	Hipparion	primigenium	SPECIES
+4830494	Hippotherium Kaup, 1833	Hipparion		GENUS
+4830496	Arenahippus Froehlich, 2002	Arenahippus		GENUS
+4830497	Haplohippus McGrew, 1953	Haplohippus		GENUS
+4830499	Anchitherium von Meyer, 1844	Anchitherium		GENUS
+4830501	Anchitherium bairdii (Leidy, 1850)	Mesohippus	bairdii	SPECIES
+4830503	Parapliohippus Kelly, 1995	Parapliohippus		GENUS
+4830504	Kalobatippus Osborn, 1915	Kalobatippus		GENUS
+4830505	Eurygnathohippus Hoepen, 1930	Eurygnathohippus		GENUS
+4830507	Onohippidium Moreno, 1891	Onohippidium		GENUS
+4830509	Protohippus Leidy, 1858	Protohippus		GENUS
+4830511	Epihippus Marsh, 1878	Epihippus		GENUS
+4830512	Griphippus Quinn, 1955	Griphippus		GENUS
+4830525	Dolichohippus Heller, 1912	Equus		GENUS
+4830526	Hemiomus Seeley, 1899	Equus		GENUS
+4830528	Miohippus Marsh, 1874	Miohippus		GENUS
+4830529	Miohippus brachystylus (Osborn, 1904)	Miohippus	brachystylus	SPECIES
+4830530	Miohippus intermedius (Osborn & Wortman, 1895)	Miohippus	intermedius	SPECIES
+4830531	Pseudhipparion Ameghino, 1904	Pseudhipparion		GENUS
+4830532	Pseudohipparion Trouessart, 1905	Pseudhipparion		GENUS
+4830534	Haagella Heissig, 1978	Haagella		GENUS
+4830536	Lophiaspis Depéret, 1910	Lophiaspis		GENUS
+4830537	Eomoropus Osborn, 1913	Eomoropus		GENUS
+4830542	Isectolophidae			FAMILY
+4830543	Homogalax Hay, 1899	Homogalax		GENUS
+4830545	Paralophiodon Dedieu, 1977	Paralophiodon		GENUS
+4830546	Isectolophus Scott & Osborn, 1887	Isectolophus		GENUS
+4830547	Systemodon Cope, 1881	Systemodon		GENUS
+4830548	Xenicohippus Bown & Kihm, 1981	Xenicohippus		GENUS
+4830553	Allohippus Kretzoi, 1938	Allohippus		GENUS
+4830555	Franzenium Casanovas-Cladellas & Santafe-Llopis, 1989	Franzenium		GENUS
+4830557	Propachynolophus Lemoine, 1891	Propachynolophus		GENUS
+4830560	Palaeotherium Cuvier, 1804	Palaeotherium		GENUS
+4830570	Paranchilophus Casanovas-Cladellas & Santafe-Llopis, 1989	Paranchilophus		GENUS
+4830574	Paloplotherium Owen, 1848	Paloplotherium		GENUS
+4830578	Floridaceras Wood, 1964	Floridaceras		GENUS
+4830579	Acerorhinus Kretzoi, 1942	Acerorhinus		GENUS
+4830580	Peraceras Cope, 1880	Peraceras		GENUS
+4830581	Diaceratherium Dietrich, 1931	Diaceratherium		GENUS
+4830586	Gaindatherium Colbert, 1934	Gaindatherium		GENUS
+4830587	Uintaceras Holbrook & Lucas, 1997	Uintaceras		GENUS
+4830588	Amphicaenopus Wood, 1927	Amphicaenopus		GENUS
+4830589	Mesaceratherium Heissig, 1969	Mesaceratherium		GENUS
+4830590	Penetrigonias Tanner & Martin, 1976	Penetrigonias		GENUS
+4830591	Dihoplus Brandt, 1878	Dihoplus		GENUS
+4830592	Aphelops Cope, 1873	Aphelops		GENUS
+4830593	Caenolophus Matthew & Granger, 1928	Caenolophus		GENUS
+4830594	Pleuroceros Roger, 1898	Pleuroceros		GENUS
+4830601	Rhinocerus Billberg, 1827	Rhinoceros		GENUS
+4830605	Eurhinoceros Gray, 1867	Rhinoceros		GENUS
+4830607	Alicornops Ginsburg & Guérin, 1979	Alicornops		GENUS
+4830613	Xiphodon Cuvier, 1822	Xiphodon		GENUS
+4830616	Ronzotherium Aymard, 1854	Ronzotherium		GENUS
+4830618	Elasmotherium Fischer, 1808	Elasmotherium		GENUS
+4830621	Epiaceratherium Abel, 1900	Epiaceratherium		GENUS
+4830622	Hispanotherium Crusafont-Pairó & Villalta, 1947	Hispanotherium		GENUS
+4830625	Stephanorhinus Kretzoi, 1942	Stephanorhinus		GENUS
+4830626	Prosantorhinus Heissig, 1974	Prosantorhinus		GENUS
+4830627	Trigonias Lucas, 1900	Trigonias		GENUS
+4830631	Aceratherium Kaup, 1832	Aceratherium		GENUS
+4830634	Subhyracodon Brandt, 1878	Subhyracodon		GENUS
+4830636	Chilotherium Ringström, 1924	Chilotherium		GENUS
+4830637	Didermocerus Brookes, 1828	Dicerorhinus		GENUS
+4830639	Ceratorhinus Gray, 1867	Dicerorhinus		GENUS
+4830640	Caenopus Cope, 1880	Caenopus		GENUS
+4830641	Caenopus occidentalis (Leidy, 1850)	Subhyracodon	occidentalis	SPECIES
+4830642	Coelodonta Bronn, 1831	Coelodonta		GENUS
+4830644	Diceratherium Marsh, 1875	Diceratherium		GENUS
+4830645	Toxotherium Wood, 1961	Toxotherium		GENUS
+4830646	Paradiceros Hooijer, 1968	Paradiceros		GENUS
+4830647	Teletaceras Hanson, 1989	Teletaceras		GENUS
+4830648	Deperetella Matthew & Granger, 1925	Deperetella		GENUS
+4830649	Huanghotherium Tung, Huang & Qiu, 1975	Huanghotherium		GENUS
+4830651	Urtinotherium Chow & Chiu, 1963	Urtinotherium		GENUS
+4830652	Allacerops Wood, 1932	Allacerops		GENUS
+4830653	Hyrachyus Leidy, 1871	Hyrachyus		GENUS
+4830655	Benaratherium Gabunia, 1955	Benaratherium		GENUS
+4830657	Triplopus Cope, 1880	Triplopus		GENUS
+4830659	Ardynia Matthew & Granger, 1923	Ardynia		GENUS
+4830663	Paraceratherium Forster Cooper, 1911	Paraceratherium		GENUS
+4830664	Eggysodon Roman, 1910	Eggysodon		GENUS
+4830666	Prohyracodon Koch, 1897	Prohyracodon		GENUS
+4830667	Forstercooperia Wood, 1938	Forstercooperia		GENUS
+4830668	Aprotodon Forster-Cooper, 1915	Aprotodon		GENUS
+4830669	Pappaceras Wood, 1963	Pappaceras		GENUS
+4830670	Metahyrachyus Troxell, 1922	Metahyrachyus		GENUS
+4830671	Symphysorrhachis Belyaeva, 1954	Symphysorrhachis		GENUS
+4830672	Indricotherium Borisiak, 1915	Indricotherium		GENUS
+4830675	Rhodopagus Radinsky, 1965	Rhodopagus		GENUS
+4830676	Epitriplopus Wood, 1927	Epitriplopus		GENUS
+4835873	Sinotherium Ringstrom, 1923	Sinotherium		GENUS
+4941568	Systemodon cristatus (Wortman, 1896)	Orohippus	cristatus	SPECIES
+4969141	Rhinocerolophiodon buxovillanum (Cuvier, 1812)	Paralophiodon	buxovillanum	SPECIES
+4969142	Diplolophodon similis Zdansky, 1930	Bahinolophus	similis	SPECIES
+4969143	Diplolophodon major Young, 1937	Bahinolophus	major	SPECIES
+4969148	Paleomoropus jepseni Radinsky, 1964	Paleomoropus	jepseni	SPECIES
+4969149	Schizotheriodes parvus Hough, 1955		parvus	SPECIES
+4969152	Lambdotherium popoagicum Cope, 1880	Lambdotherium	popoagicum	SPECIES
+4969157	Eomoropus minimus Zdansky, 1930	Eomoropus	minimus	SPECIES
+4969158	Eomoropus quadridentatus Zdansky, 1930	Eomoropus	quadridentatus	SPECIES
+4969159	Eomoropus major Zdansky, 1930	Eomoropus	major	SPECIES
+4969161	Eomoropus amarorum (Cope, 1881)	Eomoropus	amarorum	SPECIES
+4969162	Schizotherium ordosium Hu, 1959	Schizotherium	ordosium	SPECIES
+4969163	Schizotherium avitum Matthew & Granger, 1923	Schizotherium	avitum	SPECIES
+4969164	Schizotherium turgaicum Borissiak, 1921	Schizotherium	turgaicum	SPECIES
+4969165	Tylocephalonyx skinneri Coombs, 1979	Tylocephalonyx	skinneri	SPECIES
+4969166	Metaschizotherium von Koenigswald, 1932	Metaschizotherium		GENUS
+4969167	Ancylotherium pentelicum Gaudry & Lartet, 1856	Ancylotherium	pentelicum	SPECIES
+4969168	Moropus oregonensis (Leidy, 1873)	Lophiodon	oregonensis	SPECIES
+4969169	Moropus hollandi Peterson, 1913	Moropus	hollandi	SPECIES
+4969170	Moropus merriami (Holland & Peterson, 1913)	Moropus	merriami	SPECIES
+4969171	Moropus elatus Marsh, 1877	Moropus	elatus	SPECIES
+4969172	Moropus senex Marsh, 1877	Moropus	senex	SPECIES
+4969173	Moropus matthewi (Holland & Peterson, 1913)	Moropus	matthewi	SPECIES
+4969174	Moropus distans Marsh, 1877	Moropus	distans	SPECIES
+4969175	Lophiaspis maurettei Depéret, 1910	Lophiaspis	maurettei	SPECIES
+4969179	Kalitherium marinus Bajpai & al., 2006	Kalitherium	marinus	SPECIES
+4969180	Cambaytherium Bajpai, Kapur, Das, Tiwari, Saravanan & Sharma, 2016	Cambaytherium		GENUS
+4969181	Cambaytherium minor Bajpai & al., 2005	Cambaytherium	minor	SPECIES
+4969182	Cambaytherium bidens Bajpai & al., 2005	Cambaytherium	bidens	SPECIES
+4969183	Cambaytherium thewissi Bajpai & al., 2005	Cambaytherium	thewissi	SPECIES
+4969184	Astrohippus stockii (Lance, 1950)	Astrohippus	stockii	SPECIES
+4969185	Astrohippus ansae (Matthew & Stirton, 1930)	Protohippus	ansae	SPECIES
+4969186	Calippus cerasinus Hulbert, 1988	Calippus	cerasinus	SPECIES
+4969187	Calippus regulus (Johnston, 1937)	Calippus	regulus	SPECIES
+4969188	Calippus martini (Hesse, 1936)	Calippus	martini	SPECIES
+4969189	Calippus elachistus Hulbert, 1988	Calippus	elachistus	SPECIES
+4969190	Calippus proplacidus (Osborn, 1918)	Calippus	proplacidus	SPECIES
+4969191	Calippus maccartyi Hulbert, 1988	Calippus	maccartyi	SPECIES
+4969192	Calippus circulus (Quinn, 1955)	Calippus	circulus	SPECIES
+4969193	Calippus placidus (Leidy, 1869)	Protohippus	placidus	SPECIES
+4969194	Calippus hondurensis (Olson & McGrew, 1941)	Calippus	hondurensis	SPECIES
+4969195	Protohippus supremus (Leidy, 1869)	Pliohippus	supremus	SPECIES
+4969196	Protohippus gidleyi Hulbert, 1988	Protohippus	gidleyi	SPECIES
+4969197	Protohippus sejunctus (Cope, 1874)	Merychippus	sejunctus	SPECIES
+4969198	Protohippus vetus (Quinn, 1955)	Protohippus	vetus	SPECIES
+4969199	Protohippus perditus (Leidy, 1858)	Equus	perditus	SPECIES
+4969200	Equus enormis Downs & Miller, 1994	Equus	enormis	SPECIES
+4969201	Equus fraternus (Leidy, 1858)	Equus	fraternus	SPECIES
+4969202	Equus jubatus Hay, 1927	Equus	jubatus	SPECIES
+4969203	Equus nalaikhaensis Kuznetsova & Zhegallo, 1996	Equus	nalaikhaensis	SPECIES
+4969204	Equus occidentalis (Leidy, 1865)	Equus	occidentalis	SPECIES
+4969205	Equus pseudaltidens Hulbert, 1995	Equus	pseudaltidens	SPECIES
+4969206	Equus complicatus (Leidy, 1858)	Equus	complicatus	SPECIES
+4969207	Equus simplicidens (Cope, 1892)	Equus	simplicidens	SPECIES
+4969208	Equus cumminsii	Equus	cumminsii	SPECIES
+4969209	Equus francisci (Hay, 1915)	Haringtonhippus	francisci	SPECIES
+4969210	Equus giganteus Gidley, 1901	Equus	giganteus	SPECIES
+4969211	Equus idahoensis Merriam, 1918	Equus	idahoensis	SPECIES
+4969212	Equus mexicanus Hibbard, 1955	Equus	mexicanus	SPECIES
+4969213	Equus niobrarensis Hay	Equus	niobrarensis	SPECIES
+4969214	Equus alaskae (Winans, 1989)	Equus	alaskae	SPECIES
+4969215	Equus pectinatus Cope, 1901	Equus	pectinatus	SPECIES
+4969216	Equus scotti Gidley, 1900	Equus	scotti	SPECIES
+4969217	Equus crenidens (Cope, 1884)	Equus	crenidens	SPECIES
+4969218	Equus yunnanensis Colbert, 1940	Equus	yunnanensis	SPECIES
+4969219	Equus excelsus Leidy	Equus	excelsus	SPECIES
+4969220	Equus fromanius (Repenning & al., 1995)	Plesippus	fromanius	SPECIES
+4969221	Equus neogeus (Lund, 1840)	Equus	neogeus	SPECIES
+4969222	Equus insulatus (Ameghino, 1904)	Equus	insulatus	SPECIES
+4969223	Equus santaeelenae Spillmann, 1938	Equus	santaeelenae	SPECIES
+4969224	Equus andium (Wagner-Branco, 1883)	Equus	andium	SPECIES
+4969225	Equus holmesi Hay	Equus	holmesi	SPECIES
+4969226	Equus leidyi Hay, 1913	Equus	leidyi	SPECIES
+4969228	Equus pacificus Leidy, 1868	Equus	pacificus	SPECIES
+4969230	Equus conversidens Owen, 1869	Equus	conversidens	SPECIES
+4969231	Equus tabeti Arambourg, 1970	Equus	tabeti	SPECIES
+4969232	Dinohippus mexicanus (Lance, 1950)	Dinohippus	mexicanus	SPECIES
+4969233	Dinohippus interpolatus (Cope, 1893)	Pliohippus	interpolatus	SPECIES
+4969234	Dinohippus leidyanus (Osborn, 1918)	Dinohippus	leidyanus	SPECIES
+4969235	Dinohippus spectans (Cope, 1880)	Pliohippus	spectans	SPECIES
+4969236	Dinohippus leardi (Drescher, 1941)	Dinohippus	leardi	SPECIES
+4969237	Hippidion principale (Lund, 1845)	Hippidion	principale	SPECIES
+4969238	Onohippidium galushai (MacFadden & Skinner, 1979)	Boreohippidion	galushai	SPECIES
+4969239	Onohippidium bolivianum Philippi, 1893	Onohippidium	bolivianum	SPECIES
+4969240	Pliohippus pernix Marsh, 1874	Pliohippus	pernix	SPECIES
+4969241	Pliohippus fossulatus	Protohippus	fossulatus	SPECIES
+4969242	Pliohippus tehonensis (Merriam, 1915)	Pliohippus	tehonensis	SPECIES
+4969243	Pliohippus nobilis (Osborn, 1918)	Pliohippus	nobilis	SPECIES
+4969245	Pliohippus tantalus (Merriam, 1913)	Pliohippus	tantalus	SPECIES
+4969246	Pliohippus mirabilis (Leidy, 1858)	Merychippus	mirabilis	SPECIES
+4969247	Merychippus calamarius (Cope, 1875)	Merychippus	calamarius	SPECIES
+4969248	Merychippus eohipparion (Osborn, 1918)	Merychippus	eohipparion	SPECIES
+4969249	Merychippus gunteri Simpson, 1930	Merychippus	gunteri	SPECIES
+4969252	Merychippus republicanus (Osborn, 1918)	Merychippus	republicanus	SPECIES
+4969253	Merychippus stevensi Dougherty, 1940	Merychippus	stevensi	SPECIES
+4969254	Merychippus californicus Merriam, 1915	Merychippus	californicus	SPECIES
+4969256	Merychippus insignis Leidy, 1856	Merychippus	insignis	SPECIES
+4969257	Merychippus primus (Osborn, 1918)	Merychippus	primus	SPECIES
+4969258	Merychippus quintus (Osborn, 1918)	Merychippus	quintus	SPECIES
+4969259	Merychippus sumani Merriam, 1915	Merychippus	sumani	SPECIES
+4969260	Merychippus brevidontus (Bode, 1935)	Merychippus	brevidontus	SPECIES
+4969261	Merychippus coloradense (Osborn, 1918)	Merychippus	coloradense	SPECIES
+4969262	Merychippus goorisi (MacFadden & Skinner, 1981)	Cormohipparion	goorisi	SPECIES
+4969263	Merychippus intermontanus (Merriam, 1915)	Merychippus	intermontanus	SPECIES
+4969265	Merychippus relictus (Cope, 1889)	Merychippus	relictus	SPECIES
+4969266	Merychippus sphenodus (Cope, 1889)	Merychippus	sphenodus	SPECIES
+4969267	Hipparion crassum Gervais, 1859	Hipparion	crassum	SPECIES
+4969268	Hipparion forcei Richey, 1948	Hipparion	forcei	SPECIES
+4969269	Hipparion longipes Gromova, 1952	Hipparion	longipes	SPECIES
+4969270	Hipparion mediterraneum Roth & Wagner, 1855	Hipparion	mediterraneum	SPECIES
+4969271	Hipparion rocinantis Hernández Pacheco, 1921	Hipparion	rocinantis	SPECIES
+4969272	Hipparion tehonense (Merriam, 1916)	Nannippus	tehonense	SPECIES
+4969273	Hipparion dietrichi (Wehrli, 1941)	Hipparion	dietrichi	SPECIES
+4969274	Hipparion gromovae Villalta & Crusafont, 1957	Hipparion	gromovae	SPECIES
+4969275	Hipparion macedonicum Koufos, 1984	Hipparion	macedonicum	SPECIES
+4969276	Hipparion molayanense Zouhri, 1992	Hipparion	molayanense	SPECIES
+4969278	Hipparion concudense Pirlot, 1956	Hipparion	concudense	SPECIES
+4969279	Hipparion fissurae Crusafont & Sondaar, 1971	Hipparion	fissurae	SPECIES
+4969280	Hipparion laromae Pesquero & al., 2006	Hipparion	laromae	SPECIES
+4969281	Hipparion matthewi Abel, 1926	Hipparion	matthewi	SPECIES
+4969282	Hipparion periafricanum Villalta & Crusafont, 1957	Hipparion	periafricanum	SPECIES
+4969283	Hipparion shirleyae MacFadden, 1984	Hipparion	shirleyae	SPECIES
+4969284	Eurygnathohippus libycum (Pomel, 1897)	Eurygnathohippus	libycum	SPECIES
+4969286	Eurygnathohippus turkanense (Hooijer & Maglio, 1974)	Eurygnathohippus	turkanense	SPECIES
+4969287	Eurygnathohippus hasumense (Eisenmann, 1983)	Eurygnathohippus	hasumense	SPECIES
+4969288	Eurygnathohippus albertense (Hopwood, 1926)	Eurygnathohippus	albertense	SPECIES
+4969291	Eurygnathohippus afarense (Eisenmann, 1976)	Eurygnathohippus	afarense	SPECIES
+4969292	Hippotherium plicatile (Leidy, 1887)	Hipparion	plicatile	SPECIES
+4969293	Hippotherium quinni (Woodburne, 1996)	Cormohipparion	quinni	SPECIES
+4969294	Hippotherium ingenuum (Leidy, 1885)	Cormohipparion	ingenuum	SPECIES
+4969295	Hippotherium primigenium (von Meyer, 1829)	Hipparion	primigenium	SPECIES
+4969296	Hippotherium emsliei (Hulbert, 1988)	Cormohipparion	emsliei	SPECIES
+4969297	Pseudhipparion gratum (Leidy, 1869)	Hipparion	gratum	SPECIES
+4969298	Pseudhipparion retrusum (Cope, 1889)	Pseudhipparion	retrusum	SPECIES
+4969299	Pseudhipparion curtivallum (Quinn, 1955)	Pseudhipparion	curtivallum	SPECIES
+4969300	Pseudhipparion skinneri Webb & Hulbert, 1986	Pseudhipparion	skinneri	SPECIES
+4969301	Pseudhipparion hessei Webb & Hulbert, 1986	Pseudhipparion	hessei	SPECIES
+4969302	Pseudhipparion simpsoni Webb & Hulbert, 1986	Pseudhipparion	simpsoni	SPECIES
+4969303	Nannippus westoni	Merychippus	westoni	SPECIES
+4969304	Nannippus morgani Hulbert, 1993	Nannippus	morgani	SPECIES
+4969305	Nannippus beckensis Dalquest & Donovan, 1973	Nannippus	beckensis	SPECIES
+4969308	Nannippus aztecus Mooser, 1968	Nannippus	aztecus	SPECIES
+4969309	Nannippus parvulus (Marsh, 1868)	Equus	parvulus	SPECIES
+4969310	Nannippus lenticularis	Nannippus	lenticularis	SPECIES
+4969311	Neohipparion trampasense (Edwards, 1982)	Hipparion	trampasense	SPECIES
+4969312	Neohipparion eurystyle	Neohipparion	eurystyle	SPECIES
+4969313	Neohipparion leptode (Merriam, 1915)	Neohipparion	leptode	SPECIES
+4969314	Neohipparion affine (Leidy, 1869)	Hipparion	affine	SPECIES
+4969315	Neohipparion gidleyi (Merriam, 1915)	Neohipparion	gidleyi	SPECIES
+4969316	Acritohippus stylodontus (Lewis, 1968)	Pliohippus	stylodontus	SPECIES
+4969317	Acritohippus quinni Kelly, 1995	Acritohippus	quinni	SPECIES
+4969318	Acritohippus tertius (Osborn, 1918)	Acritohippus	tertius	SPECIES
+4969319	Acritohippus isonesus (Cope, 1889)	Acritohippus	isonesus	SPECIES
+4969320	Miohippus obliquidens (Osborn, 1904)	Miohippus	obliquidens	SPECIES
+4969321	Miohippus acutidens	Miohippus	acutidens	SPECIES
+4969322	Miohippus assiniboiensis (Lambe, 1905)	Miohippus	assiniboiensis	SPECIES
+4969323	Miohippus gemmarosae Osborn, 1918	Miohippus	gemmarosae	SPECIES
+4969324	Miohippus primus Osborn, 1918	Miohippus	primus	SPECIES
+4969325	Miohippus anceps (Marsh, 1874)	Anchitherium	anceps	SPECIES
+4969326	Miohippus condoni (Leidy, 1870)	Miohippus	condoni	SPECIES
+4969327	Miohippus gidleyi (Osborn, 1904)	Miohippus	gidleyi	SPECIES
+4969329	Miohippus quartus Osborn, 1918	Miohippus	quartus	SPECIES
+4969330	Miohippus annectens Marsh, 1874	Miohippus	annectens	SPECIES
+4969331	Miohippus equiceps (Cope, 1878)	Miohippus	equiceps	SPECIES
+4969332	Miohippus grandis (Clark & Beerbower, 1967)	Miohippus	grandis	SPECIES
+4969333	Sinohippus sampelayoi (Villalta & Crusafont, 1945)	Sinohippus	sampelayoi	SPECIES
+4969334	Sinohippus zitteli	Sinohippus	zitteli	SPECIES
+4969337	Hypohippus nevadensis (Merriam, 1913)	Hypohippus	nevadensis	SPECIES
+4969338	Hypohippus affinis (Leidy, 1858)	Anchitherium	affinis	SPECIES
+4969339	Hypohippus pertinax (Matthew, 1918)	Hypohippus	pertinax	SPECIES
+4969340	Hypohippus equinus (Scott, 1893)	Anchitherium	equinus	SPECIES
+4969341	Hypohippus osborni (Gidley, 1907)	Hypohippus	osborni	SPECIES
+4969342	Hypohippus chico MacFadden, 1982	Hypohippus	chico	SPECIES
+4969343	Anchitherium navasotae (Hay, 1924)	Anchitherium	navasotae	SPECIES
+4969344	Anchitherium aurelianense Cuvier, 1825	Anchitherium	aurelianense	SPECIES
+4969345	Anchitherium clarencei Simpson, 1932	Anchitherium	clarencei	SPECIES
+4969346	Anchitherium australis (Leidy, 1873)	Kalobatippus	australis	SPECIES
+4969347	Desmatippus crenidens Scott, 1893	Desmatippus	crenidens	SPECIES
+4969348	Desmatippus avus (Marsh, 1874)	Protohippus	avus	SPECIES
+4969349	Desmatippus integer (Matthew, 1924)	Desmatippus	integer	SPECIES
+4969350	Anchippus texanus Leidy, 1868	Anchippus	texanus	SPECIES
+4969351	Archaeohippus ultimus (Cope, 1886)	Archaeohippus	ultimus	SPECIES
+4969352	Archaeohippus mourningi	Archaeohippus	mourningi	SPECIES
+4969353	Archaeohippus equinanus (Osborn, 1918)	Miohippus	equinanus	SPECIES
+4969354	Archaeohippus stenolophus (Lambe, 1905)	Archaeohippus	stenolophus	SPECIES
+4969355	Archaeohippus minimus (Douglass, 1899)	Archaeohippus	minimus	SPECIES
+4969356	Archaeohippus blackbergi	Archaeohippus	blackbergi	SPECIES
+4969357	Archaeohippus penultimus (Matthew, 1924)	Archaeohippus	penultimus	SPECIES
+4969358	Archaeohippus mannulus O'Sullivan, 2003	Archaeohippus	mannulus	SPECIES
+4969359	Parahippus wyomingensis Schlaikjer, 1935	Parahippus	wyomingensis	SPECIES
+4969360	Parahippus pawniensis Gidley, 1907	Parahippus	pawniensis	SPECIES
+4969361	Parahippus leonensis (Sellards, 1916)	Parahippus	leonensis	SPECIES
+4969362	Parahippus atavus (Osborn, 1918)	Parahippus	atavus	SPECIES
+4969363	Parahippus nebrascensis (Peterson, 1907)	Desmatippus	nebrascensis	SPECIES
+4969364	Parahippus coloradensis Gidley, 1907	Parahippus	coloradensis	SPECIES
+4969365	Parahippus agrestis	Anchitherium	agrestis	SPECIES
+4969366	Parahippus pristinus (Osborn, 1918)	Parahippus	pristinus	SPECIES
+4969367	Parahippus maxsoni Jahns, 1940	Parahippus	maxsoni	SPECIES
+4969368	Parahippus cognatus	Anchitherium	cognatus	SPECIES
+4969369	Mesohippus westoni (Cope, 1889)	Mesohippus	westoni	SPECIES
+4969370	Mesohippus propinquus Lambe, 1905	Mesohippus	propinquus	SPECIES
+4969372	Mesohippus texanus McGrew, 1971	Mesohippus	texanus	SPECIES
+4969373	Mesohippus montanensis Osborn, 1904	Mesohippus	montanensis	SPECIES
+4969375	Mesohippus exoletus (Cope, 1874)	Mesohippus	exoletus	SPECIES
+4969376	Kalobatippus avus (Schlaikjer, 1935)	Kalobatippus	avus	SPECIES
+4969377	Kalobatippus agatensis (Osborn, 1918)	Kalobatippus	agatensis	SPECIES
+4969378	Kalobatippus praestans (Cope, 1879)	Kalobatippus	praestans	SPECIES
+4969379	Propalaeotherium parvulum (Laurillard, 1849)	Eurohippus	parvulum	SPECIES
+4969380	Propalaeotherium voigti (Matthes, 1977)	Propalaeotherium	voigti	SPECIES
+4969381	Propalaeotherium hassiacum Haupt, 1925	Propalaeotherium	hassiacum	SPECIES
+4969382	Propalaeotherium sinense Zdansky, 1930	Propalaeotherium	sinense	SPECIES
+4969383	Heteropliohippus hulberti Kelly, 1995	Heteropliohippus	hulberti	SPECIES
+4969384	Parapliohippus carrizoensis (Dougherty, 1940)	Parapliohippus	carrizoensis	SPECIES
+4969385	Xenicohippus osborni Bown & Kihm, 1981	Xenicohippus	osborni	SPECIES
+4969386	Xenicohippus grangeri Bown & Kihm	Xenicohippus	grangeri	SPECIES
+4969387	Xenicohippus craspedotum (Cope, 1880)	Xenicohippus	craspedotum	SPECIES
+4969388	Duchesnehippus intermedius (Peterson, 1931)	Epihippus	intermedius	SPECIES
+4969389	Epihippus uintensis	Orohippus	uintensis	SPECIES
+4969390	Epihippus gracilis (Marsh, 1871)	Anchitherium	gracilis	SPECIES
+4969391	Orohippus proteros Korth & Evander, 1982	Orohippus	proteros	SPECIES
+4969392	Orohippus sylvaticus (Leidy, 1870)	Orohippus	sylvaticus	SPECIES
+4969393	Orohippus progressus Granger, 1908	Orohippus	progressus	SPECIES
+4969394	Orohippus pumilus Marsh, 1872	Lophiodon	pumilus	SPECIES
+4969395	Orohippus agilis Marsh, 1873	Orohippus	agilis	SPECIES
+4969396	Hyracotherium aemulor (Gingerich, 1991)	Sifrhippus	aemulor	SPECIES
+4969397	Hyracotherium seekinsi Morris, 1968	Hyracotherium	seekinsi	SPECIES
+4969398	Hyracotherium montanum (Wortman, 1896)	Protorohippus	montanum	SPECIES
+4969399	Hyracotherium grangeri (Gingerich, 1989)	Sifrhippus	grangeri	SPECIES
+4969400	Hyracotherium sandrae Gingerich, 1989	Hyracotherium	sandrae	SPECIES
+4969402	Hyracotherium cristatum (Wortman, 1896)	Hyracotherium	cristatum	SPECIES
+4969403	Hyracotherium vasacciense (Cope, 1872)	Orohippus	vasacciense	SPECIES
+4969404	Hyracotherium pernix (Marsh, 1876)	Arenahippus	pernix	SPECIES
+4969405	Hyracotherium index (Cope, 1873)	Minippus	index	SPECIES
+4969406	Haplohippus texanus McGrew, 1953	Haplohippus	texanus	SPECIES
+4969407	Onohippidion Filhol, 1888	Hippidion		GENUS
+4969410	Protorohippus venticolum (Cope, 1881)	Hyracotherium	venticolum	SPECIES
+4969411	Palaeosyops robustus Marsh, 1872	Limnohyus	robustus	SPECIES
+4969412	Palaeosyops laevidens (Cope, 1873)	Palaeosyops	laevidens	SPECIES
+4969413	Palaeosyops paludosus Leidy, 1870	Palaeosyops	paludosus	SPECIES
+4969414	Palaeosyops fontinalis (Cope, 1873)	Palaeosyops	fontinalis	SPECIES
+4969415	Palaeosyops laticeps Marsh, 1872	Palaeosyops	laticeps	SPECIES
+4969416	Pakotitanops latidentatus West, 1980	Pakotitanops	latidentatus	SPECIES
+4969417	Eotitanotherium osborni (Peterson, 1913)	Diplacodon	osborni	SPECIES
+4969420	Protitanotherium emarginatum (Hatcher, 1895)	Diplacodon	emarginatum	SPECIES
+4969421	Protitanotherium superbum Osborn, 1908	Diplacodon	superbum	SPECIES
+4969423	Menops heloceras (Cope, 1873)	Symborodon	heloceras	SPECIES
+4969424	Menops walcotti (Osborn, 1916)	Menops	walcotti	SPECIES
+4969425	Menops serotinus (Marsh, 1887)	Menops	serotinus	SPECIES
+4969428	Menops varians Marsh, 1887	Menops	varians	SPECIES
+4969429	Menops marshi (Osborn, 1902)	Menops	marshi	SPECIES
+4969430	Menops bakeri (Stovall, 1948)	Menops	bakeri	SPECIES
+4969431	Duchesneodus uintensis (Peterson, 1931)	Duchesneodus	uintensis	SPECIES
+4969432	Duchesneodus primitivum (Lambe, 1908)	Megacerops	primitivum	SPECIES
+4969433	Telmatherium validus Marsh, 1872	Telmatherium	validus	SPECIES
+4969434	Telmatherium manteoceras (Hay, 1902)	Telmatherium	manteoceras	SPECIES
+4969435	Telmatherium altidens (Osborn, 1908)	Pollyosbornia	altidens	SPECIES
+4969441	Telmatherium cultridens (Osborn & al., 1878)	Leurocephalus	cultridens	SPECIES
+4969443	Protitanops curryi Stock, 1936	Protitanops	curryi	SPECIES
+4969444	Mulkrajanops moghliensis Kumar & Sahni, 1985	Mulkrajanops	moghliensis	SPECIES
+4969445	Mulkrajanops mogliensis Kumar & Sahni, 1985	Mulkrajanops	mogliensis	SPECIES
+4969451	Mesatirhinus megarhinus (Earle, 1891)	Palaeosyops	megarhinus	SPECIES
+4969452	Sphenocoelus intermedius (Osborn, 1908)	Sphenocoelus	intermedius	SPECIES
+4969454	Sphenocoelus hyognathus (Osborn, 1889)	Palaeosyops	hyognathus	SPECIES
+4969456	Sphenocoelus uintensis Osborn, 1895	Sphenocoelus	uintensis	SPECIES
+4969458	Eotitanops borealis Cope, 1880	Eotitanops	borealis	SPECIES
+4969459	Eotitanops minimus Osborn, 1919	Eotitanops	minimus	SPECIES
+4969460	Eotitanops dayi Dehm & Oettingen-Spielberg, 1958	Eotitanops	dayi	SPECIES
+4969461	Embolotherium grangeri Osborn, 1929	Embolotherium	grangeri	SPECIES
+4969462	Embolotherium andrewsi Osborn, 1929	Embolotherium	andrewsi	SPECIES
+4969463	Embolotherium loucksii Osborn, 1929	Embolotherium	loucksii	SPECIES
+4969464	Sivatitanops cotteri Pilgrim, 1925	Sivatitanops	cotteri	SPECIES
+4969465	Sivatitanops birmanicum (Pilgrim & Cotter, 1916)	Sivatitanops	birmanicum	SPECIES
+4969466	Brontops robustus Marsh, 1887	Brontops	robustus	SPECIES
+4969467	Brontops bicornutus (Osborn, 1902)	Brontops	bicornutus	SPECIES
+4969468	Brontops tyleri (Lull, 1905)	Brontops	tyleri	SPECIES
+4969469	Brontops dispar Marsh	Brontops	dispar	SPECIES
+4969470	Brontops amplus (Marsh, 1890)	Diploclonus	amplus	SPECIES
+4969471	Brontops selwynianus (Cope, 1889)	Brontops	selwynianus	SPECIES
+4969472	Brontops brachycephalus (Osborn)	Megacerops	brachycephalus	SPECIES
+4969473	Notiotitanops mississippiensis Gazin & Sullivan	Notiotitanops	mississippiensis	SPECIES
+4969474	Parabrontops lunanensis Chow & Hu, 1959	Parabrontops	lunanensis	SPECIES
+4969475	Metatelmatherium ultimum (Osborn, 1908)	Metatelmatherium	ultimum	SPECIES
+4969476	Pseudodiplacodon progressum (Peterson, 1934)	Diplacodon	progressum	SPECIES
+4969478	Sthenodectes priscus Peterson, 1934	Sthenodectes	priscus	SPECIES
+4969479	Sthenodectes incisivum (Douglass, 1909)	Sthenodectes	incisivum	SPECIES
+4969480	Megacerops hatcheri (Osborn, 1908)	Brontotherium	hatcheri	SPECIES
+4969481	Megacerops osborni (Schlaikjer, 1935)	Megacerops	osborni	SPECIES
+4969483	Megacerops kuwagatarhinus Mader & Alexander, 1995	Megacerops	kuwagatarhinus	SPECIES
+4969484	Megacerops coloradensis (Leidy, 1870)	Megacerops	coloradensis	SPECIES
+4969486	Fouchia elyensis Emry	Fouchia	elyensis	SPECIES
+4969487	Penetrigonias sagittatus (Russell, 1982)	Penetrigonias	sagittatus	SPECIES
+4969488	Penetrigonias hudsoni Tanner & Martin, 1976	Penetrigonias	hudsoni	SPECIES
+4969489	Penetrigonias dakotensis (Peterson, 1920)	Penetrigonias	dakotensis	SPECIES
+4969490	Pleuroceros pleuroceros (Duvernoy, 1853)	Pleuroceros	pleuroceros	SPECIES
+4969492	Subhyracodon mitis (Cope, 1875)	Subhyracodon	mitis	SPECIES
+4969493	Subhyracodon trigonodus (Osborn & Wortman, 1894)	Caenopus	trigonodus	SPECIES
+4969494	Subhyracodon gidleyi Wood, 1927	Subhyracodon	gidleyi	SPECIES
+4969495	Subhyracodon occidentalis (Leidy, 1850)	Subhyracodon	occidentalis	SPECIES
+4969496	Subhyracodon copei (Osborn, 1898)	Subhyracodon	copei	SPECIES
+4969497	Gulfoceras westfalli Albright, 1999	Gulfoceras	westfalli	SPECIES
+4969498	Teletaceras radinskyi Hanson, 1989	Teletaceras	radinskyi	SPECIES
+4969499	Teletaceras mortivallis (Stock, 1949)	Teletaceras	mortivallis	SPECIES
+4969500	Amphicaenopus platycephalus (Osborn & Wortman, 1894)	Caenopus	platycephalus	SPECIES
+4969501	Aceratherium alfambrense Cerdeño & Alcalá, 1989	Alicornops	alfambrense	SPECIES
+4969502	Plesiaceratherium Young, 1937	Plesiaceratherium		GENUS
+4969503	Plesiaceratherium gracile Young, 1937	Plesiaceratherium	gracile	SPECIES
+4969504	Plesiaceratherium mirallesi Crusafont & al., 1955	Plesiaceratherium	mirallesi	SPECIES
+4969505	Acerorhinus zernowi (Borissiak, 1914)	Acerorhinus	zernowi	SPECIES
+4969506	Aceratherium acutum Marsh	Aceratherium	acutum	SPECIES
+4969507	Aceratherium incisivum (Cuvier, 1824)	Aceratherium	incisivum	SPECIES
+4969508	Peraceras hessei Prothero & Manning, 1987	Peraceras	hessei	SPECIES
+4969509	Peraceras superciliosum Cope, 1880	Peraceras	superciliosum	SPECIES
+4969510	Peraceras profectum (Matthew, 1899)	Peraceras	profectum	SPECIES
+4969511	Aphelops megalodus (Cope, 1873)	Aphelops	megalodus	SPECIES
+4969513	Aphelops malacorhinus Cope, 1878	Aphelops	malacorhinus	SPECIES
+4969514	Aphelops mutilus Matthew, 1924	Aphelops	mutilus	SPECIES
+4969515	Aphelops longipes (Leidy, 1890)	Rhinoceros	longipes	SPECIES
+4969516	Floridaceras whitei Wood, 1964	Floridaceras	whitei	SPECIES
+4969518	Chilotherium haberi Ringström, 1924	Chilotherium	haberi	SPECIES
+4969519	Shansirhinus ringstromi Kretzoi, 1942	Shansirhinus	ringstromi	SPECIES
+4969522	Iranotherium Ringström, 1924	Iranotherium		GENUS
+4969523	Didermocerus sansaniensis Lartet, 1851	Dicerorhinus	sansaniensis	SPECIES
+4969524	Lartetotherium Ginsburg, 1974	Lartetotherium		GENUS
+4969525	Ronzotherium velaunum Aymard, 1853	Ronzotherium	velaunum	SPECIES
+4969526	Aegyrcitherium beonensis (Antoine, 1997)	Aegyrcitherium	beonensis	SPECIES
+4969527	Bugtirhinus praecursor Antoine & Welcomme, 2000	Bugtirhinus	praecursor	SPECIES
+4969528	Hispanotherium matritense (de Prado, 1864)	Hispanotherium	matritense	SPECIES
+4969531	Ceratotherium neumayri (Osborn, 1900)	Ceratotherium	neumayri	SPECIES
+4969532	Ceratotherium mauritanicum Pomel, 1888	Ceratotherium	mauritanicum	SPECIES
+4969535	Stephanorhinus etruscus (Falconer, 1868)	Dicerorhinus	etruscus	SPECIES
+4969536	Stephanorhinus pikermiensis (Toula, 1906)	Dihoplus	pikermiensis	SPECIES
+4969537	Dihoplus schleiermacheri (Kaup, 1834)	Dihoplus	schleiermacheri	SPECIES
+4969538	Xiphodon castrense Kowalevsky, 1873	Xiphodon	castrense	SPECIES
+4969539	Diceratherium niobrarense (Peterson, 1906)	Diceratherium	niobrarense	SPECIES
+4969540	Diceratherium annectens (Marsh, 1873)	Rhinoceros	annectens	SPECIES
+4969543	Diceratherium gregorii (Peterson, 1920)	Diceratherium	gregorii	SPECIES
+4969545	Diceratherium armatum Marsh, 1875	Diceratherium	armatum	SPECIES
+4969547	Dicerorhinus megarhinus (de Christol, 1835)	Dihoplus	megarhinus	SPECIES
+4969548	Dicerorhinus cixianensis Chen & Wu, 1976	Dicerorhinus	cixianensis	SPECIES
+4969549	Dicerorhinus kirchbergensis (Jäger, 1839)	Stephanorhinus	kirchbergensis	SPECIES
+4969550	Dicerorhinus caucasicus (Borissiak, 1935)	Dicerorhinus	caucasicus	SPECIES
+4969551	Dicerorhinus hemitoechus Falconer, 1860	Dicerorhinus	hemitoechus	SPECIES
+4969554	Ougandatherium napakense Guérin & Pickford, 2003	Ougandatherium	napakense	SPECIES
+4969556	Proaceratherium Ginsburg & Hugueney, 1980	Proaceratherium		GENUS
+4969557	Protoaceratherium Abel, 1910	Protoaceratherium		GENUS
+4969558	Trigonias osborni Lucas	Trigonias	osborni	SPECIES
+4969559	Trigonias yoderensis (Schlaikjer, 1935)	Subhyracodon	yoderensis	SPECIES
+4969560	Trigonias wellsi Wood, 1927	Trigonias	wellsi	SPECIES
+4969561	Uintaceras radinskyi Holbrook & Lucas, 1997	Uintaceras	radinskyi	SPECIES
+4969562	Teleoceras snowi Fourtau, 1918	Teleoceras	snowi	SPECIES
+4969563	Teleoceras meridianum (Leidy, 1865)	Rhinoceros	meridianum	SPECIES
+4969564	Teleoceras hicksi Cook, 1927	Teleoceras	hicksi	SPECIES
+4969565	Teleoceras proterus (Leidy, 1885)	Rhinoceros	proterus	SPECIES
+4969566	Teleoceras medicornutum Osborn, 1904	Teleoceras	medicornutum	SPECIES
+4969567	Teleoceras fossiger (Cope, 1878)	Teleoceras	fossiger	SPECIES
+4969568	Teleoceras minor Olcott, 1909	Teleoceras	minor	SPECIES
+4969569	Teleoceras major Hatcher, 1894	Teleoceras	major	SPECIES
+4969571	Prosantorhinus douvillei Osborn, 1902	Prosantorhinus	douvillei	SPECIES
+4969572	Brachypotherium brachypus Lartet, 1848	Brachypotherium	brachypus	SPECIES
+4969573	Brachypotherium americanus (Yatkola & Tanner, 1979)	Brachypotherium	americanus	SPECIES
+4969574	Chilotheridium pattersoni Hooijer, 1971	Chilotheridium	pattersoni	SPECIES
+4969575	Siamolophus krabiense Ducrocq & al., 2006	Siamolophus	krabiense	SPECIES
+4969576	Toxotherium hunteri Wood, 1961	Toxotherium	hunteri	SPECIES
+4969578	Triplopides rieli Radinsky, 1967	Triplopides	rieli	SPECIES
+4969579	Triplopus obliquidens (Scott & Osborn, 1887)	Hyrachyus	obliquidens	SPECIES
+4969580	Prothyracodon uintense Peterson, 1919	Prothyracodon	uintense	SPECIES
+4969581	Triplopus woodi Stock, 1936	Triplopus	woodi	SPECIES
+4969582	Triplopus implicatus (Cope, 1873)	Triplopus	implicatus	SPECIES
+4969583	Triplopus rhinocerinus	Eotrigonias	rhinocerinus	SPECIES
+4969584	Triplopus cubitalis Cope, 1880	Triplopus	cubitalis	SPECIES
+4969585	Ardynia altidentata Qiu & al., 2004	Ardynia	altidentata	SPECIES
+4969586	Ardynia praecox Matthew & Granger, 1923	Ardynia	praecox	SPECIES
+4969587	Ardynia mongoliensis (Belyaeva, 1952)	Ardynia	mongoliensis	SPECIES
+4969588	Epitriplopus uintensis	Epitriplopus	uintensis	SPECIES
+4969589	Prohyracodon obrutschewi Dashzeveg, 1996	Prohyracodon	obrutschewi	SPECIES
+4969590	Prohyracodon orientale Koch, 1897	Prohyracodon	orientale	SPECIES
+4969597	Aprotodon lanzhouensis Qiu & Xie, 1997	Aprotodon	lanzhouensis	SPECIES
+4969598	Hyrachyus douglassi Wood, 1934	Hyrachyus	douglassi	SPECIES
+4969599	Hyrachyus modestus (Leidy, 1870)	Hyrachyus	modestus	SPECIES
+4969601	Hyrachyus eximius Leidy, 1871	Hyrachyus	eximius	SPECIES
+4969602	Hyrachyus affinis (Marsh, 1871)	Lophiodon	affinis	SPECIES
+4969603	Forstercooperia jigniensis Sahni & Khare, 1973	Forstercooperia	jigniensis	SPECIES
+4969604	Forstercooperia grandis (Peterson, 1919)	Forstercooperia	grandis	SPECIES
+4969605	Forstercooperia minuta Lucas & al., 1981	Forstercooperia	minuta	SPECIES
+4969607	Amynodontopsis bodei Stock, 1933	Amynodontopsis	bodei	SPECIES
+4969608	Amynodon sinensis (Zdansky, 1930)	Cadurcodon	sinensis	SPECIES
+4969609	Amynodon reedi Stock, 1939	Amynodon	reedi	SPECIES
+4969610	Amynodon advenus (Marsh, 1875)	Diceratherium	advenus	SPECIES
+4969611	Metamynodon planifrons Scott & Osborn, 1887	Metamynodon	planifrons	SPECIES
+4969612	Metamynodon mckinneyi Wilson & Schiebout, 1981	Metamynodon	mckinneyi	SPECIES
+4969613	Metamynodon chadronensis Wood, 1937	Metamynodon	chadronensis	SPECIES
+4969614	Rostriamynodon grangeri Wall & Manning, 1986	Rostriamynodon	grangeri	SPECIES
+4969615	Megalamynodon regalis Wood, 1945	Megalamynodon	regalis	SPECIES
+4969616	Dzungariotherium orgosense Chiu, 1973	Dzungariotherium	orgosense	SPECIES
+4969617	Indricotherium transouralicum Pavlova, 1922	Indricotherium	transouralicum	SPECIES
+4969618	Paraceratherium yagouense (Qiu & al., 2004)	Turpanotherium	yagouense	SPECIES
+4969620	Selenaletes scopaeus Radinsky, 1966	Selenaletes	scopaeus	SPECIES
+4969621	Thuliadanta mayri Eberle, 2005	Thuliadanta	mayri	SPECIES
+4969622	Protapirus simplex Wortman & Earle, 1893	Protapirus	simplex	SPECIES
+4969623	Protapirus obliquidens Wortman & Earle, 1893	Protapirus	obliquidens	SPECIES
+4969624	Plesiocolopirus hancocki (Radinsky, 1963)	Plesiocolopirus	hancocki	SPECIES
+4969625	Tapiravus validus (Marsh, 1871)	Lophiodon	validus	SPECIES
+4969626	Tapiravus rarus Marsh, 1877	Tapiravus	rarus	SPECIES
+4969627	Miotapirus harrisonensis Schlaikjer, 1937	Miotapirus	harrisonensis	SPECIES
+4969628	Teleolophus daviesi Dehm & Oettingen-Spielberg, 1958	Teleolophus	daviesi	SPECIES
+4969629	Teleolophus medius Matthew & Granger, 1925	Teleolophus	medius	SPECIES
+4969630	Teleolophus magnus Radinsky, 1965	Teleolophus	magnus	SPECIES
+4969631	Colodon stovalli Wilson & Schiebout, 1984	Colodon	stovalli	SPECIES
+4969633	Colodon occidentalis	Colodon	occidentalis	SPECIES
+4969634	Colodon cingulatus Douglass, 1902	Colodon	cingulatus	SPECIES
+4969635	Colodon woodi (Gazin, 1956)	Desmatotherium	woodi	SPECIES
+4969636	Colodon kayi (Hough, 1955)	Desmatotherium	kayi	SPECIES
+4969637	Heteraletes leotanus (Peterson, 1931)	Heteraletes	leotanus	SPECIES
+4969638	Nexuotapirus marslandensis (Schoch & Prins, 1984)	Nexuotapirus	marslandensis	SPECIES
+4969639	Nexuotapirus robustus (Sinclair, 1901)	Protapirus	robustus	SPECIES
+4969641	Dilophodon minusculus Scott, 1883	Dilophodon	minusculus	SPECIES
+4969642	Dilophodon destitutus Zonneveld & Gunnell, 2003	Dilophodon	destitutus	SPECIES
+4969643	Tapirus greslebini Rusconi, 1934	Tapirus	greslebini	SPECIES
+4969644	Tapirus californicus	Tapirus	californicus	SPECIES
+4969645	Tapirus johnsoni Schultz & al., 1975	Tapirus	johnsoni	SPECIES
+4969646	Tapirus polkensis	Tapiravus	polkensis	SPECIES
+4969647	Tapirus sinensis Owen, 1870	Tapirus	sinensis	SPECIES
+4969648	Tapirus haysii (Leidy, 1860)	Tapirus	haysii	SPECIES
+4969649	Tapirus merriami Frick, 1921	Tapirus	merriami	SPECIES
+4969650	Tapirus sanyuanensis Huang & Fang, 1991	Tapirus	sanyuanensis	SPECIES
+4969651	Tapirus simpsoni Schultz & al., 1975	Tapirus	simpsoni	SPECIES
+4969652	Tapirus veroensis Sellards, 1918	Tapirus	veroensis	SPECIES
+4969653	Heptodon calciculus (Cope, 1880)	Heptodon	calciculus	SPECIES
+4969654	Heptodon posticus (Cope, 1882)	Heptodon	posticus	SPECIES
+4969655	Jhagirilophus chorgalensis Thewissen & al., 2001	Jhagirilophus	chorgalensis	SPECIES
+4969656	Helaletes nanus	Lophiodon	nanus	SPECIES
+4969657	Indolophus guptai Pilgrim, 1925	Indolophus	guptai	SPECIES
+4969659	Bahinolophus birmanicus (Pilgrim, 1925)	Bahinolophus	birmanicus	SPECIES
+4969660	Desmatotherium intermedius (Osborn & al., 1878)	Hyrachyus	intermedius	SPECIES
+4969664	Homogalax aureus Gingerich, 1991	Homogalax	aureus	SPECIES
+4969665	Homogalax protapirinus (Wortman, 1896)	Homogalax	protapirinus	SPECIES
+4969666	Isectolophus annectens Scott & Osborn, 1887	Isectolophus	annectens	SPECIES
+4969667	Isectolophus radinskyi Schoch, 1983	Isectolophus	radinskyi	SPECIES
+4969668	Isectolophus latidens (Osborn & al., 1878)	Helaletes	latidens	SPECIES
+4969669	Eoletes xianensis (Zhang & Qi, 1981)	Eoletes	xianensis	SPECIES
+4969670	Eoletes gracilis Biryukov, 1974	Eoletes	gracilis	SPECIES
+4969671	Lophialetes expeditus Matthew & Granger, 1925	Lophialetes	expeditus	SPECIES
+4969673	Systemodon tapirinus (Cope, 1875)	Orohippus	tapirinus	SPECIES
+4969674	Karagalax mamikhelensis Maas & al., 2001	Karagalax	mamikhelensis	SPECIES
+4969678	Palaeotherium castrense Noulet, 1863	Palaeotherium	castrense	SPECIES
+4969679	Palaeotherium isselanum (Cuvier, 1824)	Palaeotherium	isselanum	SPECIES
+4969680	Palaeotherium duvali Pomel, 1853	Palaeotherium	duvali	SPECIES
+4969681	Paraplagiolophus Depéret, 1917	Paraplagiolophus		GENUS
+4969682	Anchilophus gaudini Pictet & Humbert, 1869	Anchilophus	gaudini	SPECIES
+4969684	Pachynolophus bretovensis Remy, 1988	Pachynolophus	bretovensis	SPECIES
+4969685	Pachynolophus garimondi Remy, 1967	Pachynolophus	garimondi	SPECIES
+4969695	Skopaiolophus burmese Métais & al., 2006	Skopaiolophus	burmese	SPECIES
+4973981	Uintatherium anceps (Marsh, 1871)	Titanotherium	anceps	SPECIES
+4981009	Diceratherium advenum Marsh, 1875	Diceratherium	advenum	SPECIES
+4982473	Merychippus shirleyae	Merychippus	shirleyae	SPECIES
+5220111	Diceros bicornis (Linnaeus, 1758)	Diceros	bicornis	SPECIES
+5220112	Rhinoceros sondaicus Desmarest, 1822	Rhinoceros	sondaicus	SPECIES
+5220113	Rhinoceros unicornis Linnaeus, 1758	Rhinoceros	unicornis	SPECIES
+5428923	Hemionus F.Cuvier, 1823	Equus		GENUS
+5428924	Asinus Gray, 1824	Equus		GENUS
+5707434	Diceros bicornis michaeli Zukowsky, 1965	Diceros	bicornis	SUBSPECIES
+5707438	Diceros bicornis minor (Drummond, 1876)	Diceros	bicornis	SUBSPECIES
+5787161	Equus quagga quagga	Equus	quagga	SUBSPECIES
+5787168	Equus africanus Heuglin & Fitzinger, 1866	Equus	africanus	SPECIES
+5787169	Equus przewalskii Poliakov, 1881	Equus	przewalskii	SPECIES
+5787170	Equus ferus przewalskii Poliakov, 1881	Equus	ferus	SUBSPECIES
+5787171	Equus hemippus I.Geoffroy Saint-Hilaire, 1855	Equus	hemippus	SPECIES
+5816528	Rhinoceros schleiermacheri (Kaup, 1834)	Dihoplus	schleiermacheri	SPECIES
+5816529	Rhinoceros incisivus (Cuvier, 1824)	Aceratherium	incisivus	SPECIES
+5816532	Rhinoceros tichorhinus	Rhinoceros	tichorhinus	SPECIES
+5936036	Lophiodon leptorhynchum Filhol, 1888	Lophiodon	leptorhynchum	SPECIES
+5936037	Lophiodon filholi	Lophiodon	filholi	SPECIES
+5936038	Lophiodon remensis Lemoine, 1878	Lophiodon	remensis	SPECIES
+5936039	Grangeria canina Zdansky, 1930	Grangeria	canina	SPECIES
+5936040	Grangeria anarsius (Gazin, 1956)	Eomoropus	anarsius	SPECIES
+5936041	Megahippus mckennai Tedford & Alf, 1962	Megahippus	mckennai	SPECIES
+5936042	Megahippus matthewi	Hypohippus	matthewi	SPECIES
+5936043	Metarhinus earlei Osborn, 1908	Metarhinus	earlei	SPECIES
+5936044	Metarhinus pater Stock, 1937	Metarhinus	pater	SPECIES
+5936045	Metarhinus diploconus (Osborn, 1895)	Metarhinus	diploconus	SPECIES
+5936046	Metarhinus fluviatilis Osborn, 1908	Metarhinus	fluviatilis	SPECIES
+5936048	Menoceras barbouri (Wood, 1964)	Menoceras	barbouri	SPECIES
+5936049	Menoceras arikarense (Barbour, 1906)	Menoceras	arikarense	SPECIES
+5936050	Hyracodon petersoni Wood, 1926	Hyracodon	petersoni	SPECIES
+5936051	Hyracodon leidyanus Troxell, 1921	Hyracodon	leidyanus	SPECIES
+5936052	Hyracodon nebraskensis (Leidy)	Rhinoceros	nebraskensis	SPECIES
+5936053	Hyracodon browni Russell, 1934	Hyracodon	browni	SPECIES
+5936054	Hyracodon priscidens Lambe, 1905	Hyracodon	priscidens	SPECIES
+5936055	Hyracodon medius (Peterson, 1934)	Hyracodon	medius	SPECIES
+5936056	Schlosseria magister Matthew & Granger, 1926	Schlosseria	magister	SPECIES
+5936057	Plagiolophus codiciensis (Gaudry, 1865)	Plagiolophus	codiciensis	SPECIES
+5936058	Plagiolophus huerzeleri Remy, 2000	Plagiolophus	huerzeleri	SPECIES
+5936059	Plagiolophus javali (Filhol, 1877)	Plagiolophus	javali	SPECIES
+5936060	Plagiolophus fraasi (von Meyer, 1852)	Plagiolophus	fraasi	SPECIES
+5936061	Plagiolophus annectens Owen, 1847	Plagiolophus	annectens	SPECIES
+5936062	Plagiolophus mazateronensis Cuesta, 1994	Plagiolophus	mazateronensis	SPECIES
+5936063	Leptolophus stehlini Remy, 1965	Leptolophus	stehlini	SPECIES
+6006354	Colobognathus Brandt, 1878	Diceros		GENUS
+6141994	Dzungariotherium Chiu, 1973	Dzungariotherium		GENUS
+6141995	Thuliadanta Eberle, 2005	Thuliadanta		GENUS
+6163208	Equus zebra hartmannae Matschie, 1898	Equus	zebra	SUBSPECIES
+6163209	Equus hemionus hemippus I.Geoffroy Saint-Hilaire, 1855	Equus	hemionus	SUBSPECIES
+7194164	Equus zebra zebra	Equus	zebra	SUBSPECIES
+7262077	Diceros bicornis bicornis	Diceros	bicornis	SUBSPECIES
+7262078	Ceratotherium simum simum	Ceratotherium	simum	SUBSPECIES
+7262080	Tapirus indicus indicus	Acrocodia	indicus	SUBSPECIES
+7262081	Tapirus terrestris terrestris	Tapirus	terrestris	SUBSPECIES
+7262082	Equus hemionus hemionus	Equus	hemionus	SUBSPECIES
+7262083	Equus asinus asinus	Equus	asinus	SUBSPECIES
+7262085	Equus caballus caballus	Equus	caballus	SUBSPECIES
+7342637	Equus ferus ferus	Equus	ferus	SUBSPECIES
+7510483	Dicerorhinus etruscus Falconer, 1859	Dicerorhinus	etruscus	SPECIES
+7517427	Rhinoceros indicus G.Cuvier, 1816	Rhinoceros	indicus	SPECIES
+7571750	Tenisia turgaica (Borissiak, 1915)	Epiaceratherium	turgaica	SPECIES
+7599598	Cardiolophus Gingerich, 1991	Cardiolophus		GENUS
+7682272	Cardiolophus semihians (Cope, 1882)	Cardiolophus	semihians	SPECIES
+7818962	Acrocodia indica (Desmarest, 1819)	Acrocodia	indica	SPECIES
+7939585	Tapirus Brisson, 1762	Tapirus		GENUS
+7946360	Eotitanops gregoryi Osborn, 1913	Eotitanops	gregoryi	SPECIES
+8016038	Dicerorhinus mercki Kaup, 1841	Dicerorhinus	mercki	SPECIES
+8082837	Dromoceratherium Crusafont, Villalta & Truyols, 1955	Dromoceratherium		GENUS
+8145673	Equus taubachensis Freudenberg, 1911	Equus	taubachensis	SPECIES
+8257794	Hyracodon Leidy, 1856	Hyracodon		GENUS
+8261169	Tapirus ecuadorensis Gray, 1872	Tapirus	ecuadorensis	SPECIES
+8336123	Cardiolophus radinskyi Gingerich, 1991	Cardiolophus	radinskyi	SPECIES
+8340016	Equus hydruntinus Regalia, 1907	Equus	hydruntinus	SPECIES
+8395500	Tapirella bairdii (Gill, 1865)	Tapirella	bairdii	SPECIES
+8438329	Limnohyops monoconus Osborn, 1908	Palaeosyops	monoconus	SPECIES
+8438908	Hipparion sitifense Pomel, 1897	Hipparion	sitifense	SPECIES
+8439790	Wanotherium xuanchengensis Tang & Yan, 1976		xuanchengensis	SPECIES
+8439838	Desmatotitan tukhumensis Granger & Gregory, 1943	Desmatotitan	tukhumensis	SPECIES
+8441379	Archaeohippus minutalis (Hay, 1924)	Archaeohippus	minutalis	SPECIES
+8442030	Isectolophus scotti Peterson, 1919	Isectolophus	scotti	SPECIES
+8443195	Neohipparion molle	Neohipparion	molle	SPECIES
+8443485	Coelodonta tologoijensis Beliajeva, 1966	Coelodonta	tologoijensis	SPECIES
+8444726	Desmatippus texanus (Leidy, 1868)	Anchippus	texanus	SPECIES
+8445681	Equus littoralis (Hay, 1913)	Equus	littoralis	SPECIES
+8446272	Megacerops syceras (Cope, 1889)	Megacerops	syceras	SPECIES
+8446571	Tapirus copei Simpson, 1945	Tapirus	copei	SPECIES
+8446639	Pataecops minutissimus (Reshetov, 1979)	Pataecops	minutissimus	SPECIES
+8447223	Cormohipparion occidentale (Leidy, 1856)	Cormohipparion	occidentale	SPECIES
+8447519	Aphelops ceratorhinus Douglass, 1903	Peraceras	ceratorhinus	SPECIES
+8449045	Hyrachyus tongi Huang & Wang, 2002	Hyrachyus	tongi	SPECIES
+8450044	Desmatotherium mongoliense Osborn, 1923	Desmatotherium	mongoliense	SPECIES
+8450345	Balochititanops haqi Missiaen & al., 2011	Balochititanops	haqi	SPECIES
+8450565	Zhongjianoletes chowi Ye, 1983	Zhongjianoletes	chowi	SPECIES
+8451879	Parahippus vellicans (Hay, 1924)	Parahippus	vellicans	SPECIES
+8452518	Hesperaletes walshi Colbert, 2006	Hesperaletes	walshi	SPECIES
+8453695	Hipparion weihoense Liu & al., 1978	Hipparion	weihoense	SPECIES
+8454070	Metahyrachyus bicornutus Troxell, 1922	Metahyrachyus	bicornutus	SPECIES
+8455308	Mesatirhinus petersoni Osborn, 1908	Palaeosyops	petersoni	SPECIES
+8455894	Cormohipparion matthewi Woodburne, 2007	Cormohipparion	matthewi	SPECIES
+8456561	Tapirus priscus Kaup, 1833	Tapirus	priscus	SPECIES
+8458029	Teleoceras brachyrhinum Prothero, 2005	Teleoceras	brachyrhinum	SPECIES
+8458686	Equus parastylidens Mooser, 1959	Equus	parastylidens	SPECIES
+8459554	Sianodon ulausuensis Xu, 1966	Cadurcodon	ulausuensis	SPECIES
+8459911	Neohipparion dolichops (Gidley, 1906)	Hipparion	dolichops	SPECIES
+8460481	Dihoplus pikermiensis (Toula, 1906)	Dihoplus	pikermiensis	SPECIES
+8462387	Sifrhippus sandrae (Gingerich, 1989)	Hyracotherium	sandrae	SPECIES
+8463057	Protapirus validus Hatcher, 1896	Protapirus	validus	SPECIES
+8463267	Brontotherium medium (Marsh, 1891)	Megacerops	medium	SPECIES
+8463623	Hyracodon selenidens Troxell, 1921	Hyracodon	selenidens	SPECIES
+8463929	Pliohippus coalingensis (Merriam, 1914)	Protohippus	coalingensis	SPECIES
+8464795	Palaeosyops borealis (Cope, 1880)	Eotitanops	borealis	SPECIES
+8465446	Merychippus missouriensis (Douglass, 1908)	Merychippus	missouriensis	SPECIES
+8466036	Hyrachyus singularis (Cope, 1875)	Hyracotherium	singularis	SPECIES
+8466101	Epiaceratherium Borissiak, 1915	Epiaceratherium		GENUS
+8466401	Hipparion phlegrae Lazaridis & Tsoukala, 2014	Hipparion	phlegrae	SPECIES
+8467368	Acrotitan ulanshirehensis Ye, 1983	Acrotitan	ulanshirehensis	SPECIES
+8467587	Heptodon brownorum Seton, 1931	Heptodon	brownorum	SPECIES
+8467957	Equus nevadanus Hay	Equus	nevadanus	SPECIES
+8468261	Orohippus major Marsh, 1874	Orohippus	major	SPECIES
+8468557	Galushaceras levellorum Prothero, 2005	Galushaceras	levellorum	SPECIES
+8469890	Teleodus avus Marsh, 1890	Teleodus	avus	SPECIES
+8470180	Caenolophus magnus Shi, 1989	Caenolophus	magnus	SPECIES
+8470476	Merychippus tehachapiensis Buwalda & Lewis, 1955	Parapliohippus	tehachapiensis	SPECIES
+8473242	Equus semiplicatus	Equus	semiplicatus	SPECIES
+8473550	Eotrigonias petersoni Wood, 1927	Eotrigonias	petersoni	SPECIES
+8473618	Tapirus tennesseae Hay	Tapirus	tennesseae	SPECIES
+8473930	Eubrontotherium clarnoensis Mihlbachler, 2007	Eubrontotherium	clarnoensis	SPECIES
+8474162	Teleolophus danjiangensis Tong & Lei, 1984	Teleolophus	danjiangensis	SPECIES
+8474234	Prothyracodon intermedium Scott & Osborn, 1887	Prothyracodon	intermedium	SPECIES
+8476669	Proeggysodon qiui Bai & Wang, 2012	Proeggysodon	qiui	SPECIES
+8477607	Rhinoceros oregonensis Marsh, 1873	Rhinoceros	oregonensis	SPECIES
+8477674	Amynodon erectus Troxell, 1921	Diceratherium	erectus	SPECIES
+8477910	Microtitan mongoliensis (Osborn, 1925)	Microtitan	mongoliensis	SPECIES
+8478223	Eoletes tianshanicus Averianov & Godinot, 2005	Eoletes	tianshanicus	SPECIES
+8479588	Orohippus typicus Granger, 1908	Orohippus	typicus	SPECIES
+8480278	Colodon inceptus Matthew & Granger, 1925	Colodon	inceptus	SPECIES
+8480875	Yimengia yani Wang, 1988	Yimengia	yani	SPECIES
+8482143	Minippus index (Cope, 1873)	Minippus	index	SPECIES
+8483101	Palaeosyops minor Marsh, 1871	Palaeosyops	minor	SPECIES
+8484027	Pliohippus spectans	Pliohippus	spectans	SPECIES
+8484937	Paracolodon curtus Matthew & Granger, 1925	Colodon	curtus	SPECIES
+8486918	Homogalax bridgerensis Troxell, 1922	Homogalax	bridgerensis	SPECIES
+8487220	Bunobrontops savagei Holroyd & Ciochon, 2000	Bunobrontops	savagei	SPECIES
+8487452	Cadurcodon ardynensis (Osborn, 1924)	Cadurcodon	ardynensis	SPECIES
+8487519	Dihoplus megarhinus (de Christol, 1835)	Dihoplus	megarhinus	SPECIES
+8490674	Equus capensis (Broom, 1909)	Equus	capensis	SPECIES
+8491273	Brontotherium ingens Marsh, 1874	Brontotherium	ingens	SPECIES
+8491941	Protohippus simus (Gidley, 1906)	Pliohippus	simus	SPECIES
+8492244	Cormohipparion emsliei Hulbert, 1988	Cormohipparion	emsliei	SPECIES
+8492863	Mesatirhinus superior (Riggs, 1912)	Sphenocoelus	superior	SPECIES
+8492938	Mesohippus brachystylus (Osborn, 1904)	Miohippus	brachystylus	SPECIES
+8493849	Eurohippus parvulus (Laurillard, 1849)	Eurohippus	parvulus	SPECIES
+8494206	Tesselodon fangxianensis (Yan, 1979)	Hispanotherium	fangxianensis	SPECIES
+8494787	Parahipparion saldiasi (Roth, 1899)	Hippidion	saldiasi	SPECIES
+8495175	Deperetella cristata Matthew & Granger, 1925	Deperetella	cristata	SPECIES
+8495420	Diplacodon progressum (Peterson, 1934)	Diplacodon	progressum	SPECIES
+8497756	Lophialetes yunnanensis (Huang & Qi, 1982)	Lophiohippus	yunnanensis	SPECIES
+8498661	Hippidium principale (Lund, 1846)	Hippidion	principale	SPECIES
+8499341	Colonoceras agrestis Marsh, 1873	Colonoceras	agrestis	SPECIES
+8500242	Scaphohippus sumani (Merriam, 1915)	Merychippus	sumani	SPECIES
+8500877	Diceratherium truquianum (Cope, 1879)	Diceratherium	truquianum	SPECIES
+8501268	Cormohipparion ingenuum (Leidy, 1885)	Cormohipparion	ingenuum	SPECIES
+8502176	Protitan robustus Granger & Gregory, 1943	Protitan	robustus	SPECIES
+8502242	Brontotherium gigas Marsh, 1873	Brontotherium	gigas	SPECIES
+8505174	Stephanorhinus hemitoechus (Falconer, 1859)	Dicerorhinus	hemitoechus	SPECIES
+8506139	Zaisanamynodon borisovi Belyaeva, 1971	Zaisanamynodon	borisovi	SPECIES
+8507044	Asinus asinus dianae Dollman, 1935	Equus	asinus	SUBSPECIES
+8507737	Aphelops jemezanus Cope	Aphelops	jemezanus	SPECIES
+8508052	Orohippus atavus Granger, 1908	Lophiodon	atavus	SPECIES
+8508967	Parvicornus occidentalis Mihlbachler & Deméré, 2009	Parvicornus	occidentalis	SPECIES
+8509271	Tapirus tapirus Merriam, 1895	Tapirus	tapirus	SPECIES
+8509342	Hyracodon primus Peterson, 1934	Hyracodon	primus	SPECIES
+8511699	Palaeosyops grangeri Osborn, 1908	Limnohyus	grangeri	SPECIES
+8511937	Hyrachyus princeps Marsh, 1872	Hyrachyus	princeps	SPECIES
+8512619	Pliohippus fairbanksi	Pliohippus	fairbanksi	SPECIES
+8512925	Rhodopagus minimus	Caenolophus	minimus	SPECIES
+8513604	Circotherium sivalense (Falconer & Cautley, 1837)	Circotherium	sivalense	SPECIES
+8513903	Equus quagga boehmi Matschie, 1892	Equus	quagga	SUBSPECIES
+8515199	Equus barcenaei Cope, 1884	Equus	barcenaei	SPECIES
+8516846	Hippotherium rectidens (Cope, 1886)	Neohipparion	rectidens	SPECIES
+8517257	Allacerops pomeli (Roman, 1910)	Allacerops	pomeli	SPECIES
+8517568	Lophiotherium Marsh, 1871	Lophiotherium		GENUS
+8519523	Asinus cumminsii (Cope, 1893)	Equus	cumminsii	SPECIES
+8520471	Tapirus excelsus Simpson, 1945	Tapirus	excelsus	SPECIES
+8522171	Calippus francisi (Hay, 1924)	Calippus	francisi	SPECIES
+8522876	Brontops validus (Marsh, 1891)	Brontops	validus	SPECIES
+8523188	Huaqingtherium Huang & Yan, 1983	Hispanotherium		GENUS
+8524145	Caenolophus promissus Matthew & Granger, 1925	Caenolophus	promissus	SPECIES
+8524831	Eomoropus annectens Peterson, 1919	Eomoropus	annectens	SPECIES
+8525785	Persiatherium rodleri Pandolfi, 2016	Persiatherium	rodleri	SPECIES
+8527785	Hippidion devillei (Gervais, 1855)	Onohippidium	devillei	SPECIES
+8528733	Lambdotherium primaevum	Lambdotherium	primaevum	SPECIES
+8530438	Cormohipparion skinneri Woodburne, 2007	Cormohipparion	skinneri	SPECIES
+8531123	Tapirus olivaresi Ubilla, 1983	Tapirus	olivaresi	SPECIES
+8531736	Meridiolophus expansus Bai, Wang, Meng, Li & Jin, 2014	Meridiolophus	expansus	SPECIES
+8532045	Equus hatcheri Hay	Equus	hatcheri	SPECIES
+8532362	Arenahippus pernix (Marsh, 1876)	Arenahippus	pernix	SPECIES
+8532662	Teleoceras americanum (Yatkola & Tanner, 1979)	Brachypotherium	americanum	SPECIES
+8532731	Caenopus trigonodus allus Troxell, 1921	Caenopus	trigonodus	SUBSPECIES
+8533382	Equus curvidens Owen, 1845	Equus	curvidens	SPECIES
+8533765	Systemodon primaevus (Wortman, 1896)	Homogalax	primaevus	SPECIES
+8534323	Sharamynodon mongoliensis (Osborn, 1936)	Sharamynodon	mongoliensis	SPECIES
+8534391	Dihoplus kirchbergensis (Jäger, 1839)	Stephanorhinus	kirchbergensis	SPECIES
+8534987	Hippotherium speciosum (Leidy, 1854)	Hipparion	speciosum	SPECIES
+8535290	Rhinoceros leptorhinus Cuvier, 1822	Rhinoceros	leptorhinus	SPECIES
+8536649	Mesohippus praecocidens Lambe, 1905	Mesohippus	praecocidens	SPECIES
+8537047	Teleoceras guymonense Prothero, 2005	Teleoceras	guymonense	SPECIES
+8538329	Megacerops riggsi Osborn, 1916	Megacerops	riggsi	SPECIES
+8538650	Tapirus mesopotamicus Ferrero & Noriega, 2007	Tapirus	mesopotamicus	SPECIES
+8539362	Cormohipparion quinni (Woodburne, 1996)	Cormohipparion	quinni	SPECIES
+8539668	Chilotherium anderssoni Ringström, 1924	Chilotherium	anderssoni	SPECIES
+8540039	Miohippus validus (Osborn, 1894)	Miohippus	validus	SPECIES
+8540996	Eohippus angustidens (Cope, 1875)	Orohippus	angustidens	SPECIES
+8541330	Hyrachyus agrarius Leidy, 1871	Hyrachyus	agrarius	SPECIES
+8542755	Heterotitanops parvus Peterson, 1914	Metarhinus	parvus	SPECIES
+8543087	Moropus maximus Holland & Peterson, 1914	Moropus	maximus	SPECIES
+8545468	Qufutitan zhoui Wang & Wang, 1997	Qufutitan	zhoui	SPECIES
+8545771	Caenolophus obliquus Matthew & Granger, 1925	Caenolophus	obliquus	SPECIES
+8546815	Toxotherium woodi Skinner & Gooris, 1966	Toxotherium	woodi	SPECIES
+8547129	Hyracotherium leporinum Owen, 1849	Hyracotherium	leporinum	SPECIES
+8548112	Kalobatippus australis (Leidy, 1873)	Kalobatippus	australis	SPECIES
+8548414	Diceratherium proavitum Hatcher, 1894	Diceratherium	proavitum	SPECIES
+8548807	Hipparion platystyle	Hipparion	platystyle	SPECIES
+8549055	Lunania zhoui Huang, 2002	Lunania	zhoui	SPECIES
+8549444	Pataecops parvus Radinsky, 1965	Pataecops	parvus	SPECIES
+8550064	Teleolophus beliajevi (Biryukov, 1974)	Teleolophus	beliajevi	SPECIES
+8550138	Triplopus jeminaiensis Jin, 2000	Triplopus	jeminaiensis	SPECIES
+8551161	Diceratherium cuspidatum Troxell, 1921	Diceratherium	cuspidatum	SPECIES
+8552808	Coelodonta thibetana Deng & al., 2011	Coelodonta	thibetana	SPECIES
+8554814	Onager zoyatalis Mooser, 1959	Equus	zoyatalis	SPECIES
+8555413	Caenopus yoderensis (Schlaikjer, 1935)	Subhyracodon	yoderensis	SPECIES
+8556559	Colodon luxatus Marsh, 1890	Colodon	luxatus	SPECIES
+8557202	Rhodopagus pygmaeus Radinsky, 1965	Rhodopagus	pygmaeus	SPECIES
+8557540	Pliohippus potosinus Ferrusquía-Villafranca & al., 2014	Pliohippus	potosinus	SPECIES
+8558242	Hyrachyus hypostylus Wood, 1934	Hyrachyus	hypostylus	SPECIES
+8559644	Palaeosyops longirostris Earle, 1892	Palaeosyops	longirostris	SPECIES
+8560563	Pliohippus robustus Marsh, 1874	Pliohippus	robustus	SPECIES
+8561892	Equus quagga burchellii (Gray, 1824)	Equus	quagga	SUBSPECIES
+8563637	Schizolophodon cuspidens Peterson, 1919	Isectolophus	cuspidens	SPECIES
+8566308	Equus lambei Hay	Equus	lambei	SPECIES
+8566625	Mesohippus portentus (Douglass, 1908)	Mesohippus	portentus	SPECIES
+8568084	Tapiriscus pannonicus Kretzoi, 1951	Tapiriscus	pannonicus	SPECIES
+8569775	Diceratherium matutinum (Marsh, 1870)	Rhinoceros	matutinum	SPECIES
+8571463	Caementodon tongxinensis Guan, 1988	Hispanotherium	tongxinensis	SPECIES
+8571795	Hipparion condoni Merriam, 1915	Hipparion	condoni	SPECIES
+8572097	Hippidion angulatus Ameghino, 1889	Hippidion	angulatus	SPECIES
+8572737	Epimanteoceras formosus Granger & Gregory, 1943	Epimanteoceras	formosus	SPECIES
+8572821	Eotitanops pakistanensis Missiaen & al., 2011	Eotitanops	pakistanensis	SPECIES
+8573455	Onager hibbardi Mooser, 1959	Equus	hibbardi	SPECIES
+8574188	Woodoceras brachyops Prothero, 2005	Woodoceras	brachyops	SPECIES
+8574840	Equus calobatus Troxell, 1915	Equus	calobatus	SPECIES
+8575243	Helaletes boops Marsh, 1872	Helaletes	boops	SPECIES
+8575865	Paraceratherium bugtiense Forster Cooper, 1911	Paraceratherium	bugtiense	SPECIES
+8576821	Hispanotherium lintungensis (Zhai, 1978)	Hispanotherium	lintungensis	SPECIES
+8576895	Lophiodon affinis Marsh, 1871	Lophiodon	affinis	SPECIES
+8577889	Merychippus praecocidens (Russell, 1933)	Acritohippus	praecocidens	SPECIES
+8578922	Cormohipparion goorisi (MacFadden & Skinner, 1981)	Cormohipparion	goorisi	SPECIES
+8579619	Tapirus augustus Matthew & Granger, 1923	Tapirus	augustus	SPECIES
+8579939	Brontotherium hatcheri (Osborn)	Brontotherium	hatcheri	SPECIES
+8580257	Breviodon lumeiyiensis Huang & Qi, 1982	Breviodon	lumeiyiensis	SPECIES
+8580910	Epihippus parvus (Granger, 1908)	Anchitherium	parvus	SPECIES
+8581226	Eusyodon maximus Leidy		maximus	SPECIES
+8581297	Metacaenopus Cook, 1909	Diceratherium		GENUS
+8581617	Mesohippus latidens Douglass, 1903	Mesohippus	latidens	SPECIES
+8584620	Homogalax reliquius Qi, 1987	Helaletes	reliquius	SPECIES
+8586051	Protorohippus montanum (Wortman, 1896)	Protorohippus	montanum	SPECIES
+8587694	Pliohippus stockii (Lance, 1950)	Astrohippus	stockii	SPECIES
+8588349	Chilotherium yunnanensis Tang & al., 1974	Shansirhinus	yunnanensis	SPECIES
+8589417	Merychippus seversus (Cope, 1878)	Merychippus	seversus	SPECIES
+8589758	Orotherium loevii Cope	Orotherium	loevii	SPECIES
+8590102	Hyrachyus metalophus Chow & Qi, 1982	Hyrachyus	metalophus	SPECIES
+8591181	Yimengia zdanskyi (Lucas & Schoch, 1981)	Yimengia	zdanskyi	SPECIES
+8591512	Aktautitan hippopotamopus Mihlbachler & al., 2004	Aktautitan	hippopotamopus	SPECIES
+8592914	Aphelops Owen, 1845	Aphelops		GENUS
+8593672	Equus major DeKay, 1842	Equus	major	SPECIES
+8594431	Nanotitan shanghuangensis Qi & Beard, 1996	Nanotitanops	shanghuangensis	SPECIES
+8594685	Amynodon intermedius Osborn, 1889	Amynodon	intermedius	SPECIES
+8594759	Rhinoceros crassus Leidy	Rhinoceros	crassus	SPECIES
+8595093	Boreohippidion galushai (MacFadden & Skinner, 1979)	Boreohippidion	galushai	SPECIES
+8597077	Desmatippus nebrascensis (Peterson, 1907)	Desmatippus	nebrascensis	SPECIES
+8598541	Teleolophus sichuanensis Xu & al., 1979	Teleolophus	sichuanensis	SPECIES
+8600585	Desmatippus tyleri (Loomis, 1908)	Desmatippus	tyleri	SPECIES
+8601261	Menodus giganteus (Pomel, 1849)	Palaeotherium	giganteus	SPECIES
+8602982	Caenolophus suprametalophus Shi, 1989	Caenolophus	suprametalophus	SPECIES
+8603328	Nanotitanops shanghuangensis Qi & Beard, 1998	Nanotitanops	shanghuangensis	SPECIES
+8604079	Equus proversus (Merriam, 1916)	Pliohippus	proversus	SPECIES
+8605193	Orohippus uintanus (Marsh, 1872)	Orotherium	uintanus	SPECIES
+8605860	Schizotherium bilobatum (Cope, 1889)	Schizotherium	bilobatum	SPECIES
+8606572	Yimengia laiwuensis (Qi & Meng, 1983)	Yimengia	laiwuensis	SPECIES
+8606932	Pliohippus gracilis Marsh, 1892	Pliohippus	gracilis	SPECIES
+8607676	Hyrachyus crista Qi, 1987	Hyrachyus	crista	SPECIES
+8609056	Miohippus equinanus (Osborn, 1918)	Miohippus	equinanus	SPECIES
+8610120	Pliohippus bakeri Azzaroli, 1988	Pliohippus	bakeri	SPECIES
+8611199	Homogalax planeticus Gingerich, 1980	Cardiolophus	planeticus	SPECIES
+8611875	Sifrhippus grangeri (Gingerich, 1989)	Sifrhippus	grangeri	SPECIES
+8612264	Aceratherium exiguum Lambe, 1908	Subhyracodon	exiguum	SPECIES
+8615099	Sianodon bahoensis (Xu, 1965)	Cadurcodon	bahoensis	SPECIES
+8616092	Onager altidens Quinn, 1957	Equus	altidens	SPECIES
+8616436	Mesohippus celer (Marsh, 1874)	Anchitherium	celer	SPECIES
+8616780	Subhyracodon Wood, 1927	Subhyracodon		GENUS
+8617526	Equus midlandensis Quinn, 1957	Equus	midlandensis	SPECIES
+8618262	Pollyosbornia altidens (Osborn, 1908)	Pollyosbornia	altidens	SPECIES
+8618583	Prohyracodon meridionale Chow, 1961	Prohyracodon	meridionale	SPECIES
+8618763	Proterotherium australe (Burmeister, 1879)	Anchitherium	australe	SPECIES
+8619261	Cormohipparion johnsoni Woodburne, 2007	Cormohipparion	johnsoni	SPECIES
+8619592	Hoploaceratherium tetradactylum (Lartet, 1837)	Hoploaceratherium	tetradactylum	SPECIES
+8619669	Caenopus platycephalus nanolophus Troxell, 1921	Caenopus	platycephalus	SUBSPECIES
+8620003	Mesohippus meteulophus (Osborn, 1904)	Miohippus	meteulophus	SPECIES
+8621043	Eohippus validus Marsh, 1876	Orohippus	validus	SPECIES
+8621358	Hyrachyus agrestis Leidy, 1871	Hyrachyus	agrestis	SPECIES
+8621439	Beliajevina tekkayai (Heissig, 1974)	Hispanotherium	tekkayai	SPECIES
+8621775	Hipparion chiai Liu & al., 1978	Hipparion	chiai	SPECIES
+8622530	Deperetella depereti (Zdansky, 1930)	Deperetella	depereti	SPECIES
+8622774	Diplacodon elatus Marsh, 1875	Diplacodon	elatus	SPECIES
+8622860	Rhadinorhinus abbotti Riggs, 1912	Rhadinorhinus	abbotti	SPECIES
+8623104	Hesperaletes Colbert, 2006	Hesperaletes		GENUS
+8623860	Parahippus barbouri (White, 1942)	Parahippus	barbouri	SPECIES
+8624932	Asinus aguascalentensis (Mooser, 1959)	Equus	aguascalentensis	SPECIES
+8625313	Ampholophus luensis Wang & Tong, 1996	Ampholophus	luensis	SPECIES
+8625914	Desmatotherium guyotii Scott, 1883	Desmatotherium	guyotii	SPECIES
+8626326	Hippidion compressidens Ameghino, 1889	Hippidion	compressidens	SPECIES
+8626977	Caementodon oettingenae (Heissig, 1972)	Hispanotherium	oettingenae	SPECIES
+8627053	Hyrachyus lunanensis Huang & Qi, 1982	Hyrachyus	lunanensis	SPECIES
+8628062	Scaphohippus intermontanus (Merriam, 1915)	Merychippus	intermontanus	SPECIES
+8628828	Aphelops montanus Douglass, 1908	Peraceras	montanus	SPECIES
+8629152	Cormohipparion sphenodus (Cope, 1889)	Merychippus	sphenodus	SPECIES
+8629863	Tapirus lundeliusi Hulbert, 2010	Tapirus	lundeliusi	SPECIES
+8630191	Megacerops assiniboiensis Lambe, 1908	Megacerops	assiniboiensis	SPECIES
+8630863	Equus tau (Owen, 1869)	Equus	tau	SPECIES
+8633315	Allacerops turgaica (Borissiak, 1915)	Epiaceratherium	turgaica	SPECIES
+8633734	Neohipparion phosphorum (Simpson, 1930)	Neohipparion	phosphorum	SPECIES
+8634471	Metamynodon rex Troxell, 1921	Metamynodon	rex	SPECIES
+8635077	Homogalax uintensis Troxell, 1922	Homogalax	uintensis	SPECIES
+8636183	Aceratherium copei (Osborn, 1898)	Subhyracodon	copei	SPECIES
+8636971	Equus quagga crawshayi de Winton, 1896	Equus	quagga	SUBSPECIES
+8637380	Colodon dakotensis	Colodon	dakotensis	SPECIES
+8638032	Hyracodon apertus Sinclair, 1922	Hyracodon	apertus	SPECIES
+8638370	Pliohippus mexicanus (Lance, 1950)	Dinohippus	mexicanus	SPECIES
+8639376	Palaeosyops humilis Leidy	Palaeosyops	humilis	SPECIES
+8640483	Miohippus taxus (Douglass, 1908)	Miohippus	taxus	SPECIES
+8640832	Hyrachyus imperialis Osborn & al., 1878	Hyrachyus	imperialis	SPECIES
+8640906	Menoceras cooki (Peterson, 1906)	Menoceras	cooki	SPECIES
+8641934	Hyracodon arcidens Cope, 1873	Hyracodon	arcidens	SPECIES
+8642635	Mesohippus longipes (Osborn & Wortman, 1894)	Colodon	longipes	SPECIES
+8642708	Lophiodon tapirotherium Desmarest, 1822	Lophiodon	tapirotherium	SPECIES
+8643071	Equus quagga chapmani Layard, 1865	Equus	quagga	SUBSPECIES
+8643419	Orohippus ballardi (Marsh, 1871)		ballardi	SPECIES
+8644166	Archaeohippus nanus Simpson, 1932	Archaeohippus	nanus	SPECIES
+8646708	Allacerops minor Belayeva, 1954	Allacerops	minor	SPECIES
+8648432	Diceratherium nanum Marsh, 1875	Rhinoceros	nanum	SPECIES
+8648843	Nannippus phlegon	Nannippus	phlegon	SPECIES
+8649935	Protitan bellus Granger & Gregory, 1943	Protitan	bellus	SPECIES
+8650193	Tapirus haysii californicus Merriam, 1913	Tapirus	haysii	SUBSPECIES
+8650957	Hipparion mohavense	Hipparion	mohavense	SPECIES
+8652781	Hyracotherium tapirinum (Cope, 1875)	Orohippus	tapirinum	SPECIES
+8652869	Diploclonus amplus Marsh, 1890	Diploclonus	amplus	SPECIES
+8652950	Equus Linnaeus, 1758	Equus		GENUS
+8653144	Hyrachyus minor Huang & Qi, 1982	Hyrachyus	minor	SPECIES
+8654229	Teilhardia pretiosa Matthew & Granger, 1926	Teilhardia	pretiosa	SPECIES
+8654903	Schlosseria hetaoyuanensis Tong & Lei, 1984	Schlosseria	hetaoyuanensis	SPECIES
+8656757	Equus laurentius Hay, 1913	Equus	laurentius	SPECIES
+8657181	Hesperaletes borineyi Colbert, 2006	Hesperaletes	borineyi	SPECIES
+8657436	Metarhinus riparius Riggs, 1912	Metarhinus	riparius	SPECIES
+8657853	Baluchitherium osborni (Forster-Cooper, 1913)	Paraceratherium	osborni	SPECIES
+8659330	Hyracotherium cuspidatum	Hyracotherium	cuspidatum	SPECIES
+8659683	Orientolophus hengdongensis Ting, 1993	Orientolophus	hengdongensis	SPECIES
+8660026	Merychippus labrosus (Cope, 1874)	Merychippus	labrosus	SPECIES
+8660380	Mesohippus grallipes Sinclair, 1925	Mesohippus	grallipes	SPECIES
+8661132	Cormohipparion merriami Woodburne, 2007	Cormohipparion	merriami	SPECIES
+8661463	Protohippus lenticularis (Cope, 1893)	Cormohipparion	lenticularis	SPECIES
+8662229	Megacerops copei (Osborn, 1908)	Megacerops	copei	SPECIES
+8662578	Sastrilophus dehmi Sahni & Khare, 1971	Sastrilophus	dehmi	SPECIES
+8662918	Equus bautistensis	Equus	bautistensis	SPECIES
+8663693	Subhyracodon kewi Stock, 1933	Subhyracodon	kewi	SPECIES
+8664058	Mesohippus grandis (Clark & Beerbower, 1967)	Miohippus	grandis	SPECIES
+8664816	Homogalax namadicus Dashzeveg, 1979	Homogalax	namadicus	SPECIES
+8665420	Sianodon gaowangouensis Li, 2003	Cadurcodon	gaowangouensis	SPECIES
+8665498	Rhinoceros philippinensis von Koenigwald, 1956	Rhinoceros	philippinensis	SPECIES
+8665867	Neohipparion whitneyi Gidley, 1903	Neohipparion	whitneyi	SPECIES
+8666570	Rhinoceros mercki Kaup, 1841	Dicerorhinus	mercki	SPECIES
+8666651	Sharamynodon kirghisensis (Belyaeva, 1971)	Sharamynodon	kirghisensis	SPECIES
+8667684	Equus rectidens Gervais & Ameghino, 1880	Equus	rectidens	SPECIES
+8668805	Arenahippus aemulor (Gingerich, 1991)	Sifrhippus	aemulor	SPECIES
+8669170	Equus niobrarensis alaskae Winans	Equus	niobrarensis	SUBSPECIES
+8669611	Tanyops undans Marsh, 1894	Tanyops	undans	SPECIES
+8670282	Hyracodon ischyrolophus Schlaikjer, 1935	Hyracodon	ischyrolophus	SPECIES
+8670970	Cormohipparion fricki Woodburne, 2007	Cormohipparion	fricki	SPECIES
+8671651	Eotitanops princeps Osborn, 1913	Eotitanops	princeps	SPECIES
+8672419	Merychippus sejunctus (Cope, 1874)	Merychippus	sejunctus	SPECIES
+8673198	Epiaceratherium naduongense Böhme & al., 2013	Epiaceratherium	naduongense	SPECIES
+8673883	Hipphaplous entrerianus Ameghino, 1885	Hipphaplous	entrerianus	SPECIES
+8674590	Sivatitanops rugosidens Pilgrim, 1925	Rhinotitan	rugosidens	SPECIES
+8676151	Persiatherium Pandolfi, 2016	Persiatherium		GENUS
+8676867	Equus martinei (Spillmann, 1938)	Equus	martinei	SPECIES
+8677661	Wickia brevirhinus Mihlbachler, 2008	Wickia	brevirhinus	SPECIES
+8678027	Caenolophus progressus Matthew & Granger, 1925	Caenolophus	progressus	SPECIES
+8679457	Hyracotherium gabuniai (Hooker & Dashzeveg, 2004)	Hyracotherium	gabuniai	SPECIES
+8679811	Menodus proutii (Leidy, 1850)	Megacerops	proutii	SPECIES
+8680828	Diceratherium radtkei Prothero & Rasmussen, 2008	Diceratherium	radtkei	SPECIES
+8682663	Teleolophus shandongensis Chow & Qi, 1982	Teleolophus	shandongensis	SPECIES
+8683100	Equus shoshonensis (Gidley, 1930)	Plesippus	shoshonensis	SPECIES
+8683452	Nannippus minor (Sellards, 1916)	Hipparion	minor	SPECIES
+8684254	Anchippus brevidens Marsh, 1874	Anchippus	brevidens	SPECIES
+8685045	Danjiangia pingi Wang, 1995	Danjiangia	pingi	SPECIES
+8685734	Diceros pachygnathus Guéran, 1980	Ceratotherium	pachygnathus	SPECIES
+8687113	Microtitan elongatus Qi, 1987	Microtitan	elongatus	SPECIES
+8687473	Minchenoletes erlianensis Wang & al., 2011	Minchenoletes	erlianensis	SPECIES
+8688597	Skinneroceras manningi Prothero, 2005	Skinneroceras	manningi	SPECIES
+8689027	Orohippus osbornianus (Cope, 1883)	Lophiodon	osbornianus	SPECIES
+8690507	Ulania wilsoni Qi, 1990	Ulania	wilsoni	SPECIES
+8691182	Hipparion anthonyi	Hipparion	anthonyi	SPECIES
+8691888	Palaeosyops leidyi Osborn, 1908	Limnohyus	leidyi	SPECIES
+8691973	Pliolophus vulpiceps Owen, 1858	Pliolophus	vulpiceps	SPECIES
+8693046	Mesohippus planidens Lambe, 1905	Miohippus	planidens	SPECIES
+8693127	Palaeosyops major Leidy, 1871	Palaeosyops	major	SPECIES
+8694534	Hyracodon major Scott & Osborn, 1887	Hyracodon	major	SPECIES
+8698244	Cadurcodon kazakademius Biryukov, 1961	Cadurcodon	kazakademius	SPECIES
+8698677	Dinohippus edensis (Frick, 1921)	Pliohippus	edensis	SPECIES
+8699020	Neohipparion floresi	Neohipparion	floresi	SPECIES
+8699382	Stephanorhinus hundsheimensis (Toula, 1902)	Stephanorhinus	hundsheimensis	SPECIES
+8699459	Gigantamynodon promisus Xu, 1966	Gigantamynodon	promisus	SPECIES
+8700864	Mesohippus viejensis Clark & Beerbower, 1967	Mesohippus	viejensis	SPECIES
+8701224	Diceratherium lobatum Troxell, 1921	Diceratherium	lobatum	SPECIES
+8702750	Brontotherium leidyi Osborn, 1902	Megacerops	leidyi	SPECIES
+8703106	Tapirus webbi Hulbert, 2005	Tapirus	webbi	SPECIES
+8703869	Cormohipparion plicatile (Leidy, 1887)	Hipparion	plicatile	SPECIES
+8704581	Dolichorhinus fluminalis Riggs, 1912	Dolichorhinus	fluminalis	SPECIES
+8704664	Mesohippus eulophus Osborn, 1904	Miohippus	eulophus	SPECIES
+8705734	Cymbalophus cuniculus (Owen, 1842)	Hyracotherium	cuniculus	SPECIES
+8705811	Metatelmatherium cristatum Granger & Gregory, 1938	Metatelmatherium	cristatum	SPECIES
+8706110	Hyrachyus crassidens Osborn & al., 1878	Hyrachyus	crassidens	SPECIES
+8706874	Hippidion saldiasi Roth, 1899	Hippidion	saldiasi	SPECIES
+8707228	Baluchitherium grangeri Osborn, 1923	Baluchitherium	grangeri	SPECIES
+8707591	Diplacodon emarginatus Hatcher, 1895	Diplacodon	emarginatus	SPECIES
+8725922	Hyrachyus obliquidens Scott & Osborn, 1887	Hyrachyus	obliquidens	SPECIES
+8733228	Lophiotherium robiacense Deperet, 1917		robiacense	SPECIES
+8735211	Rhinoceros nebrascensis Leidy	Rhinoceros	nebrascensis	SPECIES
+8738233	Franzenium tetradactylum Casanovas-Cladellas & Santafé-Llopis, 1989	Franzenium	tetradactylum	SPECIES
+8739202	Tapiravus polkensis Olsen, 1960	Tapiravus	polkensis	SPECIES
+8742874	Hypohippus matthewi Barbour, 1914	Hypohippus	matthewi	SPECIES
+8743943	Hippotherium princeps (Leidy, 1890)	Neohipparion	princeps	SPECIES
+8745926	Onohippidium devillei (Gervais, 1855)	Onohippidium	devillei	SPECIES
+8747614	Megacerops brachycephalus Osborn	Megacerops	brachycephalus	SPECIES
+8748579	Megacerops primitivus Lambe, 1908	Megacerops	primitivus	SPECIES
+8754575	Equus grevyi berberensis Pocock, 1902	Equus	grevyi	SUBSPECIES
+8765907	Nannippus tehonensis (Merriam, 1916)	Nannippus	tehonensis	SPECIES
+8767891	Caenolophus promissus verified	Caenolophus	promissus	SPECIES
+8773647	Plesippus fromanius Repenning & al.	Plesippus	fromanius	SPECIES
+8781702	Eotrigonias rhinocerhinus Wood, 1927	Eotrigonias	rhinocerhinus	SPECIES
+8783405	Protohippus placidus Leidy, 1858	Protohippus	placidus	SPECIES
+8786179	Protohippus coalingensis (Merriam, 1914)	Protohippus	coalingensis	SPECIES
+8786493	Parahippus avus	Protohippus	avus	SPECIES
+8790171	Rhinoceros javanicus Geoffroy & Cuvier, 1824	Rhinoceros	javanicus	SPECIES
+8794326	Pliohippus interpolatus	Pliohippus	interpolatus	SPECIES
+8795276	Cadurcodon maomingensis Averianov, Danilov, Jin & Wang, 2016	Cadurcodon	maomingensis	SPECIES
+8798929	Hyracotherium cristonense	Hyracotherium	cristonense	SPECIES
+8800967	Allops walcotti Osborn	Menops	walcotti	SPECIES
+8806798	Chalicotherium pentelicum (Gaudry & Lartet, 1856)	Chalicotherium	pentelicum	SPECIES
+8807078	Pliohippus edensis (Frick, 1921)	Pliohippus	edensis	SPECIES
+8815019	Propachynolophus hengyangensis	Propalaeotherium	hengyangensis	SPECIES
+8815230	Propalaeotherium sudrei Remy, Krasovec & Bernard, 2016	Propalaeotherium	sudrei	SPECIES
+8817816	Lophiodon nanus Marsh, 1871	Lophiodon	nanus	SPECIES
+8821575	Rhinoceros proterus Leidy	Rhinoceros	proterus	SPECIES
+8825757	Leurocephalus cultridens Osborn & al., 1878	Leurocephalus	cultridens	SPECIES
+8827518	Equus parvulus Marsh, 1868	Equus	parvulus	SPECIES
+8828419	Forstercooperia ergiliinensis Gabunia & Dashzeveg, 1974	Forstercooperia	ergiliinensis	SPECIES
+8828685	Equus burchellii chapmanni Layard, 1865	Equus	burchellii	SUBSPECIES
+8830662	Orotherium uintanum Marsh, 1872	Orotherium	uintanum	SPECIES
+8833634	Eqvus johnstoni Sclater, 1901	Equus	johnstoni	SPECIES
+8835423	Breviodon acares Radinsky, 1965	Breviodon	acares	SPECIES
+8838619	Rhinoceros longipes Leidy	Rhinoceros	longipes	SPECIES
+8840676	Propachynolophus maldani	Propachynolophus	maldani	SPECIES
+8842417	Lophiodon validus Marsh, 1871	Lophiodon	validus	SPECIES
+8845295	Xylotitan cenosus Mihlbachler & Samuels, 2016		cenosus	SPECIES
+8845602	Stephanorhinus kirchbergensis (Jäger, 1839)	Stephanorhinus	kirchbergensis	SPECIES
+8848382	Eggysodon osborni Schlosser, 1902	Eggysodon	osborni	SPECIES
+8853343	Hipparion trampasense (Edwards, 1982)	Hipparion	trampasense	SPECIES
+8853643	Macrotherium pentelicum Gaudry & Lartet, 1856	Macrotherium	pentelicum	SPECIES
+8855432	Caenopus platycephalus	Caenopus	platycephalus	SPECIES
+8861368	Merychippus westoni Simpson, 1930	Merychippus	westoni	SPECIES
+8861660	Pliohippus stylodontus	Pliohippus	stylodontus	SPECIES
+8863441	Hipparion gratum Leidy, 1869	Hipparion	gratum	SPECIES
+8864577	Protohippus mirabilis (Leidy, 1858)	Merychippus	mirabilis	SPECIES
+8869493	Aphelops crassus (Leidy)	Rhinoceros	crassus	SPECIES
+8876286	Teilhardia valdensis Seward, 1913	Teilhardia	valdensis	SPECIES
+8877789	Lophiodon oregonensis Leidy, 1873	Lophiodon	oregonensis	SPECIES
+8879847	Helaletes latidens Osborn & al., 1878	Helaletes	latidens	SPECIES
+8882672	Anchitherium celer Marsh, 1874	Anchitherium	celer	SPECIES
+8884785	Orohippus uintensis Marsh, 1875	Orohippus	uintensis	SPECIES
+8885928	Protohippus parvulus (Marsh, 1868)	Equus	parvulus	SPECIES
+8887724	Merychippus supremus	Pliohippus	supremus	SPECIES
+8894081	Aceratherium abeli Coombs	Aceratherium	abeli	SPECIES
+8896221	Protohippus pachyops Cope, 1893	Protohippus	pachyops	SPECIES
+8899199	Equus oldowayensis Hopwood, 1937	Equus	oldowayensis	SPECIES
+8901011	Hipparion plicatile	Hipparion	plicatile	SPECIES
+8901328	Dicerorhinus steinheimensis Jäger, 1835	Dicerorhinus	steinheimensis	SPECIES
+8906249	Anchitherium affinis Leidy	Anchitherium	affinis	SPECIES
+8911350	Aceratherium campbelli Hamilton, 1973	Aceratherium	campbelli	SPECIES
+8922835	Orohippus angustidens Cope	Orohippus	angustidens	SPECIES
+8924622	Taprirus leucogenys Gray, 1872		leucogenys	SPECIES
+8925662	Desmatotherium woodi Gazin	Desmatotherium	woodi	SPECIES
+8925973	Helaletes mongoliensis Osborn, 1923	Helaletes	mongoliensis	SPECIES
+8927740	Chalicotherium rusingense Butler, 1965	Chalicotherium	rusingense	SPECIES
+8931029	Pliohippus ansae	Protohippus	ansae	SPECIES
+8932827	Desmatotherium kayi Hough	Desmatotherium	kayi	SPECIES
+8933951	Protohippus fossulatus Cope, 1893	Protohippus	fossulatus	SPECIES
+8938890	Lophiodon pumilus Marsh, 1871	Lophiodon	pumilus	SPECIES
+8939191	Equus simplicidens minor	Equus	simplicidens	SUBSPECIES
+8940997	Equus hemionus bedfordi Matschie, 1911	Equus	hemionus	SUBSPECIES
+8942177	Equus penrecei Thomas, 1900	Equus	penrecei	SPECIES
+8952543	Merychippus perditus	Equus	perditus	SPECIES
+8955567	Protohippus ansae Matthew & Stirton, 1930	Protohippus	ansae	SPECIES
+8960547	Diaceratherium lemanense Pomel, 1853	Diaceratherium	lemanense	SPECIES
+8962696	Eohippus pernix (Marsh, 1876)	Arenahippus	pernix	SPECIES
+8965684	Pliohippus osborni Frick, 1921	Pliohippus	osborni	SPECIES
+8966040	Hyracotherium angustidens	Orohippus	angustidens	SPECIES
+8970848	Heptodon niushanensis Chow & Li, 1965	Heptodon	niushanensis	SPECIES
+8971149	Paranchilophus remyi Casanovas-Cladellas & Santafé-Llopis, 1989	Paranchilophus	remyi	SPECIES
+8976108	Anchitherium agreste Leidy, 1873	Anchitherium	agreste	SPECIES
+8979141	Pliohippus proversus (Merriam, 1916)	Pliohippus	proversus	SPECIES
+8979442	Hipparion speciosum Leidy, 1856	Hipparion	speciosum	SPECIES
+8981326	Palaeosyops megarhinus Earle, 1891	Palaeosyops	megarhinus	SPECIES
+8982691	Heptodon tianshanensis Zhai, 1978	Heptodon	tianshanensis	SPECIES
+8986631	Equus asinus somaliensis Noack, 1884	Equus	asinus	SUBSPECIES
+8986851	Titanotherium anceps Marsh, 1871	Titanotherium	anceps	SPECIES
+8993071	Caenopus trigonodus	Caenopus	trigonodus	SPECIES
+9001124	Hipparion ingenium	Hipparion	ingenium	SPECIES
+9001459	Homogalax wutuensis Chow & Li, 1965	Homogalax	wutuensis	SPECIES
+9003269	Rhinoceros annectens Marsh, 1873	Rhinoceros	annectens	SPECIES
+9014779	Hipparion catalaunicum	Hipparion	catalaunicum	SPECIES
+9015100	Anchitherium aurelianense steinheimense Abusch-Siewert, 1983	Anchitherium	aurelianense	SUBSPECIES
+9018069	Tapirus peruvianus Gray, 1872	Tapirus	peruvianus	SPECIES
+9021406	Propalaeotherium hengyangensis Young, 1944	Propalaeotherium	hengyangensis	SPECIES
+9023269	Nannippus whitneyi	Nannippus	whitneyi	SPECIES
+9023622	Hipparion affine Leidy, 1869	Hipparion	affine	SPECIES
+9025490	Propalaeotherium argentonicum Gervais, 1859	Propalaeotherium	argentonicum	SPECIES
+9028543	Rhinoceros morgani Mecquenem, 1908	Rhinoceros	morgani	SPECIES
+9028861	Taprirus laurillardi Gray, 1867		laurillardi	SPECIES
+9037426	Pliohippus supremus (Leidy, 1869)	Pliohippus	supremus	SPECIES
+9039319	Limnohyus robustus Marsh, 1872	Limnohyus	robustus	SPECIES
+9041459	Diceros bicornis ladoensis Zukowsky, 1965	Diceros	bicornis	SUBSPECIES
+9046021	Parahippus crenidens	Desmatippus	crenidens	SPECIES
+9049132	Hipparion theobaldi (Lydekker, 1877)	Hipparion	theobaldi	SPECIES
+9059589	Hyracotherium cuniculus (Owen, 1842)	Hyracotherium	cuniculus	SPECIES
+9059968	Zaisanamynodon protheroi Lucas, 2006	Zaisanamynodon	protheroi	SPECIES
+9060218	Anchitherium aurelianense aurelianense	Anchitherium	aurelianense	SUBSPECIES
+9064947	Eomoropus amorarum	Eomoropus	amorarum	SPECIES
+9065266	Palaeosyops hyognathus Osborn, 1889	Palaeosyops	hyognathus	SPECIES
+9066356	Brontotherium hypoceras (Cope)	Brontotherium	hypoceras	SPECIES
+9068269	Hipparion campbelli Bernor, 1985	Hipparion	campbelli	SPECIES
+9068589	Hipparion mohavense callodonte Merriam, 1915	Hipparion	mohavense	SUBSPECIES
+9071678	Hipparion montezuma (Leidy, 1883)	Hipparion	montezuma	SPECIES
+9073896	Orohippus vasacciensis Cope	Orohippus	vasacciensis	SPECIES
+9076884	Paloplotherium annectens Owen, 1848	Paloplotherium	annectens	SPECIES
+9082169	Epihippus intermedius (Peterson, 1931)	Epihippus	intermedius	SPECIES
+9085608	Merychippus mirabilis (Leidy)	Merychippus	mirabilis	SPECIES
+9091096	Pachynolophus duvali Pomel, 1847	Pachynolophus	duvali	SPECIES
+9094263	Hyrachyus bairdi Marsh	Hyrachyus	bairdi	SPECIES
+9096463	Lophiotherium ballardi Marsh, 1871		ballardi	SPECIES
+9103830	Equus africanus asinus Linnaeus, 1758	Equus	africanus	SUBSPECIES
+9104826	Equus perditus Leidy, 1858	Equus	perditus	SPECIES
+9105133	Nannippus gratum	Hipparion	gratum	SPECIES
+9108257	Protohippus avus Marsh, 1874	Protohippus	avus	SPECIES
+9110173	Hipparion prostylum Gervais, 1848	Hipparion	prostylum	SPECIES
+9110480	Indricotherium asiaticum Borissiak, 1916	Indricotherium	asiaticum	SPECIES
+9113517	Rhinoceros meridianus (Leidy)	Rhinoceros	meridianus	SPECIES
+9117798	Equus ferus caballus Linnaeus, 1758	Equus	ferus	SUBSPECIES
+9122257	Anchilophus depereti Stehlin, 1905	Anchilophus	depereti	SPECIES
+9124096	Hyrachyus intermedius Osborn & al., 1878	Hyrachyus	intermedius	SPECIES
+9124432	Cantabrotherium truyolsi Casanovas-Cladellas & Santafé-Llopis, 1987	Cantabrotherium	truyolsi	SPECIES
+9125520	Taprirus enigmaticus Gray, 1872		enigmaticus	SPECIES
+9127771	Nannippus gratum tehonense	Hipparion	gratum	SUBSPECIES
+9136458	Lophiaspis baicherei Deperet, 1910	Lophiaspis	baicherei	SPECIES
+9139608	Caenolophus minimus Matthew & Granger, 1925	Caenolophus	minimus	SPECIES
+9141894	Anchilophus desmaresti Gervais, 1852	Anchilophus	desmaresti	SPECIES
+9147283	Diceratherium pacificum (Leidy, 1871)	Diceratherium	pacificum	SPECIES
+9150310	Rhinoceros palaeindicus verified	Rhinoceros	palaeindicus	SPECIES
+9150633	Hipparion montezumae (Leidy)	Hipparion	montezumae	SPECIES
+9156087	Pernatherium rugosum	Pernatherium	rugosum	SPECIES
+9158018	Rhinoceros matutinus Marsh, 1870	Rhinoceros	matutinus	SPECIES
+9164591	Anchitherium cognatus Leidy	Anchitherium	cognatus	SPECIES
+9164798	Pachynolophus gaytei Remy, 2015	Pachynolophus	gaytei	SPECIES
+9164923	Propachynolophus gaudryi (Lemoine, 1878)	Propachynolophus	gaudryi	SPECIES
+9168119	Plesippus shoshonensis Gidley	Plesippus	shoshonensis	SPECIES
+9170387	Hyracotherium venticolum Cope, 1881	Hyracotherium	venticolum	SPECIES
+9173429	Tapirus robustus Von Koenigswald, 1930	Tapirus	robustus	SPECIES
+9173759	Pappaceras confluens Wood, 1963	Pappaceras	confluens	SPECIES
+9175313	Pliohippus minutus	Pliohippus	minutus	SPECIES
+9175671	Anchitherium equinum Scott, 1893	Anchitherium	equinum	SPECIES
+9178872	Megahippus webbi	Megahippus	webbi	SPECIES
+9179234	Hipparion equinus	Hipparion	equinus	SPECIES
+9182370	Anchitherium gracilis Marsh, 1871	Anchitherium	gracilis	SPECIES
+9184296	Protapirus robustus (Sinclair, 1901)	Protapirus	robustus	SPECIES
+9187645	Orohippus tapirinus Cope	Orohippus	tapirinus	SPECIES
+9189984	Hippotherium calamarium (Cope, 1875)	Merychippus	calamarium	SPECIES
+9198687	Equus germanicus	Equus	germanicus	SPECIES
+9200170	Rhinoceros nebraskensis Leidy	Rhinoceros	nebraskensis	SPECIES
+9204395	Hyracodon arcidens mimus Troxell, 1921	Hyracodon	arcidens	SUBSPECIES
+9207911	Hyrachyus bairdianus (Marsh, 1871)	Hyrachyus	bairdianus	SPECIES
+9211061	Diceratherium hesperium (Leidy, 1865)	Diceratherium	hesperium	SPECIES
+9213301	Anchitherium anceps Marsh, 1874	Anchitherium	anceps	SPECIES
+9222109	Hyrachyus stehlini	Hyrachyus	stehlini	SPECIES
+9234678	Epitriplopus medius (Peterson, 1934)	Hyracodon	medius	SPECIES
+9236149	Hipparion venustum (Leidy, 1860)	Hipparion	venustum	SPECIES
+9236697	Leptolophus magnus Remy, 1998	Leptolophus	magnus	SPECIES
+9240027	Merychippus placidus (Leidy, 1869)	Protohippus	placidus	SPECIES
+9240346	Lartetotherium schleiermacheri (Kaup, 1834)	Dihoplus	schleiermacheri	SPECIES
+9240939	Cadurcotherium cayluxi Gervais, 1873	Cadurcotherium	cayluxi	SPECIES
+9243325	Colodon orientalis Borissyak, 1918	Colodon	orientalis	SPECIES
+9244200	Allops marshi (Osborn, 1902)	Menops	marshi	SPECIES
+9245690	Heptodon ventorum (Cope, 1880)	Heptodon	ventorum	SPECIES
+9248113	Dzungariotherium turfanensis Xu & Wang, 1978	Dzungariotherium	turfanensis	SPECIES
+9249952	Orohippus cuspidatus (Cope, 1875)	Hyracotherium	cuspidatus	SPECIES
+9251432	Merychippus stylodontus (Lewis, 1968)	Pliohippus	stylodontus	SPECIES
+9254942	Eggysodon gaudryi Rames, 1886	Eggysodon	gaudryi	SPECIES
+9258251	Armania asiana Gabunia & Dashzeveg, 1988	Armania	asiana	SPECIES
+9260137	Anchitherium minimus (Douglass, 1899)	Archaeohippus	minimus	SPECIES
+9262242	Limnohyops laticeps (Marsh, 1872)	Palaeosyops	laticeps	SPECIES
+9262599	Palaeotherium ruetimeyeri Franzen, 1968	Palaeotherium	ruetimeyeri	SPECIES
+9263549	Xiphodon intermedium Stehlin, 1910	Xiphodon	intermedium	SPECIES
+9266116	Elasmognathus bairdii Gill, 1865	Tapirella	bairdii	SPECIES
+9269154	Hipparion albertense (Hopwood, 1926)	Eurygnathohippus	albertense	SPECIES
+9270078	Schizotherium chucuae Gabunia, 1951	Schizotherium	chucuae	SPECIES
+9270996	Menodus selwynianus (Cope, 1889)	Brontops	selwynianus	SPECIES
+9271557	Benaratherium callistrati Gabunia, 1955	Benaratherium	callistrati	SPECIES
+9271911	Equus suessenbornensis (Wüst, 1901)	Equus	suessenbornensis	SPECIES
+9272474	Vastanolophus holbrooki Smith & al., 2015	Vastanolophus	holbrooki	SPECIES
+9275811	Plesippus francescana (Frick, 1921)	Equus	francescana	SPECIES
+9277302	Cymbalophus hookeri Godinot & al., 1987	Cymbalophus	hookeri	SPECIES
+9278774	Menodus heloceras (Cope, 1873)	Symborodon	heloceras	SPECIES
+9278775	Amynodon watanabei Tokunaga, 1926	Amynodon	watanabei	SPECIES
+9280240	Eotapirus broennimanni (Schaub & Hurzeler, 1948)	Eotapirus	broennimanni	SPECIES
+9280613	Mesohippus equiceps (Cope, 1878)	Miohippus	equiceps	SPECIES
+9282315	Miohippus meteulophus (Osborn, 1904)	Miohippus	meteulophus	SPECIES
+9282678	Eomoropus ulterior Chow, 1962	Eomoropus	ulterior	SPECIES
+9284157	Cadurcodon suhaituensis (Xu, 1966)	Cadurcodon	suhaituensis	SPECIES
+9289338	Metanchilophus Remy, 2015	Metanchilophus		GENUS
+9289545	Caenopus mitis (Cope, 1875)	Subhyracodon	mitis	SPECIES
+9289547	Neohipparion niobrarense (Gidley, 1906)	Hipparion	niobrarense	SPECIES
+9290122	Equus caballus domesticus Linnaeus, 1758	Equus	caballus	SUBSPECIES
+9290128	Metanchilophus gaudini Pictet & Humbert, 1869	Metanchilophus	gaudini	SPECIES
+9292034	Protaceratherium minutum (Osborn, 1900)	Protoaceratherium	minutum	SPECIES
+9292035	Allops serotinus (Marsh, 1887)	Menops	serotinus	SPECIES
+9292607	Parahippus mourningi (Merriam, 1913)	Archaeohippus	mourningi	SPECIES
+9294459	Ardynia plicidentata Gabunia, 1964	Ardynia	plicidentata	SPECIES
+9295418	Sianodon chiyuanensis Chow & Xu, 1965	Cadurcodon	chiyuanensis	SPECIES
+9296321	Merychippus proplacidus (Osborn, 1918)	Calippus	proplacidus	SPECIES
+9296904	Protapirus priscus Filhol, 1874	Protapirus	priscus	SPECIES
+9297801	Menodus robustus (Marsh, 1887)	Brontops	robustus	SPECIES
+9300448	Plagiolophus cartailhaci Stehlin, 1904	Plagiolophus	cartailhaci	SPECIES
+9300796	Amynodon alxaensis Qi, 1975	Amynodon	alxaensis	SPECIES
+9300797	Megacerops acer (Cope, 1873)	Symborodon	acer	SPECIES
+9303709	Pachynolophus livinierensis Savage & al., 1965	Pachynolophus	livinierensis	SPECIES
+9305595	Menodus trigonoceras (Cope, 1873)	Symborodon	trigonoceras	SPECIES
+9305947	Propachynolophus duvali Pomel, 1853	Propachynolophus	duvali	SPECIES
+9306161	Epiaceratherium magnum Uhlig, 1999	Epiaceratherium	magnum	SPECIES
+9306505	Hippotherium occidentale (Leidy, 1856)	Cormohipparion	occidentale	SPECIES
+9306744	Iberolophus jimenezi Badiola & Cuesta, 2008	Iberolophus	jimenezi	SPECIES
+9308072	Protitanotherium mongoliense (Osborn, 1923)	Rhinotitan	mongoliense	SPECIES
+9308074	Hyrachyus grande (Peterson, 1919)	Forstercooperia	grande	SPECIES
+9309570	Phyllotillon huangheensis Qiu & al., 1998	Phyllotillon	huangheensis	SPECIES
+9309571	Tapirus arvernensis Croizet & Jobert, 1828	Tapirus	arvernensis	SPECIES
+9314415	Allops crassicornis (Marsh, 1891)	Menops	crassicornis	SPECIES
+9315006	Indricotherium parvum (Chow, 1958)	Urtinotherium	parvum	SPECIES
+9315353	Merychippus carrizoensis (Dougherty, 1940)	Parapliohippus	carrizoensis	SPECIES
+9319379	Equus intermedius Cope, 1895	Equus	intermedius	SPECIES
+9319381	Homogalax primaevus (Wortman, 1896)	Homogalax	primaevus	SPECIES
+9320325	Eohippus cristatus (Wortman, 1896)	Hyracotherium	cristatus	SPECIES
+9323577	Eohippus index (Cope, 1873)	Minippus	index	SPECIES
+9324740	Cambaytherium gracilis Smith, Kumar, Rana, Folie, Solé, Noiret, Steeman, Sahni & Rose, 2016	Cambaytherium	gracilis	SPECIES
+9325528	Manteoceras manteoceras (Hay, 1902)	Telmatherium	manteoceras	SPECIES
+9326492	Plesiocolopirus grangeri (Tokunaga, 1933)	Plesiocolopirus	grangeri	SPECIES
+9328552	Hippotherium isonesum (Cope, 1889)	Acritohippus	isonesum	SPECIES
+9329881	Pliohippus pachyops (Cope, 1893)	Protohippus	pachyops	SPECIES
+9333916	Nannippus retrusus (Cope, 1889)	Pseudhipparion	retrusus	SPECIES
+9335460	Urtinotherium intermedium (Chiu, 1962)	Urtinotherium	intermedium	SPECIES
+9336684	Anchitherium sampelayoi (Villalta & Crusafont, 1945)	Sinohippus	sampelayoi	SPECIES
+9339502	Procadurcodon orientalis Gromov, 1960	Procadurcodon	orientalis	SPECIES
+9340442	Aceratherium tetradactylum (Lartet, 1837)	Hoploaceratherium	tetradactylum	SPECIES
+9341401	Mesohippus validus (Osborn, 1894)	Miohippus	validus	SPECIES
+9341973	Chasmotherium depereti Remy, 2015	Hyrachyus	depereti	SPECIES
+9342565	Rhinotitan mongoliensis (Osborn, 1923)	Rhinotitan	mongoliensis	SPECIES
+9343862	Anchilophus jeanteti Remy, 2012	Anchilophus	jeanteti	SPECIES
+9344655	Paraplagiolophus codiciensis (Gaudry, 1865)	Plagiolophus	codiciensis	SPECIES
+9344988	Menodus torvus (Cope, 1873)	Symborodon	torvus	SPECIES
+9345318	Palaeotherium bairdii (Leidy, 1850)	Mesohippus	bairdii	SPECIES
+9347993	Rhinoceridae			FAMILY
+9353577	Mesohippus obliquidens (Osborn, 1904)	Miohippus	obliquidens	SPECIES
+9354510	Protohippus proplacidus (Osborn, 1918)	Calippus	proplacidus	SPECIES
+9360444	Limnohyops priscus (Osborn, 1908)	Palaeosyops	priscus	SPECIES
+9360445	Irdinolophus mongoliensis (Osborn, 1923)	Desmatotherium	mongoliensis	SPECIES
+9361021	Subhyracodon occidentale (Leidy, 1850)	Subhyracodon	occidentale	SPECIES
+9362947	Palaeotherium proutii (Leidy, 1850)	Megacerops	proutii	SPECIES
+9362952	Dzungariotherium tienshanense (Chiu, 1962)	Dzungariotherium	tienshanense	SPECIES
+9364469	Gandheralophus robustus Missiaen & Gingerich, 2012	Gandheralophus	robustus	SPECIES
+9364807	Pliolophus barnesi Hooker, 2010	Pliolophus	barnesi	SPECIES
+9366904	Brontotherium platyceras (Scott & Osborn, 1887)	Menodus	platyceras	SPECIES
+9368043	Lophiotherium sylvaticum (Leidy, 1870)	Orohippus	sylvaticum	SPECIES
+9368389	Protapirus aginensis Richard, 1938	Protapirus	aginensis	SPECIES
+9370326	Equus neogaeus (Lund, 1840)	Equus	neogaeus	SPECIES
+9371550	Aphelops meridianus (Leidy, 1865)	Rhinoceros	meridianus	SPECIES
+9371732	Tapirus leucogenys Gray, 1872	Tapirus	leucogenys	SPECIES
+9373457	Rhodopagus minutissimus (Reshetov, 1979)	Pataecops	minutissimus	SPECIES
+9374068	Neohipparion lenticularis (Cope, 1893)	Nannippus	lenticularis	SPECIES
+9375542	Pachynolophus eulaliensis Danilo & al., 2013	Pachynolophus	eulaliensis	SPECIES
+9376495	Hyracodon nebrascensis (Leidy, 1850)	Rhinoceros	nebrascensis	SPECIES
+9376879	Aceratherium simorrense (Lartet, 1851)	Aceratherium	simorrense	SPECIES
+9378468	Nannippus ingenuus (Leidy, 1885)	Cormohipparion	ingenuus	SPECIES
+9379984	Juxia micracis (Wang, 1976)	Juxia	micracis	SPECIES
+9380541	Diploclonus tyleri (Lull, 1905)	Brontops	tyleri	SPECIES
+9381320	Turpanotherium Qiu & Wang, 2007	Turpanotherium		GENUS
+9383013	Lushiamynodon wuchengensis Wang, 1978	Sharamynodon	wuchengensis	SPECIES
+9383904	Lushiamynodon menchiapuensis Chow & Xu, 1965	Sharamynodon	menchiapuensis	SPECIES
+9384847	Astrohippus martini (Hesse, 1936)	Calippus	martini	SPECIES
+9385794	Mesohippus anceps (Marsh, 1874)	Anchitherium	anceps	SPECIES
+9386385	Megacerops tyleri (Lull, 1905)	Brontops	tyleri	SPECIES
+9389460	Helaletes intermedius (Osborn & al., 1878)	Hyrachyus	intermedius	SPECIES
+9391462	Pachynolophus cesserasicus Gervais, 1849	Pachynolophus	cesserasicus	SPECIES
+9392063	Litolophus ghazijensis Missiaen & Gingerich, 2012	Litolophus	ghazijensis	SPECIES
+9395084	Ronzotherium filholi Osborn, 1900	Ronzotherium	filholi	SPECIES
+9395644	Arenahippus grangeri (Gingerich, 1989)	Sifrhippus	grangeri	SPECIES
+9396608	Equus stenonis Cocchi, 1867	Equus	stenonis	SPECIES
+9398563	Colodon hancocki (Radinsky, 1963)	Plesiocolopirus	hancocki	SPECIES
+9402193	Hyracotherium vulpiceps (Owen, 1858)	Pliolophus	vulpiceps	SPECIES
+9402547	Gandheralophus minor Missiaen & Gingerich, 2012	Gandheralophus	minor	SPECIES
+9402895	Mesohippus stenolophus (Lambe, 1905)	Archaeohippus	stenolophus	SPECIES
+9403493	Aceratherium zernowi (Borissiak, 1914)	Acerorhinus	zernowi	SPECIES
+9404096	Titanotherium proutii (Leidy, 1850)	Megacerops	proutii	SPECIES
+9404694	Anchitherium agatensis (Osborn, 1918)	Kalobatippus	agatensis	SPECIES
+9405647	Caenopus copei (Osborn, 1898)	Subhyracodon	copei	SPECIES
+9407573	Paraceratherium asiaticum (Borissiak, 1923)	Indricotherium	asiaticum	SPECIES
+9411592	Sianodon sinensis (Zdansky, 1930)	Cadurcodon	sinensis	SPECIES
+9412213	Hipparion whitneyi (Gidley, 1903)	Neohipparion	whitneyi	SPECIES
+9413157	Paratapirus helvetius Meyer, 1867	Paratapirus	helvetius	SPECIES
+9414100	Megacerops dispar (Marsh, 1887)	Brontops	dispar	SPECIES
+9415064	Asinus conversidens (Owen, 1869)	Equus	conversidens	SPECIES
+9415660	Teleolophus xui (Tong & Lei, 1984)	Teleolophus	xui	SPECIES
+9419728	Eoletes tshakpaktasensis (Gabunia, 1999)	Eoletes	tshakpaktasensis	SPECIES
+9421286	Teleodus californicus (Stock, 1935)	Duchesneodus	californicus	SPECIES
+9422273	Amynodon antiquus (Scott & Osborn, 1882)	Orthocynodon	antiquus	SPECIES
+9422875	Neohipparion venustum (Leidy, 1860)	Hipparion	venustum	SPECIES
+9423239	Hipparion occidentale (Leidy, 1856)	Cormohipparion	occidentale	SPECIES
+9426759	Pliolophus major (Marsh, 1874)	Orohippus	major	SPECIES
+9426973	Protohippus castilli (Cope, 1886)	Calippus	castilli	SPECIES
+9429478	Hipparion hasumense (Eisenmann, 1983)	Eurygnathohippus	hasumense	SPECIES
+9429860	Rhinoceros brancoi (Schlosser, 1903)	Shansirhinus	brancoi	SPECIES
+9432664	Parahippus brevidens (Marsh, 1874)	Anchippus	brevidens	SPECIES
+9435163	Dinohippus coalingensis (Merriam, 1914)	Protohippus	coalingensis	SPECIES
+9435545	Symborodon copei (Osborn, 1908)	Megacerops	copei	SPECIES
+9435548	Dzungariotherium orgosensis Chiu, 1973	Dzungariotherium	orgosensis	SPECIES
+9437109	Lophiaspis occitanicus Deperet, 1910	Lophiaspis	occitanicus	SPECIES
+9440250	Rhinoceros etruscus (Falconer, 1868)	Dicerorhinus	etruscus	SPECIES
+9441246	Desmatotherium grangeri (Tokunaga, 1933)	Plesiocolopirus	grangeri	SPECIES
+9443765	Parisectolophus latidens (Osborn & al., 1878)	Helaletes	latidens	SPECIES
+9444374	Haringtonhippus francisci (Hay, 1915)	Haringtonhippus	francisci	SPECIES
+9445351	Cadurcotherium ardynense (Osborn, 1924)	Cadurcodon	ardynense	SPECIES
+9445950	Merychippus isonesus quintus Osborn, 1918	Acritohippus	isonesus	SUBSPECIES
+9447479	Orotherium cristonense (Cope, 1877)	Hyracotherium	cristonense	SPECIES
+9448430	Plesippus idahoensis (Merriam, 1918)	Equus	idahoensis	SPECIES
+9450729	Palaeotherium lautricense Stehlin, 1904	Palaeotherium	lautricense	SPECIES
+9451311	Aceratherium occidentale (Leidy, 1850)	Subhyracodon	occidentale	SPECIES
+9457549	Dicerorhinus ringstroemi (Arambourg, 1959)	Dihoplus	ringstroemi	SPECIES
+9460130	Pappaceras meiomenus Wang & al., 2016	Pappaceras	meiomenus	SPECIES
+9461475	Iberolophus arabensis Badiola & Cuesta, 2008	Iberolophus	arabensis	SPECIES
+9461702	Hipparion ingenuum (Leidy, 1885)	Cormohipparion	ingenuum	SPECIES
+9462071	Molassitherium delemontense Becker & al., 2013	Molassitherium	delemontense	SPECIES
+9462298	Palaeotherium pomeli Franzen, 1968	Palaeotherium	pomeli	SPECIES
+9464579	Pachynolophus boixedatensis Crusafont Pairo & Remy, 1970	Pachynolophus	boixedatensis	SPECIES
+9467706	Amynodon lunanensis Chow, 1964	Amynodon	lunanensis	SPECIES
+9468060	Plagiolophus mamertensis Remy, 2004	Plagiolophus	mamertensis	SPECIES
+9468304	Hipparion rectidens (Cope, 1886)	Neohipparion	rectidens	SPECIES
+9470907	Lophiodon modestus (Leidy, 1870)	Hyrachyus	modestus	SPECIES
+9471849	Protapirus gromovae Biryukov, 1972	Protapirus	gromovae	SPECIES
+9473423	Sianodon honanensis Chow & Xu, 1965	Cadurcodon	honanensis	SPECIES
+9475347	Chilotherium tianzhuense Zheng, 1982	Shansirhinus	tianzhuense	SPECIES
+9475349	Pliohippus leardi (Drescher, 1941)	Dinohippus	leardi	SPECIES
+9476316	Parahippus blackbergi (Hay, 1924)	Archaeohippus	blackbergi	SPECIES
+9476940	Protaceratherium albigense (Roman, 1912)	Protoaceratherium	albigense	SPECIES
+9478554	Chasmotherium birmanicum (Pilgrim, 1925)	Bahinolophus	birmanicum	SPECIES
+9478916	Metanchilophus chaubeti Remy, 2012	Metanchilophus	chaubeti	SPECIES
+9479154	Rhinoceros occidentalis (Leidy, 1850)	Subhyracodon	occidentalis	SPECIES
+9479156	Griphippus gratus (Leidy, 1869)	Hipparion	gratus	SPECIES
+9479763	Metanchilophus castrensis Remy, 2012	Metanchilophus	castrensis	SPECIES
+9482691	Lophiodon lautricense Noulet, 1851	Lophiodon	lautricense	SPECIES
+9483054	Hyracotherium craspedotum (Cope, 1880)	Xenicohippus	craspedotum	SPECIES
+9485231	Sianodon mienchiensis Chow & Xu, 1965	Cadurcodon	mienchiensis	SPECIES
+9485236	Brontotherium ramosum (Osborn, 1896)	Menodus	ramosum	SPECIES
+9486788	Eomoropus anarsius (Gazin, 1956)	Eomoropus	anarsius	SPECIES
+9486825	Anisolophus australis (Burmeister, 1879)	Anchitherium	australis	SPECIES
+9488775	Hippidium neogaeum (Lund, 1840)	Equus	neogaeum	SPECIES
+9490615	Cantabrotherium casanovasae Cuesta, 1993	Cantabrotherium	casanovasae	SPECIES
+9494075	Pachynolophus lavocati Remy, 1972	Pachynolophus	lavocati	SPECIES
+9497635	Telmatotherium cornutum (Osborn, 1895)	Palaeosyops	cornutum	SPECIES
+9498594	Pappaceras minuta (Lucas & al., 1981)	Forstercooperia	minuta	SPECIES
+9499194	Megacerops selwynianus (Cope, 1889)	Brontops	selwynianus	SPECIES
+9499828	Mesohippus assiniboiensis (Lambe, 1905)	Miohippus	assiniboiensis	SPECIES
+9500185	Schizotherium priscum Gervais, 1876	Schizotherium	priscum	SPECIES
+9501772	Amynodon mongoliensis (Osborn, 1936)	Sharamynodon	mongoliensis	SPECIES
+9503332	Hipparion turkanense (Hooijer & Maglio, 1974)	Eurygnathohippus	turkanense	SPECIES
+9504684	Mesohippus intermedius (Osborn & Wortman, 1895)	Miohippus	intermedius	SPECIES
+9505900	Urtinotherium parvum (Chow, 1958)	Urtinotherium	parvum	SPECIES
+9507086	Xiphodon gracile Cuvier, 1822	Xiphodon	gracile	SPECIES
+9507824	Caenopus dakotensis (Peterson, 1920)	Penetrigonias	dakotensis	SPECIES
+9508054	Palaeotherium siderolithicum Pictet & Humbert, 1869	Palaeotherium	siderolithicum	SPECIES
+9509403	Titanops medius (Marsh, 1891)	Megacerops	medius	SPECIES
+9509409	Turpanotherium yagouense (Qiu & al., 2004)	Turpanotherium	yagouense	SPECIES
+9517682	Plesiocolopirus kushiroensis Tomida, 1983	Plesiocolopirus	kushiroensis	SPECIES
+9518319	Diaceratherium massiliae Ménouret & Guérin, 2009	Diaceratherium	massiliae	SPECIES
+9521767	Eolophiodon laboriense Robinet & al., 2015	Eolophiodon	laboriense	SPECIES
+9522760	Telmatherium ultimum (Osborn, 1908)	Metatelmatherium	ultimum	SPECIES
+9523735	Plesippus proversus (Merriam, 1916)	Pliohippus	proversus	SPECIES
+9524976	Hipparion minus Pavlow, 1890	Hipparion	minus	SPECIES
+9527531	Menodus varians (Marsh, 1887)	Menops	varians	SPECIES
+9528123	Anchitherium aurelianese Cuvier, 1825	Anchitherium	aurelianese	SPECIES
+9529543	Rhinoceros megarhinus (de Christol, 1835)	Dihoplus	megarhinus	SPECIES
+9530123	Symphysorrhachis brevirostris Belyaeva, 1954	Symphysorrhachis	brevirostris	SPECIES
+9531084	Cadurcotherium minus Filhol, 1880	Cadurcotherium	minus	SPECIES
+9531682	Dicerorhinus schleiermacheri (Kaup, 1834)	Dihoplus	schleiermacheri	SPECIES
+9532046	Rhinoceros tetradactylus (Lartet, 1837)	Hoploaceratherium	tetradactylus	SPECIES
+9532684	Chalicotherium antiquum Kaup, 1833	Chalicotherium	antiquum	SPECIES
+9534279	Forstercooperia mazhuangensis (Wang, 1976)	Forstercooperia	mazhuangensis	SPECIES
+9536950	Megacerops bucco (Cope, 1873)	Symborodon	bucco	SPECIES
+9538905	Meschotherium meschethicum Gabunia, 1964	Meschotherium	meschethicum	SPECIES
+9539519	Simplaletes xianensis (Zhang & Qi, 1981)	Eoletes	xianensis	SPECIES
+9540137	Onohippidium saldiasi (Roth, 1899)	Hippidion	saldiasi	SPECIES
+9541123	Ilianodon lunanensis Chow, 1961	Ilianodon	lunanensis	SPECIES
+9541743	Miohippus bairdii (Leidy, 1850)	Mesohippus	bairdii	SPECIES
+9542495	Plagiolophus minor Cuvier, 1804	Plagiolophus	minor	SPECIES
+9542720	Didermocerus sumatrensis (Fischer, 1814)	Dicerorhinus	sumatrensis	SPECIES
+9543336	Metaplagiolophus atoae Checa Soler, 1993	Metaplagiolophus	atoae	SPECIES
+9546303	Paratapirus intermedius Filhol, 1885	Paratapirus	intermedius	SPECIES
+9547300	Hippodon speciosus (Leidy, 1854)	Hipparion	speciosus	SPECIES
+9549504	Hipparion minor (Sellards, 1916)	Hipparion	minor	SPECIES
+9551481	Diceratherium cooki (Peterson, 1906)	Menoceras	cooki	SPECIES
+9553474	Lophiotherium siderolithicum (Pictet, 1857)	Lophiotherium	siderolithicum	SPECIES
+9557220	Lophiodon eygalayense Labarrère & Montenat, 2011	Lophiodon	eygalayense	SPECIES
+9557230	Chowliia laoshanensis Tong & Wang, 2006	Chowliia	laoshanensis	SPECIES
+9558860	Triplopus mergenensis Dashzeveg, 1991	Triplopus	mergenensis	SPECIES
+9559813	Cadurcodon bahoensis (Xu, 1965)	Cadurcodon	bahoensis	SPECIES
+9559816	Brontotherium tichoceras (Scott & Osborn, 1887)	Menodus	tichoceras	SPECIES
+9561408	Chalicotherium sivalense (Falconer & Cautley, 1837)	Circotherium	sivalense	SPECIES
+9561410	Protapirus hancocki (Radinsky, 1963)	Plesiocolopirus	hancocki	SPECIES
+9563642	Miohippus brachylophus (Cope, 1879)	Miohippus	brachylophus	SPECIES
+9564630	Aphelops fossiger (Cope, 1878)	Teleoceras	fossiger	SPECIES
+9564995	Ronzotherium orientale Dashzeveg, 1991	Ronzotherium	orientale	SPECIES
+9564997	Hipparion phosphorum (Simpson, 1930)	Neohipparion	phosphorum	SPECIES
+9567791	Mesohippus gracilis (Marsh, 1871)	Anchitherium	gracilis	SPECIES
+9568123	Litolophus gobiensis (Colbert, 1934)	Litolophus	gobiensis	SPECIES
+9569724	Turpanotherium elegans Qiu & Wang, 2007	Turpanotherium	elegans	SPECIES
+9571101	Palaeotherium giganteum (Pomel, 1849)	Palaeotherium	giganteum	SPECIES
+9571353	Aceratherium platycephalum (Osborn & Wortman, 1894)	Caenopus	platycephalum	SPECIES
+9572121	Xiphodon castrensis Kowalevsky, 1873	Xiphodon	castrensis	SPECIES
+9573338	Juxia sharamurenensis Chow & Chiu, 1964	Juxia	sharamurenensis	SPECIES
+9575547	Pliohippus martini (Hesse, 1936)	Calippus	martini	SPECIES
+9575942	Hipparion afarense (Eisenmann, 1976)	Eurygnathohippus	afarense	SPECIES
+9576573	Lushiamynodon obesus Chow & Xu, 1965	Sharamynodon	obesus	SPECIES
+9577530	Lushiamynodon sharamurenensis Xu, 1966	Sharamynodon	sharamurenensis	SPECIES
+9578182	Dicerorhinus pikermiensis (Toula, 1906)	Dihoplus	pikermiensis	SPECIES
+9579163	Chalicotherium bilobatum (Cope, 1889)	Schizotherium	bilobatum	SPECIES
+9579745	Equus hemionus kiang (Moorcroft, 1841)	Equus	hemionus	SUBSPECIES
+9580703	Juxia shoui Qi & Zhou, 1989	Juxia	shoui	SPECIES
+9581689	Dolichorhinus hyognathus (Osborn, 1889)	Palaeosyops	hyognathus	SPECIES
+9582686	Molassitherium albigense (Roman, 1912)	Molassitherium	albigense	SPECIES
+9582929	Propalaeotherium isselanum (Cuvier, 1824)	Palaeotherium	isselanum	SPECIES
+9584313	Aceratherium nebrascensis (Leidy, 1850)	Rhinoceros	nebrascensis	SPECIES
+9585317	Pachynolophus zambranensis Badiola & al., 2005	Pachynolophus	zambranensis	SPECIES
+9585955	Pappomoropus taishanensis Tong & Wang, 2006	Pappomoropus	taishanensis	SPECIES
+9586542	Hipphaplus entrerianus (Ameghino, 1886)	Hippidion	entrerianus	SPECIES
+9588475	Amynodon altidens Xu & Chiu, 1962	Amynodon	altidens	SPECIES
+9590068	Tapirus broennimanni (Schaub & Hurzeler, 1948)	Eotapirus	broennimanni	SPECIES
+9592700	Protapirus douvillei Filhol, 1885	Protapirus	douvillei	SPECIES
+9595316	Prohyracodon parvum Dashzeveg, 1991	Prohyracodon	parvum	SPECIES
+9597516	Hippotigris shoshonensis (Gidley, 1930)	Plesippus	shoshonensis	SPECIES
+9598524	Paraceratherium grangeri (Osborn, 1923)	Baluchitherium	grangeri	SPECIES
+9600162	Hemihipparion dietrichi (Wehrli, 1941)	Hipparion	dietrichi	SPECIES
+9600776	Bepitherium jordifusalbae Checa & Colombo, 2004	Bepitherium	jordifusalbae	SPECIES
+9601165	Irdinolophus tuiensis Dashzeveg & Hooker, 1997	Irdinolophus	tuiensis	SPECIES
+9602188	Paraceratherium lepidum Xu & Wang, 1978	Paraceratherium	lepidum	SPECIES
+9602809	Diceratherium minutum (Osborn, 1900)	Protoaceratherium	minutum	SPECIES
+9604445	Pliohippus leidyanus (Osborn, 1918)	Dinohippus	leidyanus	SPECIES
+9606020	Neohipparion coloradense (Osborn, 1918)	Merychippus	coloradense	SPECIES
+9606408	Cadurcodon houldjinensis Wang & al., 2009	Cadurcodon	houldjinensis	SPECIES
+9607665	Orotherium vintanum (Marsh, 1872)	Orotherium	vintanum	SPECIES
+9608056	Protapirus bavaricus Oettingen-Spielberg, 1952	Protapirus	bavaricus	SPECIES
+9608446	Mesohippus antiquus (Schlaikjer, 1935)	Miohippus	antiquus	SPECIES
+9609057	Megacerops robustus (Marsh, 1887)	Brontops	robustus	SPECIES
+9615464	Equus crinidens (Cope, 1884)	Equus	crinidens	SPECIES
+9617485	Veragromovia desmatotheroides Gabunia, 1961	Veragromovia	desmatotheroides	SPECIES
+9618081	Epiaceratherium bolcense Abel, 1910	Epiaceratherium	bolcense	SPECIES
+9618473	Neohipparion occidentale (Leidy, 1856)	Cormohipparion	occidentale	SPECIES
+9619106	Teleolophus zaisanicus Gabunia, 1984	Teleolophus	zaisanicus	SPECIES
+9624905	Hipparion libycum (Pomel, 1897)	Eurygnathohippus	libycum	SPECIES
+9625886	Tapirus americanus (Gmelin, 1788)	Tapirus	americanus	SPECIES
+9626509	Onager littoralis (Hay, 1913)	Equus	littoralis	SPECIES
+9628926	Heptodon singularis (Cope, 1875)	Hyracotherium	singularis	SPECIES
+9629760	Franzenium durense Cuesta, 1993	Franzenium	durense	SPECIES
+9636060	Rhinoceros hemitoechus (Falconer, 1868)	Dicerorhinus	hemitoechus	SPECIES
+9676095	Rhinoceros palaeindicus	Rhinoceros	palaeindicus	SPECIES
+9819653	Merychippus isonesus	Merychippus	isonesus	SPECIES
