@@ -11,11 +11,9 @@ use File::Temp qw(tempfile);
 # process command line arguments
 my $infile;   # zip file downloaded from GBIF
 my $outfile;  # simplified occurrences as TSV
-my $taxafile; # table of taxon to taxonKey mappings
 GetOptions(
 	'infile=s'   => \$infile,
 	'outfile=s'  => \$outfile,
-	'taxafile=s' => \$taxafile,
 );
 
 # columns to retain
@@ -45,10 +43,7 @@ $zip->extractMember( 'occurrence.txt' => $tempfile );
 # start reading occurrences and writing output
 open my $in, '<', $tempfile or die $!;
 open my $out, '>', $outfile or die $!;
-my %taxa; # normalized mapping for taxon table
 my @cols; # indexes of all columns of interest
-my ( $idx, $binomialx, $genusx, $speciesx, $rankx ); # indexes of taxon columns
-my @taxon_cols = qw(taxonKey scientificName genus specificEpithet taxonRank); # labels of taxon columns
 while(<$in>) {
 	chomp;
 	my @line = split /\t/, $_;
@@ -64,39 +59,13 @@ while(<$in>) {
 			}
 		}
 		
-		# lookup taxon column indexes
-		( $idx, $binomialx, $genusx, $speciesx, $rankx ) = @columns{@taxon_cols};
-		
 		# write filtered header in snake case
 		print $out join( "\t", map { decamelize($_) } sort { $columns{$a} <=> $columns{$b} } keys %columns ), "\n";
 	}
 	
-	# write record, store taxon
+	# write record
 	else {
 		print $out join( "\t", @line[@cols] ), "\n";
-		
-		# lookup values
-		my ( $id, $binomial, $genus, $species, $rank ) = @line[$idx, $binomialx, $genusx, $speciesx, $rankx];
-		
-		# populate data structure
-		$taxa{$id} = {} unless $taxa{$id};
-		$taxa{$id}->{$binomial} = {} unless $taxa{$id}->{$binomial};
-		$taxa{$id}->{$binomial}->{$genus} = {} unless $taxa{$id}->{$binomial}->{$genus};
-		$taxa{$id}->{$binomial}->{$genus}->{$species} = $rank;
-	}
-}
-
-# write normalized taxa table
-open my $tout, '>', $taxafile or die $!;
-print $tout join( "\t", map { decamelize($_) } @taxon_cols ), "\n";
-for my $id ( sort { $a <=> $b } keys %taxa ) {
-	for my $binomial ( sort { $a cmp $b } keys %{ $taxa{$id} } ) {
-		for my $genus ( sort { $a cmp $b }  keys %{ $taxa{$id}->{$binomial} } ) {
-			for my $species ( sort { $a cmp $b } keys %{ $taxa{$id}->{$binomial}->{$genus} } ) {
-				my $rank = $taxa{$id}->{$binomial}->{$genus}->{$species};
-				print $tout join("\t", $id, $binomial, $genus, $species, $rank), "\n";
-			}
-		}
 	}
 }
 
