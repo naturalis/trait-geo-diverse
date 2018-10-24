@@ -1,19 +1,19 @@
-domesticated_tax_id	domesticated_char_id	domesticated_char_value
-1	1	1
-2	1	1
-3	1	1
-4	1	1
-5	1	1
-6	1	1
-7	1	1
-8	1	1
-9	1	1
-10	1	1
-11	1	1
-12	1	1
-13	1	1
-14	1	1
-15	1	1
-16	1	1
-17	1	1
-18	1	1
+domesticated_taxon	domesticated_char_id	domesticated_char_value
+Capra aegagrus aegagrus	1	1
+Sus scrofa libycus	1	1
+Sus scrofa moupinensis	1	1
+Ovis orientalis gmelini	1	1
+Bos primigenius primigenius	1	1
+Bos primigenius namadicus	1	1
+Equus africanus africanus	1	1
+Equus africanus somaliensis	1	1
+Bubalus arnee	1	1
+Camelus thomasi	1	1
+Equus ferus caballus	1	1
+Bos mutus	1	1
+Camelus ferus	1	1
+Lama guanicoe cacsilensis	1	1
+Vicugna vicugna mensalis	1	1
+Bos javanicus javanicus	1	1
+Bos gaurus gaurus	1	1
+Rangifer tarandus	1	1
