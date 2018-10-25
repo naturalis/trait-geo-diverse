@@ -57,7 +57,8 @@ while(<$fh>) {
 
 			# traverse classification from higher to lower taxon, growing the data structure
 			for my $level ( @cols ) {
-				if ( my $name = $record{$level}	) {
+				my $name = $record{$level};
+				if ( $name and $name =~ /\S/ ) {
 					$nesting->{$name} = {} unless $nesting->{$name};
 					$nesting = $nesting->{$name};
 				}
@@ -65,7 +66,8 @@ while(<$fh>) {
 			
 			# traverse classification from lower to higher
 			LEVEL: for my $level ( reverse @cols ) {
-				if ( my $name = $record{$level}	) {
+				my $name = $record{$level};
+				if ( $name and $name =~ /\S/ ) {
 					$nesting->{'insert_object'} = {
 						'gbif_taxon_key' => $record{'taxonID'},
 						'query_name'     => $record{'canonicalName'},
@@ -103,7 +105,7 @@ sub traverse {
 			if ( $results->[0] ) {
 				my $msw_id = $results->[0]->{'local_id'};
 				$taxon = $taxon_rs->single({ msw_id => $msw_id });
-				if ( $taxon->taxon_level eq $insert_object->{'taxon_level'} and $results->[0]->score >= 0.95 ) {
+				if ( $taxon->taxon_level eq $insert_object->{'taxon_level'} and $results->[0]->{'score'} >= 0.95 ) {
 					$taxon->gbif_taxon_key( $insert_object->{'gbif_taxon_key'} );
 				}
 				else {
