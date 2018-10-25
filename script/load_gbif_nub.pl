@@ -4,8 +4,11 @@ use warnings;
 use MY::Schema;
 use Archive::Zip;
 use Getopt::Long;
+use Data::Dumper;
 use File::Temp 'tempfile';
+use Log::Log4perl qw(:easy);
 use MY::Taxize qw[gnr_resolve TRUE FALSE];
+Log::Log4perl->easy_init($DEBUG);
 
 # process command line arguments
 my $db = $ENV{'HOME'} . '/Dropbox/documents/projects/dropbox-projects/trait-geo-diverse/tgd.db';
@@ -69,10 +72,9 @@ while(<$fh>) {
 				my $name = $record{$level};
 				if ( $name and $name =~ /\S/ ) {
 					$nesting->{'insert_object'} = {
+						'taxon_name'     => $record{'canonicalName'},						
 						'gbif_taxon_key' => $record{'taxonID'},
-						'query_name'     => $record{'canonicalName'},
 						'taxon_level'    => uc($record{'taxonRank'}),
-						'taxon_name'     => $name,
 					};
 					last LEVEL;
 				}
@@ -80,7 +82,7 @@ while(<$fh>) {
 		}
 	}
 }
-
+print Dumper(\%tree);
 traverse(\%tree);
 sub traverse {
 	my ( $hoh, $parent_id ) = @_;
@@ -88,44 +90,17 @@ sub traverse {
 		
 		# prepare $insert_object to put it in Taxa table
 		my $insert_object = delete $hoh->{'insert_object'};
-		my $query_name    = delete $insert_object->{'query_name'};
-		
-		# attempt to get the taxon via gnr_resolve
-		my $taxon;
-		if ( $query_name ) {
-			my $results = gnr_resolve( 
-				'names'           => [ $query_name ], 
-				'data_source_ids' => [ 174 ],
-				'canonical'       => TRUE,
-				'best_match_only' => TRUE,
-				'fields'          => [ "all" ]
-			);
-			
-			# find the ID in the local database and look up the primary key
-			if ( $results->[0] ) {
-				my $msw_id = $results->[0]->{'local_id'};
-				$taxon = $taxon_rs->single({ msw_id => $msw_id });
-				if ( $taxon->taxon_level eq $insert_object->{'taxon_level'} and $results->[0]->{'score'} >= 0.95 ) {
-					$taxon->gbif_taxon_key( $insert_object->{'gbif_taxon_key'} );
-				}
-				else {
-					$taxon = undef;
-				}
-			}
-		}
-		
-		# no match, create a new taxon, then create a new node
-		$taxon = $taxon_rs->create($insert_object) unless $taxon;		
+		my $taxon = $taxon_rs->create($insert_object);
 		
 		# create branch
 		$branch_rs->create({
+			'tree_id'   => $tree_id,			
 			'parent_id' => $parent_id,
+			'taxon_id'  => $taxon->taxon_id,			
 			'node_id'   => $insert_object->{'gbif_taxon_key'},
-			'taxon_id'  => $taxon->taxon_id,
-			'tree_id'   => $tree_id,
-			'label'     => $query_name,
+			'label'     => $insert_object->{'taxon_name'},
 		});
-		warn $query_name;
+		warn Dumper($insert_object);
 		
 		# traverse deeper
 		traverse( $_, $insert_object->{'gbif_taxon_key'} ) for values %$hoh;
