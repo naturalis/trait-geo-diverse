@@ -20,17 +20,17 @@ Usage:
     use MY::Taxize qw(gnr_resolve TRUE FALSE);
     my $results = gnr_resolve( 
         names                  => [ 'Bos taurus', 'Oryza sativa' ], 
-        data_source_ids        => [ 174, 165 ],
+        data_source_ids        => [ 174, 11 ], # MSW3, GBIF, respectively
         resolve_once           => FALSE,
         with_context           => FALSE,
-        canonical              => FALSE,
+        canonical              => TRUE,
         highestscore           => TRUE,
-        best_match_only        => FALSE, 
+        best_match_only        => TRUE, 
         preferred_data_sources => NULL,
         with_canonical_ranks   => FALSE, 
         http                   => "get", 
         cap_first              => TRUE,
-        fields                 => "minimal" 
+        fields                 => "all" 
     );
 
     for my $match ( @{ $results } ) {
