@@ -4,25 +4,6 @@ create table if not exists taxa(
 	taxon_level text,
 	msw_id integer,
 	tropicos_id integer,
-	kingdom integer,
-	subkingdom integer,
-	infrakingdom integer,
-	superdivision integer,
-	division integer,
-	subdivision integer,
-	class integer,
-	subclass integer,
-	order integer,
-	suborder integer,
-	infraorder integer,
-	superfamily integer,
-	family integer,
-	subfamily integer,
-	tribe integer,
-	genus integer,
-	subgenus integer,
-	species integer,
-	subspecies integer
 );
 
 create table if not exists trees (
@@ -42,13 +23,10 @@ create table if not exists occurrences (
 	event_date text, -- ISO-8601 date
 	decimal_latitude real,
 	decimal_longitude real,
-	label text, -- index scientific_name
---	genus text, -- index
---	specific_epithet text, -- index
---	taxon_rank text, -- index	
+	scientific_name text, -- index
 	dataset_key text, -- index
 	elevation real,
-	has_geospatial_issues integer, -- index, boolean (true/false), transform to 0/1
+	has_geospatial_issues integer, -- index, boolean 0/1
 	taxon_key integer,
 	taxon_id integer constraint taxon_fk references taxa (taxon_id) -- index
 );

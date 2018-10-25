@@ -25,9 +25,6 @@ my %columns = (
 	'decimalLatitude'     => undef, # real
 	'decimalLongitude'    => undef, # real
 	'scientificName'      => undef, # text, includes naming authority
-	'genus'               => undef, # text (index)
-	'specificEpithet'     => undef, # text (index)
-	'taxonRank'           => undef, # text (index)
 	'datasetKey'          => undef, # text (UUID)
 	'elevation'           => undef, # real
 	'hasGeospatialIssues' => undef, # boolean (true/false), transform to 0/1
@@ -65,6 +62,8 @@ while(<$in>) {
 	
 	# write record
 	else {
+		my $i = $columns{'hasGeospatialIssues'};
+		$line[$i] eq 'true' ? $line[$i] = 1 : $line[$i] = 0;
 		print $out join( "\t", @line[@cols] ), "\n";
 	}
 }
