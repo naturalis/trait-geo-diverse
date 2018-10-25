@@ -1,4 +1,4 @@
-node_id	parent_id	branch_length	taxon	tree_name
+node_id	parent_id	branch_length	label	tree_id
 4				mammalST_bestDates.dnd
 5	4	102.6		mammalST_bestDates.dnd
 6	5	53.0		mammalST_bestDates.dnd

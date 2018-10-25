@@ -30,7 +30,7 @@ $tree->visit(sub{
 
 # write tree table
 open my $out, '>', $outfile or die $!;
-print $out 'node_id', "\t", 'parent_id', "\t", 'branch_length', "\t", 'taxon', "\t", 'tree_name', "\n";
+print $out 'node_id', "\t", 'parent_id', "\t", 'branch_length', "\t", 'label', "\t", 'tree_id', "\n";
 $tree->visit_depth_first(
 	'-pre' => sub {
 		my $node = shift;
