@@ -64,7 +64,7 @@ while(<$fh>) {
 			}
 			
 			# traverse classification from lower to higher
-			for my $level ( reverse @cols ) {
+			LEVEL: for my $level ( reverse @cols ) {
 				if ( my $name = $record{$level}	) {
 					$nesting->{'insert_object'} = {
 						'gbif_taxon_key' => $record{'taxonID'},
@@ -72,6 +72,7 @@ while(<$fh>) {
 						'taxon_level'    => uc($record{'taxonRank'}),
 						'taxon_name'     => $name,
 					};
+					last LEVEL;
 				}
 			}
 		}
@@ -86,36 +87,43 @@ sub traverse {
 		# prepare $insert_object to put it in Taxa table
 		my $insert_object = delete $hoh->{'insert_object'};
 		my $query_name    = delete $insert_object->{'query_name'};
-		my $results = gnr_resolve( 
-			'names'           => [ $query_name ], 
-			'data_source_ids' => [ 174 ],
-			'canonical'       => TRUE,
-			'best_match_only' => TRUE,
-			'fields'          => [ "all" ]
-		);	
 		
-		# find the ID in the local database and look up the primary key
+		# attempt to get the taxon via gnr_resolve
 		my $taxon;
-		if ( $results->[0] ) {
-			my $msw_id = $results->[0]->{'local_id'};
-			$taxon = $taxon_rs->single({ msw_id => $msw_id });
-			if ( $taxon->taxon_level eq $insert_object->{'taxon_level'} and $results->[0]->score >= 0.95 ) {
-				$taxon->gbif_taxon_key( $insert_object->{'gbif_taxon_key'} );
-			}
-			else {
-				$taxon = undef;
+		if ( $query_name ) {
+			my $results = gnr_resolve( 
+				'names'           => [ $query_name ], 
+				'data_source_ids' => [ 174 ],
+				'canonical'       => TRUE,
+				'best_match_only' => TRUE,
+				'fields'          => [ "all" ]
+			);
+			
+			# find the ID in the local database and look up the primary key
+			if ( $results->[0] ) {
+				my $msw_id = $results->[0]->{'local_id'};
+				$taxon = $taxon_rs->single({ msw_id => $msw_id });
+				if ( $taxon->taxon_level eq $insert_object->{'taxon_level'} and $results->[0]->score >= 0.95 ) {
+					$taxon->gbif_taxon_key( $insert_object->{'gbif_taxon_key'} );
+				}
+				else {
+					$taxon = undef;
+				}
 			}
 		}
 		
 		# no match, create a new taxon, then create a new node
-		$taxon = $taxon_rs->create($insert_object) unless $taxon;
-		my $node = $branch_rs->create({
+		$taxon = $taxon_rs->create($insert_object) unless $taxon;		
+		
+		# create branch
+		$branch_rs->create({
 			'parent_id' => $parent_id,
 			'node_id'   => $insert_object->{'gbif_taxon_key'},
 			'taxon_id'  => $taxon->taxon_id,
 			'tree_id'   => $tree_id,
 			'label'     => $query_name,
 		});
+		warn $query_name;
 		
 		# traverse deeper
 		traverse( $_, $insert_object->{'gbif_taxon_key'} ) for values %$hoh;
