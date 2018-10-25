@@ -1,2 +1,2 @@
-char_id	char_label	data_source
+char_id	label	data_source
 1	IsDomesticated	WikiPedia

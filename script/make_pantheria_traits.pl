@@ -18,7 +18,7 @@ GetOptions(
 my $binomial_idx = 4; # first relevant column, with binomial taxon name
 open my $in,  '<', $infile or die $!;
 open my $out, '>', $outfile or die $!;
-print $out 'pantheria_tax_id', "\t", 'pantheria_char_id', "\t", 'pantheria_char_value', "\n";
+print $out 'label', "\t", 'character_id', "\t", 'character_value', "\n";
 my $flag;
 while(<$in>) {
 	local $/ = "\r\n"; # PanTHERIA data dump has MS-DOS line breaks
@@ -28,7 +28,7 @@ while(<$in>) {
 	# write character table
 	if ( not $flag ) {
 		open my $cout, '>', $charfile or die $!;
-		print $cout 'char_id', "\t", 'char_label', "\t", 'data_source', "\n";
+		print $cout 'char_id', "\t", 'label', "\t", 'data_source', "\n";
 		for my $i ( $binomial_idx + 1 .. $#line ) {
 			print $cout ( $i - $binomial_idx ), "\t", $line[$i], "\t", 'PanTHERIA_1-0_WR05_Aug2008', "\n";
 		}

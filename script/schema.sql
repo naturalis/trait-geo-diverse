@@ -36,3 +36,18 @@ create table if not exists occurrences (
 	taxon_key integer,
 	taxon_id integer constraint taxon_fk references taxa (taxon_id) -- index
 );
+
+create table if not exists characters (
+	character_id integer constraint character_pk primary key asc autoincrement,
+	char_id integer, -- retains original display order
+	label text, -- index
+	data_source text -- index
+);
+
+create table if not exists states (
+	state_id integer constraint state_pk primary key asc autoincrement,
+	label text, -- could be a biological taxon, a glottocode, a society name, a haplotype, etc.
+	character_id integer constraint character_fk references characters (character_id), -- index
+	character_value text,
+	taxon_id integer constraint taxon_fk references taxa (taxon_id) -- index
+);

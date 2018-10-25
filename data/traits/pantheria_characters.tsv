@@ -1,4 +1,4 @@
-char_id	char_label	data_source
+char_id	label	data_source
 1	1-1_ActivityCycle	PanTHERIA_1-0_WR05_Aug2008
 2	5-1_AdultBodyMass_g	PanTHERIA_1-0_WR05_Aug2008
 3	8-1_AdultForearmLen_mm	PanTHERIA_1-0_WR05_Aug2008
