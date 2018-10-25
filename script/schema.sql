@@ -3,7 +3,7 @@ create table if not exists taxa (
 	taxon_name text, -- index
 	taxon_level text,
 	msw_id integer,
-	tropicos_id integer,
+	gbif_taxon_key integer
 );
 
 create table if not exists trees (
