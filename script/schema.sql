@@ -7,17 +7,23 @@ create table if not exists taxa (
 );
 
 create table if not exists trees (
+	tree_id integer constraint tree_pk primary key asc autoincrement,
+	tree_name text -- index
+);
+
+create table if not exists branches (
 	branch_id integer constraint branch_pk primary key asc autoincrement,
 	node_id integer, -- index
 	parent_id integer, -- index
 	taxon_id integer constraint taxon_fk references taxa (taxon_id), -- index
-	label text,        
+	label text, -- could be a biological taxon, a glottocode, a society name, a haplotype, etc.
 	branch_length real,
-	tree_name text -- index
+	tree_id integer constraint tree_fk references trees (tree_id) -- index
 );
 
 create table if not exists occurrences (
-	occurrence_id integer constraint occurrence_pk primary key asc autoincrement, -- gbif_id
+	occurrence_id integer constraint occurrence_pk primary key asc autoincrement,
+	gbif_id integer, -- index
 	occurrence_type text, -- type, index
 	basis_of_record text, -- index
 	event_date text, -- ISO-8601 date
