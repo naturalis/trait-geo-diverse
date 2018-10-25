@@ -1,4 +1,4 @@
-create table if not exists taxa(
+create table if not exists taxa (
 	taxon_id integer constraint taxon_pk primary key asc autoincrement,
 	taxon_name text, -- index
 	taxon_level text,
