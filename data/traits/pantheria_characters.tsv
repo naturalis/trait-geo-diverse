@@ -1,51 +1,51 @@
-pantheria_char_id	pantheria_char_label
-1	1-1_ActivityCycle
-2	5-1_AdultBodyMass_g
-3	8-1_AdultForearmLen_mm
-4	13-1_AdultHeadBodyLen_mm
-5	2-1_AgeatEyeOpening_d
-6	3-1_AgeatFirstBirth_d
-7	18-1_BasalMetRate_mLO2hr
-8	5-2_BasalMetRateMass_g
-9	6-1_DietBreadth
-10	7-1_DispersalAge_d
-11	9-1_GestationLen_d
-12	12-1_HabitatBreadth
-13	22-1_HomeRange_km2
-14	22-2_HomeRange_Indiv_km2
-15	14-1_InterbirthInterval_d
-16	15-1_LitterSize
-17	16-1_LittersPerYear
-18	17-1_MaxLongevity_m
-19	5-3_NeonateBodyMass_g
-20	13-2_NeonateHeadBodyLen_mm
-21	21-1_PopulationDensity_n/km2
-22	10-1_PopulationGrpSize
-23	23-1_SexualMaturityAge_d
-24	10-2_SocialGrpSize
-25	24-1_TeatNumber
-26	12-2_Terrestriality
-27	6-2_TrophicLevel
-28	25-1_WeaningAge_d
-29	5-4_WeaningBodyMass_g
-30	13-3_WeaningHeadBodyLen_mm
-31	References
-32	5-5_AdultBodyMass_g_EXT
-33	16-2_LittersPerYear_EXT
-34	5-6_NeonateBodyMass_g_EXT
-35	5-7_WeaningBodyMass_g_EXT
-36	26-1_GR_Area_km2
-37	26-2_GR_MaxLat_dd
-38	26-3_GR_MinLat_dd
-39	26-4_GR_MidRangeLat_dd
-40	26-5_GR_MaxLong_dd
-41	26-6_GR_MinLong_dd
-42	26-7_GR_MidRangeLong_dd
-43	27-1_HuPopDen_Min_n/km2
-44	27-2_HuPopDen_Mean_n/km2
-45	27-3_HuPopDen_5p_n/km2
-46	27-4_HuPopDen_Change
-47	28-1_Precip_Mean_mm
-48	28-2_Temp_Mean_01degC
-49	30-1_AET_Mean_mm
-50	30-2_PET_Mean_mm
+char_id	char_label	data_source
+1	1-1_ActivityCycle	PanTHERIA_1-0_WR05_Aug2008
+2	5-1_AdultBodyMass_g	PanTHERIA_1-0_WR05_Aug2008
+3	8-1_AdultForearmLen_mm	PanTHERIA_1-0_WR05_Aug2008
+4	13-1_AdultHeadBodyLen_mm	PanTHERIA_1-0_WR05_Aug2008
+5	2-1_AgeatEyeOpening_d	PanTHERIA_1-0_WR05_Aug2008
+6	3-1_AgeatFirstBirth_d	PanTHERIA_1-0_WR05_Aug2008
+7	18-1_BasalMetRate_mLO2hr	PanTHERIA_1-0_WR05_Aug2008
+8	5-2_BasalMetRateMass_g	PanTHERIA_1-0_WR05_Aug2008
+9	6-1_DietBreadth	PanTHERIA_1-0_WR05_Aug2008
+10	7-1_DispersalAge_d	PanTHERIA_1-0_WR05_Aug2008
+11	9-1_GestationLen_d	PanTHERIA_1-0_WR05_Aug2008
+12	12-1_HabitatBreadth	PanTHERIA_1-0_WR05_Aug2008
+13	22-1_HomeRange_km2	PanTHERIA_1-0_WR05_Aug2008
+14	22-2_HomeRange_Indiv_km2	PanTHERIA_1-0_WR05_Aug2008
+15	14-1_InterbirthInterval_d	PanTHERIA_1-0_WR05_Aug2008
+16	15-1_LitterSize	PanTHERIA_1-0_WR05_Aug2008
+17	16-1_LittersPerYear	PanTHERIA_1-0_WR05_Aug2008
+18	17-1_MaxLongevity_m	PanTHERIA_1-0_WR05_Aug2008
+19	5-3_NeonateBodyMass_g	PanTHERIA_1-0_WR05_Aug2008
+20	13-2_NeonateHeadBodyLen_mm	PanTHERIA_1-0_WR05_Aug2008
+21	21-1_PopulationDensity_n/km2	PanTHERIA_1-0_WR05_Aug2008
+22	10-1_PopulationGrpSize	PanTHERIA_1-0_WR05_Aug2008
+23	23-1_SexualMaturityAge_d	PanTHERIA_1-0_WR05_Aug2008
+24	10-2_SocialGrpSize	PanTHERIA_1-0_WR05_Aug2008
+25	24-1_TeatNumber	PanTHERIA_1-0_WR05_Aug2008
+26	12-2_Terrestriality	PanTHERIA_1-0_WR05_Aug2008
+27	6-2_TrophicLevel	PanTHERIA_1-0_WR05_Aug2008
+28	25-1_WeaningAge_d	PanTHERIA_1-0_WR05_Aug2008
+29	5-4_WeaningBodyMass_g	PanTHERIA_1-0_WR05_Aug2008
+30	13-3_WeaningHeadBodyLen_mm	PanTHERIA_1-0_WR05_Aug2008
+31	References	PanTHERIA_1-0_WR05_Aug2008
+32	5-5_AdultBodyMass_g_EXT	PanTHERIA_1-0_WR05_Aug2008
+33	16-2_LittersPerYear_EXT	PanTHERIA_1-0_WR05_Aug2008
+34	5-6_NeonateBodyMass_g_EXT	PanTHERIA_1-0_WR05_Aug2008
+35	5-7_WeaningBodyMass_g_EXT	PanTHERIA_1-0_WR05_Aug2008
+36	26-1_GR_Area_km2	PanTHERIA_1-0_WR05_Aug2008
+37	26-2_GR_MaxLat_dd	PanTHERIA_1-0_WR05_Aug2008
+38	26-3_GR_MinLat_dd	PanTHERIA_1-0_WR05_Aug2008
+39	26-4_GR_MidRangeLat_dd	PanTHERIA_1-0_WR05_Aug2008
+40	26-5_GR_MaxLong_dd	PanTHERIA_1-0_WR05_Aug2008
+41	26-6_GR_MinLong_dd	PanTHERIA_1-0_WR05_Aug2008
+42	26-7_GR_MidRangeLong_dd	PanTHERIA_1-0_WR05_Aug2008
+43	27-1_HuPopDen_Min_n/km2	PanTHERIA_1-0_WR05_Aug2008
+44	27-2_HuPopDen_Mean_n/km2	PanTHERIA_1-0_WR05_Aug2008
+45	27-3_HuPopDen_5p_n/km2	PanTHERIA_1-0_WR05_Aug2008
+46	27-4_HuPopDen_Change	PanTHERIA_1-0_WR05_Aug2008
+47	28-1_Precip_Mean_mm	PanTHERIA_1-0_WR05_Aug2008
+48	28-2_Temp_Mean_01degC	PanTHERIA_1-0_WR05_Aug2008
+49	30-1_AET_Mean_mm	PanTHERIA_1-0_WR05_Aug2008
+50	30-2_PET_Mean_mm	PanTHERIA_1-0_WR05_Aug2008

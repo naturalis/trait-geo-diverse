@@ -28,9 +28,9 @@ while(<$in>) {
 	# write character table
 	if ( not $flag ) {
 		open my $cout, '>', $charfile or die $!;
-		print $cout 'pantheria_char_id', "\t", 'pantheria_char_label', "\n";
+		print $cout 'char_id', "\t", 'char_label', "\t", 'data_source', "\n";
 		for my $i ( $binomial_idx + 1 .. $#line ) {
-			print $cout ( $i - $binomial_idx ), "\t", $line[$i], "\n";
+			print $cout ( $i - $binomial_idx ), "\t", $line[$i], "\t", 'PanTHERIA_1-0_WR05_Aug2008', "\n";
 		}
 		close $cout;
 		$flag++;

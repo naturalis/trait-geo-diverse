@@ -1,2 +1,2 @@
-domesticated_char_id	domesticated_char_label
-1	DomesticatedAccordingToWikipedia
+char_id	char_label	data_source
+1	IsDomesticated	WikiPedia
