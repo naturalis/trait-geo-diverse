@@ -6,6 +6,13 @@ create table if not exists taxa (
 	gbif_taxon_key integer
 );
 
+create table if not exists taxonvariants (
+	taxonvariant_id integer constraint taxonvariant_pk primary key asc autoincrement,
+	taxonvariant_name text, -- index
+	taxonvariant_level text,
+	taxon_id integer constraint taxon_fk references taxa (taxon_id)
+);
+
 create table if not exists trees (
 	tree_id integer constraint tree_pk primary key asc autoincrement,
 	tree_name text -- index
