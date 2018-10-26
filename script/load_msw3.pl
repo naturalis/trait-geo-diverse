@@ -6,7 +6,7 @@ use Getopt::Long;
 use MY::Schema;
 
 # process command line arguments
-my $db = '/Users/rutger.vos/Dropbox/documents/projects/dropbox-projects/trait-geo-diverse/tgd.db';
+my $db = $ENV{'HOME'} . '/Dropbox/documents/projects/dropbox-projects/trait-geo-diverse/tgd.db';
 my $infile;
 GetOptions(
 	'db=s'     => \$db,
@@ -24,7 +24,7 @@ my $tree_id   = $schema->resultset('Tree')->create( { tree_name => $infile } )->
 my $msw_id_idx = 0;
 my $taxon_level_idx = 12;
 my ( @header, %tree );
-open my $fh, "<:encoding(utf8)", $infile or die $!;
+open my $fh, '<', $infile or die $!;
 while( my $row = $csv->getline($fh) ) {
 	
 	# store header
@@ -39,38 +39,50 @@ while( my $row = $csv->getline($fh) ) {
 		
 		# traverse the classification fields
 		my $nesting = \%tree;
+		my @indices = ( 1 .. 11 );
+		my %record  = map { $header[$_] => $row->[$_] } @indices;
 		my ( $taxon_name, $parent_id );
-		for my $i ( 1 .. 11 ) {
-			if ( $row->[$i] ne "" ) {
-				$taxon_name = $row->[$i];
-				if ( not $nesting->{$taxon_name} ) {
-					
-					# create a new nesting level
-					$nesting->{$taxon_name} = { msw_id => $msw_id };
+		for my $level ( @header[@indices] ) {
+			if ( $record{$level} ne "" ) {
+				
+				# compose species name
+				if ( $level eq 'Species' ) {
+					$taxon_name = join ' ', @record{'Genus', 'Species'};
+				}
+				elsif ( $level eq 'Subspecies' ) {
+					$taxon_name = join ' ', @record{'Genus', 'Species', 'Subspecies'};
 				}
 				else {
-					
-					# nesting level exists, store id of this ancestor
-					$parent_id = $nesting->{$taxon_name}->{msw_id};
+					$taxon_name = $record{$level};
 				}
+				
+				# expand or traverse nestings
+				if ( not $nesting->{$taxon_name} ) {
+					$nesting->{$taxon_name} = { 'msw_id' => $msw_id };
+				}
+				else {
+					$parent_id = $nesting->{$taxon_name}->{'msw_id'};
+				}
+				
+				# store current level
 				$nesting = $nesting->{$taxon_name};
 			}	
 		}
 		
 		# insert taxon
 		my $taxon_id = $taxon_rs->create({
-			taxon_name  => $taxon_name,
-			taxon_level => $taxon_level,
-			msw_id      => $msw_id,
+			'taxon_name'  => $taxon_name,
+			'taxon_level' => $taxon_level,
+			'msw_id'      => $msw_id,
 		})->taxon_id;
 		
 		# insert branch
 		$branch_rs->create({
-			node_id   => $msw_id,
-			parent_id => $parent_id,
-			taxon_id  => $taxon_id,
-			label     => $taxon_name,
-			tree_id   => $tree_id,
+			'node_id'    => $msw_id,
+			'parent_id'  => $parent_id,
+			'taxon_id'   => $taxon_id,
+			'label'      => $taxon_name,
+			'tree_id'    => $tree_id,
 		});
 	}
 }
