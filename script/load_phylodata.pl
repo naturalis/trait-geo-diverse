@@ -3,6 +3,7 @@ use strict;
 use warnings;
 use Getopt::Long;
 use MY::Schema;
+use Data::Dumper;
 use Log::Log4perl qw(:easy);
 use MY::Taxize qw[gnr_resolve TRUE FALSE];
 Log::Log4perl->easy_init($DEBUG);
@@ -85,13 +86,16 @@ sub get_taxon_id {
 		);	
 		if ( $results->[0] ) {
 			my $match = $results->[0]->{'matched_name2'};
-			my $score = $results->[0]->{'score'};			
-			if ( $score >= 0.95 ) {
-				$taxon_id = $taxon_rs->single({ $colname => $local_id })->taxon_id;
+			my $score = $results->[0]->{'score'};
+			my $local = $results->[0]->{'local_id'};
+			my $value = $results->[0]->{'match_value'};
+			if ( $score >= 0.75 and $value eq 'Fuzzy match by canonical form' ) {
+				$taxon_id = $taxon_rs->single({ $colname => $local })->taxon_id;
 				DEBUG "TNRS match for '$label' => '$match' ($taxon_id)";
 			}
 			else {
 				DEBUG "TNRS matching score for '$label' => '$match' not high enough ($score)";
+				DEBUG Dumper($results->[0]);
 			}
 		}		
 	}
