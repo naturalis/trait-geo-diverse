@@ -11,7 +11,7 @@ create table if not exists taxonvariants (
 	taxonvariant_name text, -- index
 	taxonvariant_level text,
 	taxonvariant_status text, -- e.g. synonym, canonical, etc.
-	taxon_id integer constraint taxon_fk references taxa (taxon_id)
+	taxon_id integer constraint taxon_fk references taxa (taxon_id) on delete cascade on update cascade
 );
 
 create table if not exists trees (
@@ -23,10 +23,10 @@ create table if not exists branches (
 	branch_id integer constraint branch_pk primary key asc autoincrement,
 	node_id integer, -- index
 	parent_id integer, -- index
-	taxon_id integer constraint taxon_fk references taxa (taxon_id), -- index
+	taxon_id integer constraint taxon_fk references taxa (taxon_id) on delete cascade on update cascade, -- index
 	label text, -- could be a biological taxon, a glottocode, a society name, a haplotype, etc.
 	branch_length real,
-	tree_id integer constraint tree_fk references trees (tree_id) -- index
+	tree_id integer constraint tree_fk references trees (tree_id) on delete cascade on update cascade -- index
 );
 
 create table if not exists occurrences (
@@ -42,7 +42,7 @@ create table if not exists occurrences (
 	elevation real,
 	has_geospatial_issues integer, -- index, boolean 0/1
 	taxon_key integer,
-	taxon_id integer constraint taxon_fk references taxa (taxon_id) -- index
+	taxon_id integer constraint taxon_fk references taxa (taxon_id) on delete cascade on update cascade -- index
 );
 
 create table if not exists characters (
@@ -55,7 +55,7 @@ create table if not exists characters (
 create table if not exists states (
 	state_id integer constraint state_pk primary key asc autoincrement,
 	label text, -- could be a biological taxon, a glottocode, a society name, a haplotype, etc.
-	character_id integer constraint character_fk references characters (character_id), -- index
+	character_id integer constraint character_fk references characters (character_id) on delete cascade on update cascade, -- index
 	character_value text,
-	taxon_id integer constraint taxon_fk references taxa (taxon_id) -- index
+	taxon_id integer constraint taxon_fk references taxa (taxon_id) on delete cascade on update cascade -- index
 );
