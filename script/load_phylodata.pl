@@ -89,7 +89,8 @@ sub get_taxon_id {
 			my $score = $results->[0]->{'score'};
 			my $local = $results->[0]->{'local_id'};
 			my $value = $results->[0]->{'match_value'};
-			if ( $score >= 0.75 and $value eq 'Fuzzy match by canonical form' ) {
+			my $editd = $results->[0]->{'edit_distance'};
+			if ( $score >= 0.75 and $value =~ /(?:Fuzzy|Exact) match by canonical form/ and $editd <= 1 ) {
 				$taxon_id = $taxon_rs->single({ $colname => $local })->taxon_id;
 				DEBUG "TNRS match for '$label' => '$match' ($taxon_id)";
 			}
