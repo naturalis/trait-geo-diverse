@@ -10,6 +10,7 @@ create table if not exists taxonvariants (
 	taxonvariant_id integer constraint taxonvariant_pk primary key asc autoincrement,
 	taxonvariant_name text, -- index
 	taxonvariant_level text,
+	taxonvariant_status text, -- e.g. synonym, canonical, etc.
 	taxon_id integer constraint taxon_fk references taxa (taxon_id)
 );
 
