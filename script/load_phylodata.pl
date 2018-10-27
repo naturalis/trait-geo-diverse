@@ -4,12 +4,13 @@ use warnings;
 use Getopt::Long;
 use MY::Schema;
 use Data::Dumper;
+use FindBin qw($Bin);
 use Log::Log4perl qw(:easy);
-use MY::Taxize qw[gnr_resolve TRUE FALSE];
+use MY::Taxize qw(gnr_resolve TRUE FALSE);
 Log::Log4perl->easy_init($DEBUG);
 
 # process command line arguments
-my $db = $ENV{'HOME'} . '/Dropbox/documents/projects/dropbox-projects/trait-geo-diverse/tgd.db';
+my $db = $Bin . '/../data/sql/tgd.db';
 my $infile;
 my $taxonomy;
 GetOptions(
