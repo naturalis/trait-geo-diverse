@@ -123,9 +123,24 @@ __PACKAGE__->has_many(
   { cascade_copy => 0, cascade_delete => 0 },
 );
 
+=head2 taxonvariants
 
-# Created by DBIx::Class::Schema::Loader v0.07049 @ 2018-10-25 13:43:51
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:ixVK8co4hNTDp2+fdHr3fA
+Type: has_many
+
+Related object: L<MY::Schema::Result::Taxonvariant>
+
+=cut
+
+__PACKAGE__->has_many(
+  "taxonvariants",
+  "MY::Schema::Result::Taxonvariant",
+  { "foreign.taxon_id" => "self.taxon_id" },
+  { cascade_copy => 0, cascade_delete => 0 },
+);
+
+
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2018-10-27 11:45:37
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Am8OSwSQA52RGpUBV3Jg8g
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
