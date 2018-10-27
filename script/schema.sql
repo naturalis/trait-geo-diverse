@@ -23,7 +23,7 @@ create table if not exists branches (
 	branch_id integer constraint branch_pk primary key asc autoincrement,
 	node_id integer, -- index
 	parent_id integer, -- index
-	taxon_id integer constraint taxon_fk references taxa (taxon_id) on delete cascade on update cascade, -- index
+	taxonvariant_id integer constraint taxonvariant_fk references taxonvariants (taxonvariant_id) on delete cascade on update cascade, -- index
 	label text, -- could be a biological taxon, a glottocode, a society name, a haplotype, etc.
 	branch_length real,
 	tree_id integer constraint tree_fk references trees (tree_id) on delete cascade on update cascade -- index
@@ -42,7 +42,7 @@ create table if not exists occurrences (
 	elevation real,
 	has_geospatial_issues integer, -- index, boolean 0/1
 	taxon_key integer,
-	taxon_id integer constraint taxon_fk references taxa (taxon_id) on delete cascade on update cascade -- index
+	taxonvariant_id integer constraint taxonvariant_fk references taxonvariants (taxonvariant_id) on delete cascade on update cascade -- index
 );
 
 create table if not exists characters (
@@ -57,5 +57,5 @@ create table if not exists states (
 	label text, -- could be a biological taxon, a glottocode, a society name, a haplotype, etc.
 	character_id integer constraint character_fk references characters (character_id) on delete cascade on update cascade, -- index
 	character_value text,
-	taxon_id integer constraint taxon_fk references taxa (taxon_id) on delete cascade on update cascade -- index
+	taxonvariant_id integer constraint taxonvariant_fk references taxonvariants (taxonvariant_id) on delete cascade on update cascade -- index
 );
