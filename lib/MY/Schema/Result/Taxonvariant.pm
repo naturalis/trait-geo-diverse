@@ -79,6 +79,51 @@ __PACKAGE__->set_primary_key("taxonvariant_id");
 
 =head1 RELATIONS
 
+=head2 branches
+
+Type: has_many
+
+Related object: L<MY::Schema::Result::Branch>
+
+=cut
+
+__PACKAGE__->has_many(
+  "branches",
+  "MY::Schema::Result::Branch",
+  { "foreign.taxonvariant_id" => "self.taxonvariant_id" },
+  { cascade_copy => 0, cascade_delete => 0 },
+);
+
+=head2 occurrences
+
+Type: has_many
+
+Related object: L<MY::Schema::Result::Occurrence>
+
+=cut
+
+__PACKAGE__->has_many(
+  "occurrences",
+  "MY::Schema::Result::Occurrence",
+  { "foreign.taxonvariant_id" => "self.taxonvariant_id" },
+  { cascade_copy => 0, cascade_delete => 0 },
+);
+
+=head2 states
+
+Type: has_many
+
+Related object: L<MY::Schema::Result::State>
+
+=cut
+
+__PACKAGE__->has_many(
+  "states",
+  "MY::Schema::Result::State",
+  { "foreign.taxonvariant_id" => "self.taxonvariant_id" },
+  { cascade_copy => 0, cascade_delete => 0 },
+);
+
 =head2 taxon
 
 Type: belongs_to
@@ -100,8 +145,8 @@ __PACKAGE__->belongs_to(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07049 @ 2018-10-27 11:45:37
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:bMZ9UHQDmfQtiA7/3PhQUg
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2018-10-27 12:18:54
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:REVqAHafpOCI3hYbJqcFxQ
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

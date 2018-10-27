@@ -45,7 +45,7 @@ __PACKAGE__->table("states");
   data_type: 'text'
   is_nullable: 1
 
-=head2 taxon_id
+=head2 taxonvariant_id
 
   data_type: 'integer'
   is_foreign_key: 1
@@ -62,7 +62,7 @@ __PACKAGE__->add_columns(
   { data_type => "integer", is_foreign_key => 1, is_nullable => 1 },
   "character_value",
   { data_type => "text", is_nullable => 1 },
-  "taxon_id",
+  "taxonvariant_id",
   { data_type => "integer", is_foreign_key => 1, is_nullable => 1 },
 );
 
@@ -95,34 +95,34 @@ __PACKAGE__->belongs_to(
   {
     is_deferrable => 0,
     join_type     => "LEFT",
-    on_delete     => "NO ACTION",
-    on_update     => "NO ACTION",
+    on_delete     => "CASCADE",
+    on_update     => "CASCADE",
   },
 );
 
-=head2 taxon
+=head2 taxonvariant
 
 Type: belongs_to
 
-Related object: L<MY::Schema::Result::Taxa>
+Related object: L<MY::Schema::Result::Taxonvariant>
 
 =cut
 
 __PACKAGE__->belongs_to(
-  "taxon",
-  "MY::Schema::Result::Taxa",
-  { taxon_id => "taxon_id" },
+  "taxonvariant",
+  "MY::Schema::Result::Taxonvariant",
+  { taxonvariant_id => "taxonvariant_id" },
   {
     is_deferrable => 0,
     join_type     => "LEFT",
-    on_delete     => "NO ACTION",
-    on_update     => "NO ACTION",
+    on_delete     => "CASCADE",
+    on_update     => "CASCADE",
   },
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07049 @ 2018-10-25 13:43:51
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:G5QWl6bsa5x/3bx74u5L+Q
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2018-10-27 12:18:54
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:2v7nkNfjNlJMxPj5ZnC5Gg
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
