@@ -46,10 +46,7 @@ while(<$fh>) {
 	else {
 		
 		# load into hash
-		my %record;
-		for my $i ( 0 .. $#header ) {
-			$record{$header[$i]} = $line[$i];
-		}
+		my %record = map { $header[$_] => $line[$_] } 0 .. $#header;
 		
 		# check if focal class, skip otherwise
 		if ( $record{'class'} and $record{'class'} eq $class ) {
