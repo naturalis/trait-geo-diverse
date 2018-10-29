@@ -63,6 +63,7 @@ my %char_id;
 # read states file, persist character state values
 {
 	my @header;
+	my %taxonvariant_id;
 	open my $fh, '<', $infile or die $!;
 	while(<$fh>) {
 		chomp;
@@ -77,17 +78,24 @@ my %char_id;
 		else {
 			my %record = map { $header[$_] => $line[$_] } 0 .. $#header;
 			
-			# update values
+			# update character id from local to global
 			my $local_id = $record{'character_id'};
 			$record{'character_id'} = $char_id{$local_id};
+			
+			# lookup taxon variant ID if a reference taxonomy was provided
 			if ( $taxonomy ) {
-				$record{'taxonvariant_id'} = get_taxonvariant_id(
-					'itis'  => $sdb,
-					'tgd'   => $db,
-					'label' => $record{'label'},
-					'dsid'  => $data_source_id, # msw3
-					'col'   => $colname,
-				);
+				
+				# do the lookup once and cache it for subsequent states
+				if ( not $taxonvariant_id{ $record{'label'} } ) {
+					$taxonvariant_id{ $record{'label'} } = get_taxonvariant_id(
+						'itis'  => $sdb,
+						'tgd'   => $db,
+						'label' => $record{'label'},
+						'dsid'  => $data_source_id, # msw3
+						'col'   => $colname,
+					);
+				}
+				$record{'taxonvariant_id'} = $taxonvariant_id{ $record{'label'} };
 			}
 			
 			# persist record
