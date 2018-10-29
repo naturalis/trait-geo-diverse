@@ -2,9 +2,14 @@ package MY::Taxize;
 use strict;
 use warnings;
 use Statistics::R;
+use MY::Schema;
+use MY::Schema::ITIS;
+use Data::Dumper;
+use Log::Log4perl qw(:easy);
+Log::Log4perl->easy_init($INFO);
 require Exporter;
 our @ISA = qw(Exporter);
-our @EXPORT_OK = qw(gnr_resolve classification TRUE FALSE);
+our @EXPORT_OK = qw(gnr_resolve get_taxonvariant_id TRUE FALSE);
 
 sub TRUE () { 1 }
 sub FALSE () { 0 }
@@ -103,6 +108,127 @@ sub gnr_resolve {
 		push @results, $r;
 	}
 	return \@results;
+}
+
+=pod
+
+=over
+
+=item
+
+Usage:
+
+	my $id = get_taxonvariant_id(
+		itis  => '/path/to/ITIS.db',
+		tgd   => '/path/to/tgd.db',
+		label => 'Pan paniscus',
+		dsid  => 174, # msw3
+		col   => 'msw_id',
+	);
+
+=cut
+
+{
+	my $itis;   # connection to ITIS database
+	my $schema; # connection to MSW3 database
+	my $names;  # result set for ITIS long names
+	my $links;  # result set for links between synonyms and canonical names
+	my $taxonv_rs; # result set for taxon variants 
+	my $taxon_rs;  # result set for taxa
+
+	sub get_taxonvariant_id {
+		my %args = @_;
+		my $label          = $args{'label'};
+		my $data_source_id = $args{'dsid'};
+		my $colname        = $args{'col'};
+		my $taxonvariant_id;		
+		
+		# instantiate database connections to ITIS
+		if ( $args{'itis'} and not $itis ) {
+			$itis  = MY::Schema::ITIS->connect( 'dbi:SQLite:' . $args{'itis'} );
+			$names = $itis->resultset('Longname');
+			$links = $itis->resultset('SynonymLink');
+		}
+		
+		# instantiate database connection to TGD
+		if ( $args{'tgd'} and not $schema ) {
+			$schema    = MY::Schema->connect( 'dbi:SQLite:' . $args{'tgd'} );
+			$taxonv_rs = $schema->resultset('Taxonvariant');
+			$taxon_rs  = $schema->resultset('Taxa');
+		}
+	
+		# do local query
+		my $tv = $taxonv_rs->search({ 'taxonvariant_name' => $label });
+		if ( $tv->count > 0 ) {
+			if ( $tv->count == 1 ) {
+				$taxonvariant_id = $tv->first->taxonvariant_id;
+				DEBUG "Exact match in local database for '$label' => $taxonvariant_id";
+			}
+			else {
+				while( my $t = $tv->next ) {
+					ERROR $t->taxonvariant_name;
+				}
+			}
+		}
+	
+		# look in ITIS for synonyms
+		elsif ( my $itis_syn = $names->find({ 'completename' => $label }) ) {
+			eval {
+				my $tsn_acc  = $links->find({ 'tsn' => $itis_syn->tsn })->tsn_accepted;
+				my $name_acc = $names->find({ 'tsn' => $tsn_acc })->completename;
+			
+				# check if other ITIS name exists
+				if ( my $acc_tv = $taxonv_rs->single({ 'taxonvariant_name' => $name_acc }) ) {
+					$taxonvariant_id = $taxonv_rs->create({
+						'taxonvariant_name'   => $label,
+						'taxon_id'            => $acc_tv->taxon_id,
+						'taxonvariant_level'  => $acc_tv->taxonvariant_level,
+						'taxonvariant_status' => 'synonym',
+					})->taxonvariant_id;			
+					DEBUG "Exact match in ITIS database for '$label' => '$name_acc' => $taxonvariant_id";
+				}
+			};
+			if ( $@ ) {
+				ERROR "ITIS problem with $label";
+			}
+		}
+	
+		# return here unless there was an ITIS problem
+		return $taxonvariant_id if $taxonvariant_id;
+	
+		# do tnrs
+		my $results = gnr_resolve( 
+			'names'           => [ $label ], 
+			'data_source_ids' => [ $data_source_id ],
+			'canonical'       => TRUE,
+			'best_match_only' => TRUE,
+			'fields'          => [ "all" ]
+		);	
+		if ( $results->[0] ) {
+			my $match = $results->[0]->{'matched_name2'};
+			my $score = $results->[0]->{'score'};
+			my $local = $results->[0]->{'local_id'};
+			my $value = $results->[0]->{'match_value'};
+			my $editd = $results->[0]->{'edit_distance'};
+			if ( $score >= 0.75 and $value =~ /(?:Fuzzy|Exact) match by canonical form/ and $editd <= 1 ) {
+			
+				# lookup taxon and link variant to it
+				my $taxon = $taxon_rs->single({ $colname => $local });
+				$taxonvariant_id = $taxonv_rs->create({
+					'taxonvariant_name'   => $label,
+					'taxon_id'            => $taxon->taxon_id,
+					'taxonvariant_level'  => $taxon->taxon_level,
+					'taxonvariant_status' => 'synonym',
+				})->taxonvariant_id;
+				INFO "TNRS match for '$label' => '$match' (" . $taxon->taxon_id . ")";
+			}
+			else {
+				INFO "TNRS matching score for '$label' => '$match' not high enough ($score)";
+				INFO Dumper($results->[0]);
+			}
+		}
+		return $taxonvariant_id;
+	}
 }
 
 1;
