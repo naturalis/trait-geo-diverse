@@ -24,7 +24,7 @@ my $rs = $schema->resultset('Occurrence');
 my @header;
 my $counter;
 open my $fh, "gunzip -c $infile |" or die $!;
-while(<$fh>) {
+LINE: while(<$fh>) {
 	chomp;
 	my @line = split /\t/, $_;
 	
@@ -40,10 +40,19 @@ while(<$fh>) {
 		# rename this field because 'type' is reserved word in SQL
 		$record{'occurrence_type'} = delete $record{'type'};
 		
-		# persist record - XXX at this point it does NOT have a taxon variant ID
-		if ( $record{'decimal_longitude'} ne '' and $record{'decimal_latitude'} ne '' and $record{'basis_of_record'} !~ /UNKNOWN/ ) {
-			$rs->create(\%record);
-			DEBUG $counter . ': ' . Dumper(\%record) unless ++$counter % 10_000;
+		# these fields cannot be empty
+		for my $field ( qw(decimal_longitude decimal_latitude event_date) ) {
+			next LINE if not $record{$field};
 		}
+		
+		# this field must be 0
+		next LINE if $record{'has_geospatial_issues'} != 0;
+		
+		# this field must not be unknown
+		next LINE if $record{'basis_of_record'} =~ /UNKNOWN/;
+		
+		# now persist the record
+		$rs->create(\%record);
+		DEBUG $counter . ': ' . Dumper(\%record) unless ++$counter % 10_000;
 	}
 }
