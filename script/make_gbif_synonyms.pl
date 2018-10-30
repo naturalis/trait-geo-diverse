@@ -2,6 +2,7 @@
 use strict;
 use warnings;
 use Getopt::Long;
+use Data::Dumper;
 
 # process command line arguments
 my $infile;        # Taxon.tsv from GBIF's backbone-current.zip
@@ -24,7 +25,7 @@ print $sfh 'tsn', "\t", 'tsn_accepted', "\n";
 # start reading input
 my @header;
 open my $in, '<', $infile or die $!;
-while(<$in>) {
+LINE: while(<$in>) {
 	chomp;
 	my @line = split /\t/, $_;
 	
@@ -38,15 +39,30 @@ while(<$in>) {
 		my %record = map { $header[$_] => $line[$_] } 0 .. $#header;
 		next if not $record{'class'} or $record{'class'} ne $class;
 		
-		# fields for $longnames
-		my $completename = $record{'scientificName'};
-		my $tsn = $record{'taxonID'};
-		print $lfh $tsn, "\t", $completename, "\n";
+		# create label
+		my $rank = $record{'taxonRank'};
+		my $label;
+		if ( $rank =~ /(?:species|variety)/ ) {
+			$label = join ' ', grep { $_ } @record{qw(genus specificEpithet infraspecificEpithet)};
+		}
+		elsif ( $rank =~ /UNRANKED/i ) {
+			next LINE;
+		}
+		else {
+			$label = $record{lc $rank};
+		}		
+		
+		if ( not $label ) {
+			warn Dumper(\%record);
+			next LINE;
+		}
+		
+		# print fields for $longnames
+		print $lfh $record{'taxonID'}, "\t", $label, "\n";
 		
 		# make synonym link if focal name is not 'accepted'
 		if ( $record{'taxonomicStatus'} ne 'accepted' ) {
-			my $tsn_accepted = $record{'acceptedNameUsageID'};
-			print $sfh $tsn, "\t", $tsn_accepted, "\n";
+			print $sfh $record{'taxonID'}, "\t", $record{'acceptedNameUsageID'}, "\n";
 		}
 	}
 }
