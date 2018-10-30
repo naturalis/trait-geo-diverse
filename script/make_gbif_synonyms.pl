@@ -23,7 +23,7 @@ print $lfh 'tsn', "\t", 'completename', "\n";
 print $sfh 'tsn', "\t", 'tsn_accepted', "\n";
 
 # start reading input
-my @header;
+my ( @header, %seen );
 open my $in, '<', $infile or die $!;
 LINE: while(<$in>) {
 	chomp;
@@ -56,12 +56,13 @@ LINE: while(<$in>) {
 			warn Dumper(\%record);
 			next LINE;
 		}
+		next LINE if $seen{$label}++;
 		
 		# print fields for $longnames
 		print $lfh $record{'taxonID'}, "\t", $label, "\n";
 		
 		# make synonym link if focal name is not 'accepted'
-		if ( $record{'taxonomicStatus'} ne 'accepted' ) {
+		if ( $record{'taxonomicStatus'} ne 'accepted' and $record{'acceptedNameUsageID'} ) {
 			print $sfh $record{'taxonID'}, "\t", $record{'acceptedNameUsageID'}, "\n";
 		}
 	}
