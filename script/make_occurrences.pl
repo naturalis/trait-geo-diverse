@@ -5,6 +5,7 @@ use utf8;
 use Data::Dumper;
 use Getopt::Long;
 use Archive::Zip;
+use MY::Schema::Synonyms;
 use File::Temp qw(tempfile);
 
 # extracts a DarwinCore archive from GBIF, exports selected columns from 
@@ -12,10 +13,14 @@ use File::Temp qw(tempfile);
 # process command line arguments
 my $infile;   # zip file downloaded from GBIF
 my $outfile;  # simplified occurrences as TSV
+my $sdb;
 GetOptions(
 	'infile=s'   => \$infile,
 	'outfile=s'  => \$outfile,
+	'sdb=s'      => \$sdb,
 );
+
+my $syn = MY::Schema::Synonyms->connect( "dbi:SQLite:$sdb" );
 
 # columns to retain
 my %columns = (
@@ -38,7 +43,7 @@ $zip->extractMember( 'occurrence.txt' => $tempfile );
 # start reading occurrences and writing output
 open my $in, '<', $tempfile or die $!;
 open my $out, '>', $outfile or die $!;
-my ( @header, @transformed );
+my ( @header, @transformed, %labels );
 LINE: while(<$in>) {
 	chomp;
 	my @line = split /\t/, $_;
@@ -60,19 +65,11 @@ LINE: while(<$in>) {
 		$record{'hasGeospatialIssues'} = $record{'hasGeospatialIssues'} eq 'true' ? 1 : 0; 
 		
 		# create label
-		my $rank = $record{'taxonRank'};
-		my $label;
-		if ( $rank =~ /SPECIES/ ) {
-			$label = join ' ', grep { /\S/ } @record{qw(genus specificEpithet infraspecificEpithet)};
+		my $key = $record{'taxonKey'};
+		if ( not $labels{$key} ) {
+			$labels{$key} = $syn->resultset('Longname')->find($key)->completename;
 		}
-		elsif ( $rank eq 'UNRANKED' ) {
-			next LINE;
-		}
-		else {
-			$label = $record{lc $rank};
-		}
-		
-		die Dumper(\%record) if not $label;
+		my $label = $labels{$key};
 		
 		# write output
 		my @values = map { $record{$_} } grep { $columns{$_} } @header;
