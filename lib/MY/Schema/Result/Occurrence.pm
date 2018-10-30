@@ -46,7 +46,7 @@ __PACKAGE__->table("occurrences");
 
 =head2 event_date
 
-  data_type: 'text'
+  data_type: 'date'
   is_nullable: 1
 
 =head2 decimal_latitude
@@ -59,19 +59,9 @@ __PACKAGE__->table("occurrences");
   data_type: 'real'
   is_nullable: 1
 
-=head2 scientific_name
-
-  data_type: 'text'
-  is_nullable: 1
-
 =head2 dataset_key
 
   data_type: 'text'
-  is_nullable: 1
-
-=head2 elevation
-
-  data_type: 'real'
   is_nullable: 1
 
 =head2 has_geospatial_issues
@@ -79,9 +69,9 @@ __PACKAGE__->table("occurrences");
   data_type: 'integer'
   is_nullable: 1
 
-=head2 taxon_key
+=head2 label
 
-  data_type: 'integer'
+  data_type: 'text'
   is_nullable: 1
 
 =head2 taxonvariant_id
@@ -102,21 +92,17 @@ __PACKAGE__->add_columns(
   "basis_of_record",
   { data_type => "text", is_nullable => 1 },
   "event_date",
-  { data_type => "text", is_nullable => 1 },
+  { data_type => "date", is_nullable => 1 },
   "decimal_latitude",
   { data_type => "real", is_nullable => 1 },
   "decimal_longitude",
   { data_type => "real", is_nullable => 1 },
-  "scientific_name",
-  { data_type => "text", is_nullable => 1 },
   "dataset_key",
   { data_type => "text", is_nullable => 1 },
-  "elevation",
-  { data_type => "real", is_nullable => 1 },
   "has_geospatial_issues",
   { data_type => "integer", is_nullable => 1 },
-  "taxon_key",
-  { data_type => "integer", is_nullable => 1 },
+  "label",
+  { data_type => "text", is_nullable => 1 },
   "taxonvariant_id",
   { data_type => "integer", is_foreign_key => 1, is_nullable => 1 },
 );
@@ -156,8 +142,8 @@ __PACKAGE__->belongs_to(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07049 @ 2018-10-27 12:18:54
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:3itJQ1zlYl/SBu++//zPDg
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2018-10-30 17:22:58
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:rZ3ZhDwJTM2Q2pie0/ul5A
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
