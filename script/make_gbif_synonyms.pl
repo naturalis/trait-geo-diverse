@@ -39,27 +39,8 @@ LINE: while(<$in>) {
 		my %record = map { $header[$_] => $line[$_] } 0 .. $#header;
 		next if not $record{'class'} or $record{'class'} ne $class;
 		
-		# create label
-		my $rank = $record{'taxonRank'};
-		my $label;
-		if ( $rank =~ /(?:species|variety)/ ) {
-			$label = join ' ', grep { $_ } @record{qw(genus specificEpithet infraspecificEpithet)};
-		}
-		elsif ( $rank =~ /UNRANKED/i ) {
-			next LINE;
-		}
-		else {
-			$label = $record{lc $rank};
-		}		
-		
-		if ( not $label ) {
-			warn Dumper(\%record);
-			next LINE;
-		}
-		next LINE if $seen{$label}++;
-		
 		# print fields for $longnames
-		print $lfh $record{'taxonID'}, "\t", $label, "\n";
+		print $lfh $record{'taxonID'}, "\t", $record{'canonicalName'}, "\n";
 		
 		# make synonym link if focal name is not 'accepted'
 		if ( $record{'taxonomicStatus'} ne 'accepted' and $record{'acceptedNameUsageID'} ) {
