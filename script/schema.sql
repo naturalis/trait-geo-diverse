@@ -31,18 +31,16 @@ create table if not exists branches (
 
 create table if not exists occurrences (
 	occurrence_id integer constraint occurrence_pk primary key asc autoincrement,
-	gbif_id integer, -- index
-	occurrence_type text, -- type, index
-	basis_of_record text, -- index
-	event_date text, -- ISO-8601 date
+	gbif_id integer,
+	occurrence_type text,
+	basis_of_record text,
+	event_date date,
 	decimal_latitude real,
 	decimal_longitude real,
-	scientific_name text, -- index
-	dataset_key text, -- index
-	elevation real,
-	has_geospatial_issues integer, -- index, boolean 0/1
-	taxon_key integer,
-	taxonvariant_id integer constraint taxonvariant_fk references taxonvariants (taxonvariant_id) on delete cascade on update cascade -- index
+	dataset_key text,
+	has_geospatial_issues integer,
+	label text,
+	taxonvariant_id integer constraint taxonvariant_fk references taxonvariants (taxonvariant_id) on delete cascade on update cascade
 );
 
 create table if not exists characters (
