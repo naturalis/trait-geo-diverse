@@ -6,7 +6,7 @@ use Data::Dumper;
 use FindBin qw($Bin);
 use Log::Log4perl qw(:easy);
 use MY::Schema;
-use MY::Schema::ITIS;
+use MY::Schema::Synonyms;
 use MY::Taxize qw(get_taxonvariant_id);
 Log::Log4perl->easy_init($INFO);
 
@@ -88,7 +88,7 @@ my %char_id;
 				# do the lookup once and cache it for subsequent states
 				if ( not $taxonvariant_id{ $record{'label'} } ) {
 					$taxonvariant_id{ $record{'label'} } = get_taxonvariant_id(
-						'itis'  => $sdb,
+						'syn'   => $sdb,
 						'tgd'   => $db,
 						'label' => $record{'label'},
 						'dsid'  => $data_source_id, # msw3

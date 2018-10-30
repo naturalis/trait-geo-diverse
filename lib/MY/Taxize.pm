@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Statistics::R;
 use MY::Schema;
-use MY::Schema::ITIS;
+use MY::Schema::Synonyms;
 use Data::Dumper;
 use Log::Log4perl qw(:easy);
 Log::Log4perl->easy_init($INFO);
@@ -119,7 +119,7 @@ sub gnr_resolve {
 Usage:
 
 	my $id = get_taxonvariant_id(
-		itis  => '/path/to/ITIS.db',
+		syn   => '/path/to/synonyms.db',
 		tgd   => '/path/to/tgd.db',
 		label => 'Pan paniscus',
 		dsid  => 174, # msw3
@@ -129,9 +129,9 @@ Usage:
 =cut
 
 {
-	my $itis;   # connection to ITIS database
-	my $schema; # connection to MSW3 database
-	my $names;  # result set for ITIS long names
+	my $itis;   # connection to synonyms database
+	my $schema; # connection to trait-geo-diverse database
+	my $names;  # result set for synonyms long names
 	my $links;  # result set for links between synonyms and canonical names
 	my $taxonv_rs; # result set for taxon variants 
 	my $taxon_rs;  # result set for taxa
@@ -143,9 +143,9 @@ Usage:
 		my $colname        = $args{'col'};
 		my $taxonvariant_id;		
 		
-		# instantiate database connections to ITIS
-		if ( $args{'itis'} and not $itis ) {
-			$itis  = MY::Schema::ITIS->connect( 'dbi:SQLite:' . $args{'itis'} );
+		# instantiate database connections to synonyms
+		if ( $args{'syn'} and not $itis ) {
+			$itis  = MY::Schema::Synonyms->connect( 'dbi:SQLite:' . $args{'syn'} );
 			$names = $itis->resultset('Longname');
 			$links = $itis->resultset('SynonymLink');
 		}
@@ -171,13 +171,13 @@ Usage:
 			}
 		}
 	
-		# look in ITIS for synonyms
+		# look for synonyms
 		elsif ( my $itis_syn = $names->find({ 'completename' => $label }) ) {
 			eval {
 				my $tsn_acc  = $links->find({ 'tsn' => $itis_syn->tsn })->tsn_accepted;
 				my $name_acc = $names->find({ 'tsn' => $tsn_acc })->completename;
 			
-				# check if other ITIS name exists
+				# check if canonical name exists
 				if ( my $acc_tv = $taxonv_rs->single({ 'taxonvariant_name' => $name_acc }) ) {
 					$taxonvariant_id = $taxonv_rs->create({
 						'taxonvariant_name'   => $label,
@@ -185,15 +185,15 @@ Usage:
 						'taxonvariant_level'  => $acc_tv->taxonvariant_level,
 						'taxonvariant_status' => 'synonym',
 					})->taxonvariant_id;			
-					DEBUG "Exact match in ITIS database for '$label' => '$name_acc' => $taxonvariant_id";
+					DEBUG "Exact match in synonyms database for '$label' => '$name_acc' => $taxonvariant_id";
 				}
 			};
 			if ( $@ ) {
-				ERROR "ITIS problem with $label";
+				ERROR "Synonyms problem with $label: $@";
 			}
 		}
 	
-		# return here unless there was an ITIS problem
+		# return here unless there was an synonyms problem
 		return $taxonvariant_id if $taxonvariant_id;
 	
 		# do tnrs

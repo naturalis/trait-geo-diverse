@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Getopt::Long;
 use MY::Schema;
-use MY::Schema::ITIS;
+use MY::Schema::Synonyms;
 use Data::Dumper;
 use FindBin qw($Bin);
 use Log::Log4perl qw(:easy);
@@ -59,7 +59,7 @@ while(<$fh>) {
 		if ( $taxonomy and $record{'label'} ) {
 			$record{'taxonvariant_id'} = get_taxonvariant_id( 
 				'label' => $record{'label'},
-				'itis'  => $sdb,
+				'syn'   => $sdb,
 				'tgd'   => $db,
 				'dsid'  => $data_source_id,
 				'col'   => $colname,
