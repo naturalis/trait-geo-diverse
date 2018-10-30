@@ -37,9 +37,6 @@ LINE: while(<$fh>) {
 	else {
 		my %record = map { $header[$_] => $line[$_] } 0 .. $#header;
 		
-		# rename this field because 'type' is reserved word in SQL
-		$record{'occurrence_type'} = delete $record{'type'};
-		
 		# these fields cannot be empty
 		for my $field ( qw(decimal_longitude decimal_latitude event_date) ) {
 			next LINE if not $record{$field};
