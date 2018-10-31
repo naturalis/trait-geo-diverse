@@ -118,6 +118,7 @@ tree <- make.phylo(db_file, tree_id, names)
 # at this scale, the tip labels will be cluttered.
 # let's just make sure it's an ultrametric tree.
 plot(tree, show.tip.label=F)
+axisPhylo(side = 1)
 ```
 
 ## Doing a comparative analysis
