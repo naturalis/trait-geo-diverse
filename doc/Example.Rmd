@@ -40,14 +40,17 @@ Then we need to look up the ID of the mammal supertree of Bininda-Emonds et al. 
 [../data/phylogeny/Bininda-emonds_2007_mammals.tsv](../data/phylogeny/Bininda-emonds_2007_mammals.tsv). We query as follows:
 
 ```{r tree_id_query}
-tree_id <- dbGetQuery(tgd, 'select tree_id from trees where tree_name="../data/phylogeny/Bininda-emonds_2007_mammals.tsv"')$tree_id
+tree_name <- "../data/phylogeny/Bininda-emonds_2007_mammals.tsv"
+query <- 'select tree_id from trees where tree_name="%s"'
+tree_id <- dbGetQuery(tgd, sprintf(query, tree_name))$tree_id
 ```
 
 Given this `tree_id`, we are now going to look for taxa that have taxonvariants that have branches in the tree and that have taxonvariants
 that have occurrences. This is a fairly complex query all in all because there's a number of joins that need to be done. As follows:
 
 ```{r taxa_join}
-query <- 'select distinct taxa.taxon_name,occurrences.decimal_latitude,occurrences.decimal_longitude
+query <- 'select distinct 
+taxa.taxon_name,occurrences.decimal_latitude,occurrences.decimal_longitude
 from (((taxonvariants 
 inner join taxa on taxonvariants.taxon_id = taxa.taxon_id)
 inner join occurrences on occurrences.taxonvariant_id = taxonvariants.taxonvariant_id)
@@ -79,10 +82,10 @@ df <- matrix(ncol=2, nrow=length(names))
 for ( i in 1:length(names) ) {
 	
 	# average absolute latitude
-	aal <- mean(abs(results[ which(results$taxon_name == names[[i]]), "decimal_latitude" ]))
+	aal <- mean(abs(results[which(results$taxon_name==names[[i]]),"decimal_latitude"]))
 	
 	# latitudinal range
-	lar <- range(results[ which(results$taxon_name == names[[i]]), "decimal_latitude" ])
+	lar <- range(results[which(results$taxon_name==names[[i]]),"decimal_latitude"])
 	lar <- lar[[2]] - lar[[1]]
 	
 	# add row to matrix
@@ -111,7 +114,10 @@ a `phylo` object (as originally introduced by the `ape` package). As follows:
 library(ape)
 source('../R/make_phylo.R')
 tree <- make.phylo(db_file, tree_id, names)
-plot(tree)
+
+# at this scale, the tip labels will be cluttered.
+# let's just make sure it's an ultrametric tree.
+plot(tree, show.tip.label=F)
 ```
 
 ## Doing a comparative analysis
@@ -120,10 +126,13 @@ We now have everything in place to do a phylogenetic comparative analysis, e.g. 
 We follow [this tutorial](https://www.r-phylo.org/wiki/HowTo/Phylogenetic_Independent_Contrasts):
 
 ```{r pic}
-# collapse unbranched interior nodes (these are the result of taking a subtree from the database)
+# Because we extract a subtree from the database, it may
+# have interior nodes with just one child. Here we 
+# collapse these.
 tree <- collapse.singles(tree)
 
-# convert from multifurcating to bifurcating (the tree in the database may not be fully resolved)
+# The tree may not be fully bifurcating, althout PIC needs
+# this. Hence we arbitrarily resolve it.
 tree <- multi2di(tree)
 
 # create separate vectors
@@ -150,3 +159,5 @@ summary.lm(regress) # p < 0.05
 plot(average_absolute_latitude.c, latitudinal_range.c)
 abline(regress)
 ```
+
+It appears that Rapoport's rule indeed applies (p<0.05*)
