@@ -2,7 +2,9 @@
 title: "Example usage in R"
 author: "Rutger Vos (@rvosa)"
 date: "31-10-2018"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -12,23 +14,26 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Introduction
 
 This document gives a first introduction in querying the TGD database such that occurrences and phylogenetic data are properly linked despite
-input data potentially using different taxon labels and different backbone topologies. The overarching design of the schema is such that there
-is a table of `taxa`, which uses the names accepted by either the [Mammal Species of the World 3rd edition](http://www.departments.bucknell.edu/biology/resources/msw3/), the [GBIF backbone taxonomy](https://doi.org/10.15468/39omei), or both.
-As such, each record here has at least one of the identifiers used by these resources. Subsequently, all variations on these accepted names
-(that is, alternative spellings, synonyms, etc.) are records in the `taxonvariants` table, each of which have a foreign key that links it to the
+input data sets potentially using different taxon labels and different backbone taxonomies The overarching design of the schema is such that 
+there is a table of `taxa`, which uses the names accepted by either the 
+[Mammal Species of the World 3rd edition](http://www.departments.bucknell.edu/biology/resources/msw3/), the 
+[GBIF backbone taxonomy](https://doi.org/10.15468/39omei), or both.
+As such, each record in that table has at least one of the identifiers used by these resources. Subsequently, all variations on these accepted names
+(that is, alternative spellings, synonyms, etc.) are records in the `taxonvariants` table, each of which have a foreign key that links back to the
 accepted name version. Whenever a data set (a tree, a set of occurrences, a trait data set) is imported, the record labels that are used in that
 data set are looked up in the taxon variants table. Any existing exact match is re-used, and new ones are created as needed. Then, an attempt is
-made to link these labels to accepted taxon names using taxonomic name reconciliation (as implemented in the `taxize` package). The upshot of this
+made to link new variants to accepted taxon names using taxonomic name reconciliation (as implemented in the `taxize` package). The upshot of this
 design is that, if you want to get all occurrences (say) for a given species, you first have to look up that species in the taxa table, then get
 all the variations on that name in the taxonvariants table, and then all occurrences that link to any of these variants. And, if you want to 
 combine, for example, occurrences and phylogeny, you have to look for the intersection between "taxa that have variants that have occurrences",
-and "taxa that have variants that have branches for the given tree".
+and "taxa that have variants that have branches in the given tree".
 
 Without further ado, here's what the steps might be. First we connect to the database:
 
 ```{r connect}
 library(DBI)
-tgd <- dbConnect(RSQLite::SQLite(), "../data/sql/tgd.db")
+db_file <- "../data/sql/tgd.db"
+tgd <- dbConnect(RSQLite::SQLite(), db_file)
 ```
 
 Then we need to look up the ID of the mammal supertree of Bininda-Emonds et al. (2007), which is named 
@@ -42,7 +47,7 @@ Given this `tree_id`, we are now going to look for taxa that have taxonvariants 
 that have occurrences. This is a fairly complex query all in all because there's a number of joins that need to be done. As follows:
 
 ```{r taxa_join}
-query <- 'select distinct taxa.taxon_name,occurrences.decimal_latitude,occurrences.decimal_longitude,branches.branch_length
+query <- 'select distinct taxa.taxon_name,occurrences.decimal_latitude,occurrences.decimal_longitude
 from (((taxonvariants 
 inner join taxa on taxonvariants.taxon_id = taxa.taxon_id)
 inner join occurrences on occurrences.taxonvariant_id = taxonvariants.taxonvariant_id)
@@ -53,31 +58,22 @@ order by taxon_name'
 results <- dbGetQuery(tgd, query)
 ```
 
-## Statistical analysis
+## Building a data frame
 
-Now that we have a great big table, we should be able to do some potentially interesting analyses. For example:
+Now that we have a great big table, we should be able to do some potentially interesting analyses. For example, does 
+[Rapoport's rule](https://en.wikipedia.org/wiki/Rapoport%27s_rule) apply to our data? This is an ecogeographical rule 
+that states that latitudinal ranges of plants and animals are generally smaller at lower latitudes than at higher latitudes. 
+So, for this we need the absolute average latitude and the latitudinal range.
 
-1. Since the tropics are more biodiverse, does that mean that the species are also younger? If that's the case, then the branch lengths
-   should be positively correlated with the *absolute average latitude* (i.e. distance from the equator). Of course this might also not be
-   the case at all, because the underlying assumption here is that the higher biodiversity is produced by speciation rates in the tropics 
-   being higher. Alternatively, extinction rates might be lower, for example.
-2. Do older species have larger ranges? A very naive model of speciation and geographic distribution might be that a speciation 'event' 
-   happens in a single location, and that the members of the species over time occupy a larger and larger range. If that's true (it
-   probably isn't, for a variety of reasons), then one way to test this would be to calculate the *latitudinal and longitudinal range*
-   (max - min, but not absolute), which again should be positively correlated with branch lengths.
-3. Does [Rapoport's rule](https://en.wikipedia.org/wiki/Rapoport%27s_rule) apply to our data? This is an ecogeographical rule that states 
-   that latitudinal ranges of plants and animals are generally smaller at lower latitudes than at higher latitudes. So, for this we need
-   the two summary statistics from the previous two questions, i.e. the absolute average latitude and the range.
-
-The data structure that we are going to want thus needs to have one observation for each taxon, recording 4 variables (branch length,
-absolute average latitude, latitudinal range, longitudinal range). Here now we populate a data frame to do this:
+The data structure that we are going to want thus needs to have one observation for each taxon, recording 2 variables 
+(absolute average latitude, latitudinal range, longitudinal range). Here now we populate a data frame to do this:
 
 ```{r make_frame}
 # we will use the distinct taxon names (these are the clean, accepted names) as row names
 names <- unique(results$taxon_name)
 
 # we start with a matrix, populate this, and then make it into a data.frame
-df <- matrix(ncol=4, nrow=length(names))
+df <- matrix(ncol=2, nrow=length(names))
 
 # use i index for the matrix
 for ( i in 1:length(names) ) {
@@ -89,21 +85,68 @@ for ( i in 1:length(names) ) {
 	lar <- range(results[ which(results$taxon_name == names[[i]]), "decimal_latitude" ])
 	lar <- lar[[2]] - lar[[1]]
 	
-	# longitudinal range
-	lor <- range(results[ which(results$taxon_name == names[[i]]), "decimal_longitude" ])
-	lor <- lor[[2]] - lor[[1]]
-	
-	# branch length
-	bl <- results[ which(results$taxon_name == names[[i]]), "branch_length" ][[1]]
-	
 	# add row to matrix
-	df[i,] <- c( aal, lar, lor, bl )
+	df[i,] <- c( aal, lar )
 }
 
-# make data from, assign taxa as row names, variables as col names
+# make data frame, assign taxa as row names, variables as col names
 df <- data.frame(df, row.names = names)
-colnames(df) <- c("average_absolute_latitude", "latitudinal_range", "longitudinal_range", "branch_length")
+colnames(df) <- c("average_absolute_latitude", "latitudinal_range")
 
+# remove observations with ranges of 0, i.e. single observation
+row_sub = apply(df, 1, function(row) all(row !=0 ))
+df <- df[row_sub,]
+names <- row.names(df)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Importing phylogenies
+
+We might now be tempted to simply do some correlation tests, but this is actually not a valid approach. Our observations are of 
+species that are related to one another, so part of the commonality in observation values might be due to shared descent. For
+example, two sister species are probably near each other on the earth, and have a similar range: pseudo-replication. To account
+for this we need take phylogeny into account. Hence, we need to extract a tree from the database. We will do this by extracting
+a `phylo` object (as originally introduced by the `ape` package). As follows:
+
+```{r make_phylo}
+library(ape)
+source('../R/make_phylo.R')
+tree <- make.phylo(db_file, tree_id, names)
+plot(tree)
+```
+
+## Doing a comparative analysis
+
+We now have everything in place to do a phylogenetic comparative analysis, e.g. `pic` in ape.
+We follow [this tutorial](https://www.r-phylo.org/wiki/HowTo/Phylogenetic_Independent_Contrasts):
+
+```{r pic}
+# collapse unbranched interior nodes (these are the result of taking a subtree from the database)
+tree <- collapse.singles(tree)
+
+# convert from multifurcating to bifurcating (the tree in the database may not be fully resolved)
+tree <- multi2di(tree)
+
+# create separate vectors
+average_absolute_latitude <- df$average_absolute_latitude
+names(average_absolute_latitude) <- row.names(df)
+latitudinal_range <- df$latitudinal_range
+names(latitudinal_range) <- row.names(df)
+
+# calculate contrasts
+average_absolute_latitude.c <- pic(average_absolute_latitude, tree, scaled=F)
+latitudinal_range.c <- pic(latitudinal_range, tree, scaled=F)
+
+# produce scatterplot
+plot(average_absolute_latitude.c, latitudinal_range.c)
+```
+
+The raw plot is suggestive of a positive correlation, so let's do a linear model:
+
+```{r lm}
+regress <- lm(latitudinal_range.c~average_absolute_latitude.c-1)
+summary.lm(regress) # p < 0.05
+
+# plot with regression line
+plot(average_absolute_latitude.c, latitudinal_range.c)
+abline(regress)
+```
