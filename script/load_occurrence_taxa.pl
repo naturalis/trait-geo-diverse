@@ -54,15 +54,20 @@ for my $label ( @labels ) {
 	# lookup or create 
 	my $taxonvariant = $tgd->resultset('Taxonvariant')->single( { 'taxonvariant_name' => $completename } );
 	if ( not $taxonvariant ) {
-		my $taxon = $tgd->resultset('Taxa')->create({
-			'taxon_name'     => $completename,	
-			'gbif_taxon_key' => $tsn_accepted,
-		});
-		$taxonvariant = $tgd->resultset('Taxonvariant')->create({
+		
+		# lookup or create
+		my $taxon = $tgd->resultset('Taxa')->single( { 'taxon_name' => $completename } );
+		if ( not $taxon ) {
+			$taxon = $tgd->resultset('Taxa')->create( {
+				'taxon_name'     => $completename,	
+				'gbif_taxon_key' => $tsn_accepted,
+			} );
+		}
+		$taxonvariant = $tgd->resultset('Taxonvariant')->create( {
 			'taxonvariant_name'   => $label,
 			'taxonvariant_status' => ( $label eq $completename ? 'accepted' : 'synonym' ),
 			'taxon_id'            => $taxon->taxon_id,
-		});
+		} );
 		DEBUG "CREATED NEW TAXON ($completename) AND NEW TAXON VARIANT ($label)";
 	}
 	my $taxonvariant_id = $taxonvariant->taxonvariant_id;
