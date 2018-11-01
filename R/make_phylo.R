@@ -25,17 +25,22 @@ make.phylo <- function(db_file,tree_id,tip_vector) {
 	# lookup IDs for names
 	temp <- vector(mode="integer", length=length(tip_vector))
 	for ( i in 1:length(tip_vector) ) {
-		id_lookup <- dbGetQuery(db, sprintf(id_template, tip_vector[i], tree_id))$node_id
-		temp[i] <- id_lookup
+		id_lookup <- dbGetQuery(db, sprintf(id_template, tip_vector[i], tree_id))
+		if ( length(id_lookup$node_id) != 0 ) {
+			temp[i] <- id_lookup
+		}
+		else {
+			temp[i] <- NA
+		}
 	}
 	
 	# build a list of node IDs anywhere in the tree
-	total <- temp
-	uniq <- unique(temp)
+	total <- temp[!is.na(temp)]
+	uniq <- unique(total)
 	while(length(uniq) > 1) {
 		result <- vector(mode="integer", length=length(uniq))
 		for ( i in 1:length(uniq) ) {
-			result[i] <- dbGetQuery(db, sprintf(parent_template,uniq[i],tree_id))$parent_id
+			result[i] <- dbGetQuery(db, sprintf(parent_template,uniq[[i]],tree_id))$parent_id
 		}
 		uniq <- unique(na.omit(result))
 		total <- unique(c(total, uniq))
@@ -48,13 +53,13 @@ make.phylo <- function(db_file,tree_id,tip_vector) {
 	##  $ Nnode      : int 19
 	max <- length(total)-1
 	edge <- matrix(nrow=max,ncol=2)
-	tip.label <- tip_vector
+	tip.label <- tip_vector[!is.na(temp)]
 	edge.length <- vector(mode="numeric", length=max)
-	Nnode <- as.integer( length(total) - length(tip_vector) )
+	Nnode <- as.integer( length(total) - length(tip.label) )
 	j <- 1
 	lookup <- list()
 	for ( i in 1:max ) {
-		result <- dbGetQuery(db, sprintf(branch_template,total[i],tree_id))
+		result <- dbGetQuery(db, sprintf(branch_template,total[[i]],tree_id))
 		edge[i,1] <- result$parent_id
 		edge[i,2] <- result$node_id
 		edge.length[i] <- result$branch_length
