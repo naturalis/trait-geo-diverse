@@ -25,7 +25,7 @@ by Gower distance should be shorter than everage pairwise evolutionary distance.
 To assess this, we are going to build on the [occurrences/trees](occurrences-trees.Rmd) 
 tutorial. First, we need a tree for the Ungulates.
 
-```{r cars}
+```{r make_phylo}
 library(taxize)
 library(DBI)
 library(ape)
@@ -74,4 +74,29 @@ tree <- make.phylo(db_file, tree_id, names)
 plot(tree, show.tip.label=F)
 axisPhylo(side = 1)
 ```
+Now that we have a tree, we can look for character state values for the tips in 
+in the tree. As follows:
+```{r make_traitset}
+source('../R/make_traitset.R')
 
+# we use the traits from PanTHERIA
+df <- make.traitset(db_file, tree$tip.label, 'PanTHERIA_1-0_WR05_Aug2008')
+```
+
+Now let's do an analysis:
+
+```{r gowdis}
+library(FD)
+
+# in this case all values are numeric, but
+# come out of the database as character, 
+# so we coerce them here
+for (i in 1:50) { 
+	df[,i] <- as.numeric(df[,i])
+}
+
+# here we compute the Gower distance from FD,
+# then compute a dendrogram using neighbor-joining
+dist <- gowdis(df)
+plot(njs(dist), type = "unrooted")
+```
