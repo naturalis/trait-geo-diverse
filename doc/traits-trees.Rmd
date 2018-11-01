@@ -1,0 +1,75 @@
+---
+title: "Traits and trees"
+author: "Rutger Vos (@rvosa)"
+date: "1-11-2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Analyzing trees and traits
+
+In this example we are going to explore whether domesticated ungulates are closer to each 
+other in trait values than they are in evolutionary relatedness. Only some ungulates have 
+ever been domesticated, and there are indications that the succesful ones have been 
+domesticated multiple times (cows, pigs), whereas others have been failures. Apparently 
+there are combinations of trait values among ungulates that determine whether domestication 
+can ever succeed, and only some of them have the right combination (Jared Diamond's Anna 
+Karenina argument). Thus, average pairwise distance among domesticated ungulates clustered 
+by Gower distance should be shorter than everage pairwise evolutionary distance.
+
+To assess this, we are going to build on the [occurrences/trees](occurrences-trees.Rmd) 
+tutorial. First, we need a tree for the Ungulates.
+
+```{r cars}
+library(taxize)
+library(DBI)
+library(ape)
+source('../R/expand_taxon.R')
+
+# 'ungulates' is a common name, not an accepted higher taxon.
+# So what accepted taxa fall under this name?
+ungulates <- unique(comm2sci("Ungulates",db="itis")$Ungulates)
+
+# locations of data files
+db_file <- '../data/sql/tgd.db'
+msw3_file <- '../data/taxa/msw3-all.csv'
+supertree_file <- '../data/phylogeny/Bininda-emonds_2007_mammals.tsv'
+
+# we need the tree_id of the msw3_file
+db <- dbConnect(RSQLite::SQLite(), db_file)
+query <- 'select tree_id from trees where tree_name="%s"'
+tree_id <- dbGetQuery(db, sprintf(query, msw3_file))$tree_id
+
+# iterate over the top level 'ungulates' and expand them to species
+names <- list()
+for ( name in ungulates ) {
+	
+	# the actual call to the file we sourced above
+	expanded <- expand.taxon(
+		db_file     = db_file,
+		taxon_name  = toupper(name),
+		db          = db,
+		tree_id     = tree_id,
+		taxon_level = 'SPECIES'
+	)
+	
+	# post process to get a flat list
+	nnames <- length(expanded)
+	expanded_names <- vector(mode="list", length=nnames)
+	for ( i in 1:nnames ) {
+		expanded_names[[i]] <- expanded[[i]]$taxon_name
+	}
+	names <- c(names,expanded_names)
+}
+
+# now switch to the mammal supertree and extract its subtree
+source('../R/make_phylo.R')
+tree_id <- dbGetQuery(db, sprintf(query, supertree_file))$tree_id
+tree <- make.phylo(db_file, tree_id, names)
+plot(tree, show.tip.label=F)
+axisPhylo(side = 1)
+```
+
