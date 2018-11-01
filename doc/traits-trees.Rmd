@@ -98,5 +98,5 @@ for (i in 1:50) {
 # here we compute the Gower distance from FD,
 # then compute a dendrogram using neighbor-joining
 dist <- gowdis(df)
-plot(njs(dist), type = "unrooted")
+plot(njs(dist), type = "radial", cex=par("cex")/2, no.margin=T, label.offset = 0.02)
 ```
