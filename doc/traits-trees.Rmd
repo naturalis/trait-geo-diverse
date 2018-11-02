@@ -91,12 +91,29 @@ library(FD)
 # in this case all values are numeric, but
 # come out of the database as character, 
 # so we coerce them here
-for (i in 1:50) { 
+for (i in 1:length(df)) { 
 	df[,i] <- as.numeric(df[,i])
 }
 
 # here we compute the Gower distance from FD,
 # then compute a dendrogram using neighbor-joining
-dist <- gowdis(df)
-plot(njs(dist), type = "radial", cex=par("cex")/2, no.margin=T, label.offset = 0.02)
+dist <- as.matrix(gowdis(df))
+complete <- complete.cases(dist)
+dist <- as.dist(dist[complete,complete])
+njtree <- njs(dist)
+plot(njtree, type = "radial", cex=par("cex")/2, no.margin=T, label.offset = 0.02)
 ```
+So, does the clustering in trait space actually correspond at all with the phylogeny?
+In other words, are closely related ungulates similar in their PanTHERIA traits?
+
+
+```{r domesticates}
+library(adephylo)
+tips_to_drop <- setdiff(tree$tip.label, row.names(as.matrix(dist)))
+subtree <- drop.tip(tree,tip=tips_to_drop)
+pdist <- distTips(subtree, tips="all", method="patristic") 
+plot(r1<-mantel.randtest(pdist,dist), main="Mantel's test")
+r1
+```
+
+So the answer is yes (unsurprisingly).
