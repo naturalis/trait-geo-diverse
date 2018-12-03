@@ -1,0 +1,42 @@
+---
+title: "Linear Modeling"
+author: "Rutger Vos (@rvosa)"
+date: "3-12-2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Import data
+
+Here we read the traits table and the tree:
+
+```{r setup}
+library(ape)
+df  <- read.table("lm/traits.txt", header = T, sep = "\t")
+phy <- read.tree(file = "lm/ungulates.nwk")
+
+tips_to_drop <- setdiff(phy$tip.label, row.names(df))
+subtree <- drop.tip(phy,tip=tips_to_drop)
+
+```
+
+Now make the linear model with the first column of the frame as the dependent variable,
+and the other columns as the independent:
+
+```{r formula}
+cols <- colnames(df)
+nmax <- length(cols)
+formula <- as.formula(paste("IsDomesticated~", paste(cols[2:nmax], collapse="+")))
+```
+
+Now do the linear model:
+
+```{r analysis}
+library(phylolm)
+result <- phyloglm(formula, df, subtree)
+```
+
+
