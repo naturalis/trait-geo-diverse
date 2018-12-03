@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Here we read the traits table and the tree:
 
-```{r setup}
+```{r import}
 library(ape)
 df  <- read.table("lm/traits.txt", header = T, sep = "\t")
 phy <- read.tree(file = "lm/ungulates.nwk")
