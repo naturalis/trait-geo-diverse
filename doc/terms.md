@@ -8,4 +8,8 @@ For a taxon, defines which taxon variant ID is used by Mammal Species of the Wor
 
 ### msw3_taxonvariant_label
 
-For a taxon, defines which taxxon variant label is used by Mammal Species of the World, 3rd edition.
+For a taxon, defines which taxon variant label is used by Mammal Species of the World, 3rd edition.
+
+### msw3_taxonvariant_level
+
+For a taxon, defines which taxon level (SPECIES/SUBSPECIES) the associated taxon variant has according to Mammal Species of the World, 3rd edition.
