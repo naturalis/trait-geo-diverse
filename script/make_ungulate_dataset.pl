@@ -156,6 +156,7 @@ for my $tip ( @tips ) {
 		push @nodes, $fac->create_node(
 			'-name'          => $branches[0]->label,
 			'-branch_length' => $branches[0]->branch_length,
+			'-generic'       => { 'tip' => $branches[0] },
 			'-meta' => {
 				'tgd:branch_id'               => $branches[0]->branch_id,
 				'tgd:bininda_taxonvariant_id' => $branches[0]->taxonvariant_id,
@@ -250,11 +251,65 @@ for my $tvid ( @tvids ) {
 }
 $proj->insert($cmatrix);
 $proj->insert($smatrix);
-print $proj->to_nexus( '-charlabels' => 1 );
 
 # populate the tree
 my $forest = $fac->create_forest( '-taxa' => $taxa );
+my $tree = $fac->create_tree( '-name' => $bininda_name, '-meta' => { 'tgd:tree_id' => $bininda } );
+$forest->insert($tree);
+$proj->insert($forest);
+$tree->insert($_) for @nodes;
+my @orphans = grep { ! $_->get_generic('root') } grep { ! $_->get_parent } @{ $tree->get_entities };
+while( @orphans > 1 ) {
+	contract($tree, @orphans);
+	@orphans = grep { ! $_->get_generic('root') } grep { ! $_->get_parent } @{ $tree->get_entities };
+}
 
+print $proj->to_nexus( '-charlabels' => 1 );
+
+# contracts a tip set to a tree topology
+sub contract {
+	my ( $tree, @orphans ) = @_;
+	$log->info("finding parents for ".scalar(@orphans)." nodes");
+		
+	# store the currently known nodes by their database ID, and store the tree ID
+	my %seen = map { $_->get_generic('tip')->node_id => $_ } @{ $tree->get_entities };
+	my $tree_id = $tree->get_meta_object('tgd:tree_id');		
+		
+	# iterate over the orphans
+	for my $o ( @orphans ) {
+		my $tip = $o->get_generic('tip');
+		my $node_id = $tip->node_id;
+			
+		# node has a parent in the database
+		if ( my $parent_id = $tip->parent_id ) {
+				
+			# that node was already in the tree
+			if ( my $parent = $seen{$parent_id} ) {
+				$o->set_parent($parent);
+				$log->debug("branch node:$node_id => parent:$parent_id drawn between nodes already in tree");
+			}
+			else {
+				if ( my $b = $branch_rs->single({ 'tree_id' => $tree_id, 'node_id' => $parent_id }) ) {
+					my $parent = $fac->create_node(
+						'-branch_length' => $b->branch_length,
+						'-generic'       => { 'tip' => $b },
+					);
+					$log->debug("branch node:$node_id => parent:$parent_id created by fetching parent from database");
+					$o->set_parent($parent);
+					$tree->insert($parent);
+					$seen{$parent_id} = $parent;
+				}
+				else {
+					$log->warn("no parent $parent_id in database");
+				}
+			}
+		}
+		else {
+			$log->info("no parent in database, focal node is root");
+			$o->set_generic( 'root' => 1 );
+		}			
+	}
+}
 
 # expands the MSW3 tree recursively
 sub expand {
