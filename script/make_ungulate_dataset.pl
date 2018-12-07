@@ -154,7 +154,7 @@ for my $tip ( @tips ) {
 	# all is well: there is exactly one node in the Bininda tree
 	if ( @branches == 1 ) {
 		push @nodes, $fac->create_node(
-			'-name'          => $branches[0]->label,
+			'-name'          => $dbtaxon->taxon_name,
 			'-branch_length' => $branches[0]->branch_length,
 			'-generic'       => { 'tip' => $branches[0] },
 			'-meta' => {
@@ -263,7 +263,9 @@ while( @orphans > 1 ) {
 	contract($tree, @orphans);
 	@orphans = grep { ! $_->get_generic('root') } grep { ! $_->get_parent } @{ $tree->get_entities };
 }
+$tree->remove_unbranched_internals;
 
+# write nexus
 print $proj->to_nexus( '-charlabels' => 1 );
 
 # contracts a tip set to a tree topology
