@@ -1,0 +1,81 @@
+char_id	label	data_source
+1	trophic guild	EoL-2019-01-08
+2	Biogeographic realm	EoL-2019-01-08
+3	skeletal tissue composition	EoL-2019-01-08
+4	total life span (months)	EoL-2019-01-08
+5	age at first birth (days)	EoL-2019-01-08
+6	first appearance	EoL-2019-01-08
+7	conservation status	EoL-2019-01-08
+8	animal population density (individuals per square kilometer)	EoL-2019-01-08
+9	gestation period duration (days)	EoL-2019-01-08
+10	Ash Content (percent)	EoL-2019-01-08
+11	habitat is	EoL-2019-01-08
+12	prenatal development duration (days)	EoL-2019-01-08
+13	actual evapotranspiration rate in geographic range (millimeters per month)	EoL-2019-01-08
+14	litters per year (/year)	EoL-2019-01-08
+15	reproduction	EoL-2019-01-08
+16	home range (km^2)	EoL-2019-01-08
+17	last appearance	EoL-2019-01-08
+18	inter-birth interval (days)	EoL-2019-01-08
+19	total life span (years)	EoL-2019-01-08
+20	potential evapotranspiration rate in geographic range (millimeters per month)	EoL-2019-01-08
+21	human population density (individuals per square kilometer)	EoL-2019-01-08
+22	motility	EoL-2019-01-08
+23	growth rate (/day)	EoL-2019-01-08
+24	habitat includes	EoL-2019-01-08
+25	onset of fertility (days)	EoL-2019-01-08
+26	trophic level	EoL-2019-01-08
+27	body length (VT) (mm)	EoL-2019-01-08
+28	geographic distribution includes	EoL-2019-01-08
+29	ecomorphological guild	EoL-2019-01-08
+30	extinction status	EoL-2019-01-08
+31	primary diet	EoL-2019-01-08
+32	body mass (g)	EoL-2019-01-08
+33	milk lipids (percent)	EoL-2019-01-08
+34	first appearance (million years ago)	EoL-2019-01-08
+35	behavioral circadian rhythm	EoL-2019-01-08
+36	geographic range (size of area) (km^2)	EoL-2019-01-08
+37	protein composition of milk	EoL-2019-01-08
+38	carbohydrate composition of milk	EoL-2019-01-08
+39	weaning age (days)	EoL-2019-01-08
+40	latitude (degrees)	EoL-2019-01-08
+41	precipitation in geographic range (millimeters per month)	EoL-2019-01-08
+42	ecoregion	EoL-2019-01-08
+43	milk solids (percent)	EoL-2019-01-08
+44	temperature in geographic range (0.1°C)	EoL-2019-01-08
+45	longitude (degrees)	EoL-2019-01-08
+46	weight (g)	EoL-2019-01-08
+47	Body Temperature (kelvin)	EoL-2019-01-08
+48	basal metabolic rate (Watts)	EoL-2019-01-08
+49	basal metabolic rate (mL/hr O2)	EoL-2019-01-08
+50	fatty acid composition of milk	EoL-2019-01-08
+51	introduced range includes	EoL-2019-01-08
+52	native range includes	EoL-2019-01-08
+53	invasive in	EoL-2019-01-08
+54	not invasive in	EoL-2019-01-08
+55	diet includes	EoL-2019-01-08
+56	last appearance (million years ago)	EoL-2019-01-08
+57	water O2 saturation (percent)	EoL-2019-01-08
+58	water temperature (degrees Celsius)	EoL-2019-01-08
+59	water nitrate concentration (µmol/L)	EoL-2019-01-08
+60	water silicate concentration (µmol/L)	EoL-2019-01-08
+61	water dissolved O2 concentration (mL/L)	EoL-2019-01-08
+62	water depth (m)	EoL-2019-01-08
+63	water salinity (PSU)	EoL-2019-01-08
+64	water phosphate concentration (µmol/L)	EoL-2019-01-08
+65	dispersal age (days)	EoL-2019-01-08
+66	amino acid composition of milk	EoL-2019-01-08
+67	mineral composition of milk	EoL-2019-01-08
+68	Male Tenure (months)	EoL-2019-01-08
+69	inter-birth interval (months)	EoL-2019-01-08
+70	age at maturity (months)	EoL-2019-01-08
+71	Mating System	EoL-2019-01-08
+72	life span (months)	EoL-2019-01-08
+73	Social System	EoL-2019-01-08
+74	age at eye opening (days)	EoL-2019-01-08
+75	nutrient composition of milk	EoL-2019-01-08
+76	initial mortality rate (/year)	EoL-2019-01-08
+77	mortality rate doubling time (years)	EoL-2019-01-08
+78	measurement accuracy	EoL-2019-01-08
+79	milk phospholipids (mg/100ml)	EoL-2019-01-08
+80	forelimb length (mm)	EoL-2019-01-08
