@@ -174,18 +174,21 @@ Usage:
 		# look for synonyms
 		elsif ( my $itis_syn = $names->find({ 'completename' => $label }) ) {
 			eval {
-				my $tsn_acc  = $links->find({ 'tsn' => $itis_syn->tsn })->tsn_accepted;
-				my $name_acc = $names->find({ 'tsn' => $tsn_acc })->completename;
+				my $link = $links->find({ 'tsn' => $itis_syn->tsn });
+				if ( $link ) {
+					my $tsn_acc  = $link->tsn_accepted;
+					my $name_acc = $names->find({ 'tsn' => $tsn_acc })->completename;
 			
-				# check if canonical name exists
-				if ( my $acc_tv = $taxonv_rs->single({ 'taxonvariant_name' => $name_acc }) ) {
-					$taxonvariant_id = $taxonv_rs->create({
-						'taxonvariant_name'   => $label,
-						'taxon_id'            => $acc_tv->taxon_id,
-						'taxonvariant_level'  => $acc_tv->taxonvariant_level,
-						'taxonvariant_status' => 'synonym',
-					})->taxonvariant_id;			
-					DEBUG "Exact match in synonyms database for '$label' => '$name_acc' => $taxonvariant_id";
+					# check if canonical name exists
+					if ( my $acc_tv = $taxonv_rs->single({ 'taxonvariant_name' => $name_acc }) ) {
+						$taxonvariant_id = $taxonv_rs->create({
+							'taxonvariant_name'   => $label,
+							'taxon_id'            => $acc_tv->taxon_id,
+							'taxonvariant_level'  => $acc_tv->taxonvariant_level,
+							'taxonvariant_status' => 'synonym',
+						})->taxonvariant_id;			
+						DEBUG "Exact match in synonyms database for '$label' => '$name_acc' => $taxonvariant_id";
+					}
 				}
 			};
 			if ( $@ ) {
