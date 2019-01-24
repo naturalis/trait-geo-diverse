@@ -19,30 +19,31 @@ EXTRACTING AND CLEANING OCCURRENCE DATA
 Occurrences as downloaded from GBIF potentially suffer from the following problems that preclude them
 from being used directly in niche modelling:
 
-- Taxonomic ambiguity, in that multiple synonyms occur in the database, which are reconciled against the
-  GBIF backbone, but not directly against other taxonomies (e.g. Mammal Species of the World, MSW3), which is a 
-  challenge when combining niche modeling with data from elsewhere (phylogenies, traits). However, this 
-  issue is resolved on an ongoing basis by curating a local database where the taxon labels from the different
-  data sources are reconciled with one another. Hence, this is not an issue that is dealt with in this script,
-  except to say that the output records will use the name that is considered canonical by MSW3, regardless what
-  was used in the GBIF record.
-- There are often multiple records with the exact same lat/lon coordinates, being observations of multiple
-  individuals in the same locality, for example. Here, we will resolve this by only retaining distinct records,
-  which in fact can be produced directly using functionality available in SQL databases (i.e. 'SELECT DISTINCT').
-- There are sometimes records in localities far outside of the range of a species, e.g. being observations that are
-  annotated with the coordinates of some institution (a botanical garden, a zoo, a natural history collection) that
-  keeps the specimen. We will filter these out by using a shape file provided by IUCN, with the native ranges
-  (stacked) for all terrestrial mammals. The taxon labels in this shape file are assumed to have been reconciled
-  with the database, such that any relevant taxa have their used name variants known to the db.
-- There are sometimes records that are within the range map but that are still spurious. Here, we provide
-  for the optional possibility of computing all pairwise distances between occurrences of a species, and then
-  removing all records that are more than n * stdev from the mean (setting n to infinity would retain all).
-- There are records of a type (i.e. dwc:basisOfRecord) that is unsuitable for our purposes, for example because 
-  we might only want PRESERVED_SPECIMEN. Here, we provide the optional possibility of specifying which of the
-  types are acceptable to our analysis.
-- There are records whose age makes them unsuitable for analysis, for example because these are subfossil 
-  remains from a time when there was a different climate or different land use. Here, we provide the option of 
-  defining an age range (optional min, optional max, in ISO8601 date format) to filter on.
+1. Taxonomic ambiguity, in that multiple synonyms occur in the database, which are reconciled against the
+   GBIF backbone, but not directly against other taxonomies (e.g. Mammal Species of the World, MSW3), which is a 
+   challenge when combining niche modeling with data from elsewhere (phylogenies, traits). However, this 
+   issue is resolved on an ongoing basis by curating a local database where the taxon labels from the different
+   data sources are reconciled with one another. Hence, this is not an issue that is dealt with in this script,
+   except to say that the output records will use the name that is considered canonical by MSW3, regardless what
+   was used in the GBIF record.
+2. There are often multiple records with the exact same lat/lon coordinates, being observations of multiple
+   individuals in the same locality, for example. Here, we will resolve this by only retaining distinct records,
+   which in fact can be produced directly using functionality available in SQL databases (i.e. 'SELECT DISTINCT').
+3. There are records of a type (i.e. dwc:basisOfRecord) that is unsuitable for our purposes, for example because 
+   we might only want PRESERVED_SPECIMEN. Here, we provide the optional possibility of specifying which of the
+   types are acceptable to our analysis.
+4. There are records whose age makes them unsuitable for analysis, for example because these are subfossil 
+   remains from a time when there was a different climate or different land use. Here, we provide the option of 
+   defining an age range (optional min, optional max, in ISO8601 date format) to filter on.   
+5. There are sometimes records in localities far outside of the range of a species, e.g. being observations that are
+   annotated with the coordinates of some institution (a botanical garden, a zoo, a natural history collection) that
+   keeps the specimen. We will filter these out by using a shape file provided by IUCN, with the native ranges
+   (stacked) for all terrestrial mammals. The taxon labels in this shape file are assumed to have been reconciled
+   with the database, such that any relevant taxa have their used name variants known to the db.
+6. There are sometimes records that are within the range map but that are still spurious. Here, we provide
+   for the optional possibility of computing all pairwise distances between occurrences of a species, and then
+   removing all records that are more than n * stdev from the mean (setting n to infinity would retain all).
+
 
 =cut
 
@@ -59,6 +60,25 @@ GetOptions(
 	'taxa=s'    => \@taxa,
 	'level=s'   => \$level,
 );
+
+# does the database query for a given input species, handles the restrictions of 1-4
+
+sub get_records_for_species {
+	my %args = @_;
+
+}
+
+# filters the records on their presence within a species range, by way of a shape file, restriction 5
+
+sub filter_records_by_range {
+	my %args = @_;
+}
+
+# filters the records by throwing out outliers more than n * stdev from the mean pairwise distance, restriction 6
+
+sub filter_records_by_distances {
+	my %args = @_;
+}
 
 # - For each record in the shape file, check to see if the $level is one of the names in @taxa.
 # - If so, take the value in the 'binomial' column.
