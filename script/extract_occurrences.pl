@@ -4,11 +4,12 @@ use strict;
 use warnings;
 use MY::Schema;
 use Getopt::Long;
+use GIS::Distance;
 use Geo::ShapeFile;
 use FindBin qw($Bin);
-use GIS::Distance;
-use GIS::Distance::Fast;
+use List::Util qw(sum);
 use Log::Log4perl qw(:easy);
+use Statistics::Descriptive;
 use DateTime::Format::Flexible;
 
 Log::Log4perl->easy_init($INFO);
@@ -52,7 +53,6 @@ preclude them from being used directly in niche modelling:
    Here, we provide for the optional possibility of computing all pairwise distances 
    between occurrences of a species, and then removing all records that are more than 
    n * stdev from the mean (setting n to infinity would retain all).
-
 
 =cut
 
@@ -195,6 +195,44 @@ sub filter_records_by_range {
 # filters the records by throwing out outliers more than n * stdev from the mean pairwise distance, restriction 6
 sub filter_records_by_distances {
 	my ( $self, @records ) = @_;
+	
+	# compute all Great Circle distances
+	my $gis = GIS::Distance->new;
+	$gis->formula('GreatCircle');
+	my %dist;
+	for my $i ( 0 .. $#records - 1 ) {
+		my $src_lat = $records[$i]->decimal_latitude;
+		my $src_lon = $records[$i]->decimal_longitude;
+		my $src_id  = $records[$i]->occurrence_id;
+		for my $j ( $i + 1 .. $#records ) {
+			my $trgt_lat = $records[$j]->decimal_latitude;
+			my $trgt_lon = $records[$j]->decimal_longitude;
+			my $trgt_id  = $records[$j]->occurrence_id;
+			my $dist = $gis->distance( $src_lat,$src_long => $trgt_lat,$trgt_long );
+			$dist{$src_id}  = [] if not $dist{$src_id};
+			$dist{$trgt_id} = [] if not $dist{$trgt_id};
+			push @{ $dist{$src_id}  }, $dist;
+			push @{ $dist{$trgt_id} }, $dist;
+		}
+	}
+	
+	# compute mean distance for each occurrence, stdev, and threshold
+	my $stat = Statistics::Descriptive->new;
+	my @means;
+	for my $occ_id ( keys %dist ) {
+		my @dists = @{ $dist{$occ_id} };
+		my $mean = sum(@dists)/scalar(@dists);
+		$dist{$occ_id} = $mean;
+		push @means, $mean;
+	}
+	$stat->add_data(@means);
+	my $stdev = $stat->standard_deviation;
+	my $threshold = $stdev * $self->outlier;
+	
+	# filter by ids
+	return map { $_->[1] } 
+	      grep { $dist{$_->[0]} <= $threshold } 
+	       map { [ $_->occurrence_id => $_ ] } @records;
 }
 
 sub AUTOLOAD {
