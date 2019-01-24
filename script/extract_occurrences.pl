@@ -172,6 +172,18 @@ sub get_records_for_species {
 	}	
 	
 	# keep distinct lat/lon coordinates
+	my %occ;
+	for my $occ ( @occurrences ) {
+		my $lat = $occ->decimal_latitude;
+		$occ{$lat} = {} if not $occ{$lat};
+		my $lon = $occ->decimal_longitude;
+		$occ{$lat}->{$lon} = $occ if not $occ{$lat}->{$lon};
+	}
+	@occurrences = ();
+	for my $lat ( keys %occ ) {
+		push @occurrences values %{ $occ{$lat} };
+	}
+	return @occurrences;
 }
 
 # filters the records on their presence within a species range, by way of a shape file, restriction 5
