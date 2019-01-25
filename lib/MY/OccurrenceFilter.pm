@@ -148,7 +148,7 @@ sub get_occurrences_for_species {
 	# filter on event_date
 	if ( $self->mindate ) {
 		my @min_filter;
-		for my $occ ( @occurences ) {
+		for my $occ ( @occurrences ) {
 			my $date = DateTime::Format::Flexible->parse_datetime($occ->event_date);
 			push @min_filter, $occ if $date >= $self->mindate;
 		}			
@@ -156,7 +156,7 @@ sub get_occurrences_for_species {
 	}
 	if ( $self->maxdate ) {
 		my @max_filter;
-		for my $occ ( @occurences ) {
+		for my $occ ( @occurrences ) {
 			my $date = DateTime::Format::Flexible->parse_datetime($occ->event_date);
 			push @max_filter, $occ if $date <= $self->maxdate;
 		}			
@@ -173,7 +173,7 @@ sub get_occurrences_for_species {
 	}
 	@occurrences = ();
 	for my $lat ( keys %occ ) {
-		push @occurrences values %{ $occ{$lat} };
+		push @occurrences, values %{ $occ{$lat} };
 	}
 	return @occurrences;
 }
@@ -200,7 +200,7 @@ sub filter_occurrences_by_distances {
 			my $trgt_lat = $records[$j]->decimal_latitude;
 			my $trgt_lon = $records[$j]->decimal_longitude;
 			my $trgt_id  = $records[$j]->occurrence_id;
-			my $dist = $gis->distance( $src_lat,$src_long => $trgt_lat,$trgt_long );
+			my $dist = $gis->distance( $src_lat,$src_lon => $trgt_lat,$trgt_lon );
 			$dist{$src_id}  = [] if not $dist{$src_id};
 			$dist{$trgt_id} = [] if not $dist{$trgt_id};
 			push @{ $dist{$src_id}  }, $dist;
