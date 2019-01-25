@@ -4,6 +4,7 @@ use warnings;
 use MY::Schema;
 use GIS::Distance;
 use Geo::ShapeFile;
+use Geo::ShapeFile::Point;
 use FindBin qw($Bin);
 use List::Util qw(sum);
 use Log::Log4perl qw(:easy);
@@ -181,7 +182,60 @@ sub get_occurrences_for_species {
 # filters the records on their presence within a species range, by way of a shape file, restriction 5
 sub filter_occurrences_by_shapes {
 	my ( $self, $species, @records ) = @_;
+	
+	# expand the species to all its taxonvariant labels, optionally do the same for all subspecies labels
+	my %labels;
+	for my $tv ( $species->taxonvariants ) {
+		my $name = $tv->taxonvariant_name;
+		$labels{$name} = 1;
+		if ( $self->subsp ) {
+			for my $node ( $tv->branches ) {
+				my $children = $self->db->resultset('Branch')->search({
+					'parent_id' => $node->node_id,
+					'tree_id'   => 11,
+				});
+				while( my $c = $children->next ) {
+					my $subname = $c->taxonvariant->taxonvariant_name;
+					$labels{$subname} = 1;
+				}
+			}
+		}
+	}
+
+	# result list
+	my @filtered;
+	
+	# create a hash keyed on record IDs, where the value is a tuple consisting of occurrence record 
+	# and shapefile point
+	my %records = map { 
+		$_->occurrence_id => [ 
+			$_, 
+			Geo::ShapeFile::Point->new( 'X' => $_->decimal_longitude, 'Y' => $_->decimal_latitude ) 
+		] 
+	} @records;
+	
+	# open shapefile, iterate over shapes
 	my $shp = Geo::ShapeFile->new( $self->shpfile, { 'no_cache' => 1 } );
+	SHAPE: for my $id ( 1 .. $shp->shapes ) { # 1-based IDs
+
+		# check if focal shape matches any of the taxonvariant labels
+		my %db = $shp->get_dbf_record($id);
+		my $name = $db{'binomial'};
+		if ( $labels{$name} ) {
+		
+			# check all remaining occurrence records to see if they're in this shape
+			my $shape = $shp->get_shp_record($id);
+			my @r = keys %records;
+			last SHAPE if @r == 0;
+			for my $r ( @r ) {								
+				if ( $shape->contains_point( $records{$r}->[1] ) ) {
+					push @filtered, $records{$r}->[0];
+					delete $records{$r};
+				}
+			}
+		}
+	}	
+	return @filtered;
 }
 
 # filters the records by throwing out outliers more than n * stdev from the mean pairwise distance, restriction 6
