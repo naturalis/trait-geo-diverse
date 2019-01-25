@@ -19,6 +19,7 @@ perl -I../lib extract_occurrences.pl \
 	--basis=OBSERVATION \
 	--basis=LITERATURE \
 	--basis=MATERIAL_SAMPLE \
+	--verbose \
 	--verbose
 
 # explanation of options and arguments:
