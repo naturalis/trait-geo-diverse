@@ -239,11 +239,12 @@ sub filter_occurrences_by_shapes {
 		
 			# check all remaining occurrence records to see if they're in this shape
 			my $shape = $shp->get_shp_record($id);
+			$shape->build_spatial_index(0);
 			my @r = keys %records;
 			last SHAPE if @r == 0;
 			for my $r ( @r ) {								
-				if ( $shape->contains_point( $records{$r}->[1] ) ) {
-					DEBUG "\tpoint is inside shape";
+				if ( $shape->contains_point( $records{$r}->[1] => 1 ) ) {
+					DEBUG "\t\tpoint $r is inside shape";
 					push @filtered, $records{$r}->[0];
 					delete $records{$r};
 				}
