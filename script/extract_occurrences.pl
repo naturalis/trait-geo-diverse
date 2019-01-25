@@ -49,10 +49,10 @@ for my $taxon ( @taxa ) {
 		'tree_id' => 11,
 		'label'   => $taxon,
 	});
-	_recurse( $self, $node, \@species );
+	_recurse( $node, \@species );
 }
 sub _recurse {		
-	my ( $self, $node, $species ) = @_;
+	my ( $node, $species ) = @_;
 	if ( $node->taxonvariant->taxa->taxon_level eq 'SPECIES' ) {
 		push @$species, $node->taxonvariant->taxa;		
 	}
@@ -62,7 +62,7 @@ sub _recurse {
 			'parent_id' => $node->node_id,
 		});
 		while( my $n = $rs->next ) {
-			_recurse( $self, $n, $species );
+			_recurse( $n, $species );
 		}
 	}
 }
