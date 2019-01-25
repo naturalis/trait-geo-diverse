@@ -9,7 +9,7 @@ perl -I../lib extract_occurrences.pl \
 	--subsp=1 \
 	--taxa=PERISSODACTYLA \
 	--taxa=ARTIODACTYLA \
-	--thresh=4 \
+	--thresh=2 \
 	--mindate=1900-01-01 \
 	--maxdate=2018-12-31 \
 	--basis=PRESERVED_SPECIMEN \

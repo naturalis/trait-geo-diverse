@@ -9,7 +9,6 @@ use FindBin qw($Bin);
 use List::Util qw(sum);
 use Log::Log4perl qw(:easy);
 use Statistics::Descriptive;
-use DateTime::Format::Flexible;
 
 our $AUTOLOAD;
 
@@ -264,7 +263,7 @@ sub filter_occurrences_by_shapes {
 # filters the records by throwing out outliers more than n * stdev from the mean pairwise distance, restriction 6
 sub filter_occurrences_by_distances {
 	my ( $self, @records ) = @_;
-	INFO "going to filter ".scalar(@records)." occurrences on outliers by mean pairwise distance";
+	INFO "filtering ".scalar(@records)." occurrences on outliers by mean pairwise distance";
 	
 	# compute all Great Circle distances
 	my $gis = GIS::Distance->new;
@@ -298,12 +297,13 @@ sub filter_occurrences_by_distances {
 	}
 	$stat->add_data(\@means);
 	my $stdev = $stat->standard_deviation();
+	my $mom   = $stat->mean();
 	my $threshold = $stdev * $self->thresh;
 	INFO "\tthreshold is ".$self->thresh." * stdev ($stdev) = ".$threshold;
 	
 	# filter by ids
 	my @filtered = map { $_->[1] } 
-	              grep { $dist{$_->[0]} <= $threshold } 
+	              grep { abs( $dist{$_->[0]} - $mom ) <= $threshold } 
 	               map { [ $_->occurrence_id => $_ ] } @records;
 	INFO "\tretaining ".scalar(@filtered)." records";
 	return @filtered;
