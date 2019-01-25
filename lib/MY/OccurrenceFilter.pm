@@ -11,7 +11,6 @@ use Log::Log4perl qw(:easy);
 use Statistics::Descriptive;
 use DateTime::Format::Flexible;
 
-Log::Log4perl->easy_init($INFO);
 our $AUTOLOAD;
 
 =begin pod
@@ -105,10 +104,10 @@ sub new {
 	
 	# parse dates
 	if ( $self{'mindate'} ) {
-		$self{'mindate'} = DateTime::Format::Flexible->parse_datetime($self{'mindate'});
+		$self{'mindate'} =~ s/-//g;
 	}
 	if ( $self{'maxdate'} ) {
-		$self{'maxdate'} = DateTime::Format::Flexible->parse_datetime($self{'maxdate'});
+		$self{'maxdate'} =~ s/-//g;
 	}
 	
 	return bless \%self, $package;
@@ -118,11 +117,13 @@ sub new {
 sub get_occurrences_for_species {
 	my ( $self, $species ) = @_;
 	my @occurrences;
+	INFO "going to get occurrences for ".$species->taxon_name;
 	
 	# get all taxon variants, optionally including those for subspecies
 	for my $tv ( $species->taxonvariants ) {
 		push @occurrences, $tv->occurrences;
 		if ( $self->subsp ) {
+			DEBUG "\tincluding occurrences for subspecies";
 			for my $n ( $tv->branches ) {
 				if ( $n->tree_id == 11 ) {
 					my $children = $self->db->resultset('Branch')->search({
@@ -134,8 +135,9 @@ sub get_occurrences_for_species {
 					}
 				}		
 			}
-		}	
+		}		
 	}
+	INFO "\tfetched ".scalar(@occurrences)." unfiltered occurrences from database";	
 	
 	# filter on basis_of_record
 	my %bor = map { $_ => 1 } @{ $self->basis };
@@ -145,23 +147,30 @@ sub get_occurrences_for_species {
 		push @bor_filter, $occ if $bor{$b};
 	}
 	@occurrences = @bor_filter;
+	INFO "\thave ".scalar(@occurrences)." after filtering on basis_of_record";
 	
 	# filter on event_date
 	if ( $self->mindate ) {
 		my @min_filter;
-		for my $occ ( @occurrences ) {
-			my $date = DateTime::Format::Flexible->parse_datetime($occ->event_date);
+		OCC: for my $occ ( @occurrences ) {
+			my $date = substr $occ->event_date, 0, 10;
+			$date =~ s/-//g;
+			next OCC if $date !~ /^\d{8}$/;
 			push @min_filter, $occ if $date >= $self->mindate;
 		}			
 		@occurrences = @min_filter;	
+		INFO "\thave ".scalar(@occurrences)." after filtering on mindate ".$self->mindate;
 	}
 	if ( $self->maxdate ) {
 		my @max_filter;
-		for my $occ ( @occurrences ) {
-			my $date = DateTime::Format::Flexible->parse_datetime($occ->event_date);
+		OCC: for my $occ ( @occurrences ) {
+			my $date = substr $occ->event_date, 0, 10;
+			$date =~ s/-//g;		
+			next OCC if $date !~ /^\d{8}$/;				
 			push @max_filter, $occ if $date <= $self->maxdate;
 		}			
 		@occurrences = @max_filter;	
+		INFO "\thave ".scalar(@occurrences)." after filtering on maxdate ".$self->maxdate;		
 	}	
 	
 	# keep distinct lat/lon coordinates
@@ -176,12 +185,14 @@ sub get_occurrences_for_species {
 	for my $lat ( keys %occ ) {
 		push @occurrences, values %{ $occ{$lat} };
 	}
+	INFO "\thave ".scalar(@occurrences)." after retaining distinct coordinates";		
 	return @occurrences;
 }
 
 # filters the records on their presence within a species range, by way of a shape file, restriction 5
 sub filter_occurrences_by_shapes {
 	my ( $self, $species, @records ) = @_;
+	INFO "filtering ".scalar(@records)." occurrences by shapes for species ".$species->taxon_name;
 	
 	# expand the species to all its taxonvariant labels, optionally do the same for all subspecies labels
 	my %labels;
@@ -201,6 +212,7 @@ sub filter_occurrences_by_shapes {
 			}
 		}
 	}
+	INFO "\thave ".scalar(keys(%labels))." taxon variant names";
 
 	# result list
 	my @filtered;
@@ -216,12 +228,15 @@ sub filter_occurrences_by_shapes {
 	
 	# open shapefile, iterate over shapes
 	my $shp = Geo::ShapeFile->new( $self->shpfile, { 'no_cache' => 1 } );
+	my $has_shape;
 	SHAPE: for my $id ( 1 .. $shp->shapes ) { # 1-based IDs
 
 		# check if focal shape matches any of the taxonvariant labels
 		my %db = $shp->get_dbf_record($id);
 		my $name = $db{'binomial'};
 		if ( $labels{$name} ) {
+			$has_shape++;
+			INFO "\thave shape for label $name";
 		
 			# check all remaining occurrence records to see if they're in this shape
 			my $shape = $shp->get_shp_record($id);
@@ -229,18 +244,27 @@ sub filter_occurrences_by_shapes {
 			last SHAPE if @r == 0;
 			for my $r ( @r ) {								
 				if ( $shape->contains_point( $records{$r}->[1] ) ) {
+					DEBUG "\tpoint is inside shape";
 					push @filtered, $records{$r}->[0];
 					delete $records{$r};
 				}
 			}
 		}
 	}	
-	return @filtered;
+	if ( not $has_shape ) {
+		WARN "\t**** no shape for species ".$species->taxon_name;
+		return @records;
+	}
+	else {
+		INFO "\tretaining ".scalar(@filtered)." occurrences after filtering by shape";
+		return @filtered;
+	}
 }
 
 # filters the records by throwing out outliers more than n * stdev from the mean pairwise distance, restriction 6
 sub filter_occurrences_by_distances {
 	my ( $self, @records ) = @_;
+	INFO "going to filter ".scalar(@records)." occurrences on outliers by mean pairwise distance";
 	
 	# compute all Great Circle distances
 	my $gis = GIS::Distance->new;
@@ -254,16 +278,17 @@ sub filter_occurrences_by_distances {
 			my $trgt_lat = $records[$j]->decimal_latitude;
 			my $trgt_lon = $records[$j]->decimal_longitude;
 			my $trgt_id  = $records[$j]->occurrence_id;
-			my $dist = $gis->distance( $src_lat,$src_lon => $trgt_lat,$trgt_lon );
+			my $dist = $gis->distance( $src_lat,$src_lon => $trgt_lat,$trgt_lon )->value;
 			$dist{$src_id}  = [] if not $dist{$src_id};
 			$dist{$trgt_id} = [] if not $dist{$trgt_id};
 			push @{ $dist{$src_id}  }, $dist;
 			push @{ $dist{$trgt_id} }, $dist;
 		}
 	}
+	INFO "\tcomputed all pairwise great circle distances";
 	
 	# compute mean distance for each occurrence, stdev, and threshold
-	my $stat = Statistics::Descriptive->new;
+	my $stat = Statistics::Descriptive::Sparse->new;
 	my @means;
 	for my $occ_id ( keys %dist ) {
 		my @dists = @{ $dist{$occ_id} };
@@ -271,20 +296,23 @@ sub filter_occurrences_by_distances {
 		$dist{$occ_id} = $mean;
 		push @means, $mean;
 	}
-	$stat->add_data(@means);
-	my $stdev = $stat->standard_deviation;
+	$stat->add_data(\@means);
+	my $stdev = $stat->standard_deviation();
 	my $threshold = $stdev * $self->thresh;
+	INFO "\tthreshold is ".$self->thresh." * stdev ($stdev) = ".$threshold;
 	
 	# filter by ids
-	return map { $_->[1] } 
-	      grep { $dist{$_->[0]} <= $threshold } 
-	       map { [ $_->occurrence_id => $_ ] } @records;
+	my @filtered = map { $_->[1] } 
+	              grep { $dist{$_->[0]} <= $threshold } 
+	               map { [ $_->occurrence_id => $_ ] } @records;
+	INFO "\tretaining ".scalar(@filtered)." records";
+	return @filtered;
 }
 
 sub AUTOLOAD {
 	my $self = shift;
 	my $method = $AUTOLOAD;
-	$method =~ s/.+?:://;
+	$method =~ s/.+:://;
 	if ( exists $self->{$method} ) {
 		return $self->{$method};
 	}
