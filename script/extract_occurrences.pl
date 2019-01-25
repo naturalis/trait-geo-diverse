@@ -87,16 +87,16 @@ SPECIES: for my $sp ( @species ) {
  	next SPECIES if scalar(@records) < 10;
 
 	# write CSV
- 	my $filename = $sp->taxon_name;
+	my $taxon_name = $sp->taxon_name;
+ 	my $filename = $taxon_name . '.csv';
  	$filename =~ s/ /_/g;
- 	$filename .= '.csv';
  	$filename = $outdir . '/' . $filename;
 	open my $fh, '>', $filename or die $!;
 	print $fh join(",", qw(gbif_id taxon_name decimal_latitude decimal_longitude)), "\n";
 	for my $r ( @records ) {
 		my @values = (
 			$r->gbif_id,
-			$r->taxonvariant->taxon->taxon_name,
+			$taxon_name,
 			$r->decimal_latitude,
 			$r->decimal_longitude
 		);
