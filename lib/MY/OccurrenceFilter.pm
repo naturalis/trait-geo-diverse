@@ -226,7 +226,7 @@ sub filter_occurrences_by_shapes {
 	} @records;
 	
 	# open shapefile, iterate over shapes
-	my $shp = Geo::ShapeFile->new( $self->shpfile, { 'no_cache' => 1 } );
+	my $shp = Geo::ShapeFile->new( $self->shpfile, { 'no_cache' => 0 } );
 	my $has_shape;
 	SHAPE: for my $id ( 1 .. $shp->shapes ) { # 1-based IDs
 
@@ -266,39 +266,37 @@ sub filter_occurrences_by_distances {
 	my ( $self, @records ) = @_;
 	INFO "filtering ".scalar(@records)." occurrences on outliers by mean pairwise distance";
 	
-	# compute all Great Circle distances
+	# instantiate object to compute all Great Circle distances
 	my $gis = GIS::Distance->new;
 	$gis->formula('GreatCircle');
-	my %dist;
-	for my $i ( 0 .. $#records - 1 ) {
+	
+	# all vs all
+	my ( %dist, @means );
+	for my $i ( 0 .. $#records ) {
+		
+		# lookup and cache values for the inner loop
 		my $src_lat = $records[$i]->decimal_latitude;
 		my $src_lon = $records[$i]->decimal_longitude;
 		my $src_id  = $records[$i]->occurrence_id;
-		for my $j ( $i + 1 .. $#records ) {
+		my @dists;
+		INNER: for my $j ( 0 .. $#records ) {
+			next INNER if $i == $j;
+		
+			# calculate distance
 			my $trgt_lat = $records[$j]->decimal_latitude;
 			my $trgt_lon = $records[$j]->decimal_longitude;
-			my $trgt_id  = $records[$j]->occurrence_id;
-			my $dist = $gis->distance( $src_lat,$src_lon => $trgt_lat,$trgt_lon )->value;
-			$dist{$src_id}  = [] if not $dist{$src_id};
-			$dist{$trgt_id} = [] if not $dist{$trgt_id};
-			push @{ $dist{$src_id}  }, $dist;
-			push @{ $dist{$trgt_id} }, $dist;
+			push @dists, $gis->distance( $src_lat,$src_lon => $trgt_lat,$trgt_lon )->value;
 		}
+		$dist{$src_id} = sum(@dists)/scalar(@dists);
+		push @means, $dist{$src_id};
 	}
 	INFO "\tcomputed all pairwise great circle distances";
 	
 	# compute mean distance for each occurrence, stdev, and threshold
 	my $stat = Statistics::Descriptive::Sparse->new;
-	my @means;
-	for my $occ_id ( keys %dist ) {
-		my @dists = @{ $dist{$occ_id} };
-		my $mean = sum(@dists)/scalar(@dists);
-		$dist{$occ_id} = $mean;
-		push @means, $mean;
-	}
 	$stat->add_data(\@means);
 	my $stdev = $stat->standard_deviation();
-	my $mom   = $stat->mean();
+	my $mom   = $stat->mean(); # mean of means
 	my $threshold = $stdev * $self->thresh;
 	INFO "\tthreshold is ".$self->thresh." * stdev ($stdev) = ".$threshold;
 	
@@ -316,6 +314,9 @@ sub AUTOLOAD {
 	$method =~ s/.+:://;
 	if ( exists $self->{$method} ) {
 		return $self->{$method};
+	}
+	elsif ( $method =~ /^[A-Z]+$/ ) {
+		return;
 	}
 	else {
 		die "No '$method'";
