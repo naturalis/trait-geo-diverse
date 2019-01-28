@@ -31,18 +31,19 @@ my %cargs = (
 # the constructor arguments on the command line
 my %args = map { $_ . '=s' => ref($cargs{$_}) ? $cargs{$_} : \$cargs{$_} } keys %cargs;
 
-# the top level taxa that we will expand to species level
-my @taxa;
-
-# where to write CSV files
-my $outdir;
-
-# verbose level: warn
+# additional command line arguments
+my @taxa;      # top-level taxa to expand
+my $outdir;    # where to write CSV files
+my $overwrite; # whether to overwrite
 my $verbosity = 3;
-my $verbose = 0;
-
-# process command line arguments
-GetOptions(%args, 'taxa=s' => \@taxa, 'outdir=s' => \$outdir, 'verbose+' => \$verbose );
+my $verbose   = 0;
+GetOptions(
+	%args, 
+	'taxa=s'    => \@taxa, 
+	'outdir=s'  => \$outdir, 
+	'verbose+'  => \$verbose,
+	'overwrite' => \$overwrite,
+);
 
 # instantiate logger
 Log::Log4perl->easy_init( ($verbosity-$verbose) * 10_000 );
@@ -79,6 +80,15 @@ INFO "Expanded @taxa into ".scalar(@species)." species";
 
 # iterate over species
 SPECIES: for my $sp ( @species ) {
+
+	# generate output file name, skip if exists and not --overwrite
+	my $taxon_name = $sp->taxon_name;
+ 	my $filename = $taxon_name . '.csv';
+ 	$filename =~ s/ /_/g;
+ 	$filename = $outdir . '/' . $filename;
+ 	next SPECIES if -e $filename and not $overwrite;
+
+	# start filtering
  	my @records = $filter->get_occurrences_for_species($sp);
  	next SPECIES if scalar(@records) < 10;
  	@records = $filter->filter_occurrences_by_shapes( $sp => @records );
@@ -87,10 +97,6 @@ SPECIES: for my $sp ( @species ) {
  	next SPECIES if scalar(@records) < 10;
 
 	# write CSV
-	my $taxon_name = $sp->taxon_name;
- 	my $filename = $taxon_name . '.csv';
- 	$filename =~ s/ /_/g;
- 	$filename = $outdir . '/' . $filename;
 	open my $fh, '>', $filename or die $!;
 	print $fh join(",", qw(gbif_id taxon_name decimal_latitude decimal_longitude)), "\n";
 	for my $r ( @records ) {
