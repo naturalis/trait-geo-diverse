@@ -76,7 +76,7 @@ sub _recurse {
 		}
 	}
 }
-INFO "Expanded @taxa into ".scalar(@species)." species";
+INFO "Expanded @taxa into ".scalar(@species)." species: [".join(', ',map{$_->taxon_name}@species).']';
 
 # iterate over species
 SPECIES: for my $sp ( @species ) {
@@ -86,7 +86,10 @@ SPECIES: for my $sp ( @species ) {
  	my $filename = $taxon_name . '.csv';
  	$filename =~ s/ /_/g;
  	$filename = $outdir . '/' . $filename;
- 	next SPECIES if -e $filename and not $overwrite;
+ 	if ( -e $filename and not $overwrite ) {
+ 		INFO "Species $taxon_name already has data (file: $filename). Skipping because --overwrite wasn't used";
+	 	next SPECIES;
+ 	}
 
 	# start filtering
  	my @records = $filter->get_occurrences_for_species($sp);
