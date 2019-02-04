@@ -3,7 +3,7 @@
 # this script demonstrates how to extract filtered occurrences:
 
 perl -I../lib extract_occurrences.pl \
-	--outdir=../../trait-geo-diverse-ungulates/data/occurrences \
+	--outdir=../../trait-geo-diverse-ungulates/data/filtered \
 	--dbfile=../data/sql/tgd.db \
 	--shpfile=$HOME/Dropbox/documents/projects/dropbox-projects/trait-geo-diverse-ungulates/Input_Datasets/Range_Data/TERRESTRIAL_MAMMALS/TERRESTRIAL_MAMMALS \
 	--subsp=1 \
