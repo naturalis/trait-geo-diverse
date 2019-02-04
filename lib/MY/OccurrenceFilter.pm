@@ -121,8 +121,9 @@ sub get_occurrences_for_species {
 	# get all taxon variants, optionally including those for subspecies
 	for my $tv ( $species->taxonvariants ) {
 		push @occurrences, $tv->occurrences;
+		DEBUG "\tincluding occurrences for taxonvariant: ".$tv->taxonvariant_name;
 		if ( $self->subsp ) {
-			DEBUG "\tincluding occurrences for subspecies";
+			my @labels;
 			for my $n ( $tv->branches ) {
 				if ( $n->tree_id == 11 ) {
 					my $children = $self->db->resultset('Branch')->search({
@@ -130,10 +131,14 @@ sub get_occurrences_for_species {
 						'tree_id'   => 11,
 					});
 					while( my $c = $children->next ) {
-						push @occurrences, $c->taxonvariant->occurrences;
+						for my $ctv ( $c->taxonvariant->taxon->taxonvariants ) {
+							push @labels, $ctv->taxonvariant_name;
+							push @occurrences, $ctv->occurrences;
+						}
 					}
 				}		
 			}
+			DEBUG "\t\tincluding occurrences for subspecies: [".join(', ',@labels)."]";
 		}		
 	}
 	INFO "\tfetched ".scalar(@occurrences)." unfiltered occurrences from database";	
@@ -204,9 +209,11 @@ sub filter_occurrences_by_shapes {
 					'parent_id' => $node->node_id,
 					'tree_id'   => 11,
 				});
-				while( my $c = $children->next ) {
-					my $subname = $c->taxonvariant->taxonvariant_name;
-					$labels{$subname} = 1;
+				while( my $c = $children->next ) {					
+					for my $ctv ( $c->taxonvariant->taxon->taxonvariants ) {
+						my $subname = $ctv->taxonvariant_name;
+						$labels{$subname} = 1;
+					}					
 				}
 			}
 		}
@@ -228,10 +235,11 @@ sub filter_occurrences_by_shapes {
 	# open shapefile, iterate over shapes
 	my $shp = Geo::ShapeFile->new( $self->shpfile, { 'no_cache' => 0 } );
 	my $has_shape;
-	SHAPE: for my $id ( 1 .. $shp->shapes ) { # 1-based IDs
+	SHAPE: for my $id ( 1 .. $shp->shapes ) { # 1-based IDs		
 
 		# check if focal shape matches any of the taxonvariant labels
 		my %db = $shp->get_dbf_record($id);
+		next SHAPE if $db{'legend'} eq 'Reintroduced';
 		my $name = $db{'binomial'};
 		if ( $labels{$name} ) {
 			$has_shape++;
