@@ -12,24 +12,24 @@ perl -I../lib extract_occurrences.pl \
 	--thresh=2 \
 	--mindate=1900-01-01 \
 	--maxdate=2018-12-31 \
+	--precision=2 \
 	--basis=PRESERVED_SPECIMEN \
 	--basis=HUMAN_OBSERVATION \
 	--basis=MACHINE_OBSERVATION \
 	--basis=FOSSIL_SPECIMEN \
 	--basis=OBSERVATION \
 	--basis=LITERATURE \
-	--basis=MATERIAL_SAMPLE \
-	--verbose \
-	--verbose
+	--basis=MATERIAL_SAMPLE
 
 # explanation of options and arguments:
-# --outdir  - where to write CSV files with filtered occurrences
-# --dbfile  - location of the database file
-# --shpfile - location of the shapefile, without extension (!)
-# --subsp   - whether to include occurrences of subspecies
-# --taxa    - which higher taxa (sensu MSW3) to expand to species level
-# --thresh  - multiplier of the stdev, for filtering outlying occurrences
-# --mindate - occurrences onwards from this date are included, yyyy-mm-dd
-# --maxdate - occurrences up till this date are included, yyyy-mm-dd
-# --basis   - occurrences with this basis_of_record are included
-# --verbose - provide more feedback
+# --outdir    - where to write CSV files with filtered occurrences
+# --dbfile    - location of the database file
+# --shpfile   - location of the shapefile, without extension (!)
+# --subsp     - whether to include occurrences of subspecies
+# --taxa      - which higher taxa (sensu MSW3) to expand to species level
+# --thresh    - multiplier of the stdev, for filtering outlying occurrences
+# --mindate   - occurrences onwards from this date are included, yyyy-mm-dd
+# --maxdate   - occurrences up till this date are included, yyyy-mm-dd
+# --precision - precision in arc degrees
+# --basis     - occurrences with this basis_of_record are included
+# --verbose   - provide more feedback

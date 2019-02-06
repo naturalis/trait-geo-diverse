@@ -5,6 +5,7 @@ use MY::Schema;
 use GIS::Distance;
 use Geo::ShapeFile;
 use Geo::ShapeFile::Point;
+use Term::ProgressBar;
 use FindBin qw($Bin);
 use List::Util qw(sum);
 use Log::Log4perl qw(:easy);
@@ -78,13 +79,14 @@ sub new {
 	
 	# setup defaults
 	my %self = (
-	 	'dbfile'   => undef,
-		'shpfile'  => undef,	 	
-		'subsp'    => 1,
-	 	'mindate'  => undef,
-	 	'maxdate'  => undef,
-	 	'thresh'   => 9**9**9,
-	 	'basis'    => [ 
+	 	'dbfile'    => undef,
+		'shpfile'   => undef,	 	
+		'subsp'     => 1,
+	 	'mindate'   => undef,
+	 	'maxdate'   => undef,
+	 	'thresh'    => 9**9**9,
+	 	'precision' => 2,
+	 	'basis'     => [ 
 	 		'PRESERVED_SPECIMEN',
 			'HUMAN_OBSERVATION',
 			'MACHINE_OBSERVATION',
@@ -177,6 +179,20 @@ sub get_occurrences_for_species {
 		INFO "\thave ".scalar(@occurrences)." after filtering on maxdate ".$self->maxdate;		
 	}	
 	
+	# filter on precision
+	if ( $self->precision ) {
+		my @prec_filter;
+		my $prec  = $self->precision;
+		my $regex = qr/^-?\d+\.\d{$prec}/;
+		for my $occ ( @occurrences ) {
+			if ( $occ->decimal_latitude =~ $regex and $occ->decimal_longitude =~ $regex ) {
+				push @prec_filter, $occ;
+			}
+		}
+		@occurrences = @prec_filter;
+		INFO "\thave ".scalar(@occurrences)." after filtering on at least $prec decimals precision";
+	}
+	
 	# keep distinct lat/lon coordinates
 	my %occ;
 	for my $occ ( @occurrences ) {
@@ -234,6 +250,9 @@ sub filter_occurrences_by_shapes {
 	
 	# open shapefile, iterate over shapes
 	my $shp = Geo::ShapeFile->new( $self->shpfile, { 'no_cache' => 0 } );
+	my $progress;
+	$progress = Term::ProgressBar->new(scalar(keys(%records))) if get_logger()->level() <= $INFO;
+	my $i = 1;
 	my $has_shape;
 	SHAPE: for my $id ( 1 .. $shp->shapes ) { # 1-based IDs		
 
@@ -243,7 +262,6 @@ sub filter_occurrences_by_shapes {
 		my $name = $db{'binomial'};
 		if ( $labels{$name} ) {
 			$has_shape++;
-			INFO "\thave shape for label $name";
 		
 			# check all remaining occurrence records to see if they're in this shape
 			my $shape = $shp->get_shp_record($id);
@@ -252,15 +270,19 @@ sub filter_occurrences_by_shapes {
 			last SHAPE if @r == 0;
 			for my $r ( @r ) {								
 				if ( $shape->contains_point( $records{$r}->[1] => 1 ) ) {
-					DEBUG "\t\tpoint $r is inside shape";
 					push @filtered, $records{$r}->[0];
 					delete $records{$r};
+					$progress->update($i++) if get_logger()->level() <= $INFO;
 				}
 			}
 		}
 	}	
 	if ( not $has_shape ) {
 		WARN "\t**** no shape for species ".$species->taxon_name;
+		return @records;
+	}
+	elsif ( scalar(@filtered) < 10 ) {
+		WARN "\t*** shapes retained fewer than 10 occurrences, skipping filter for ".$species->taxon_name;
 		return @records;
 	}
 	else {
@@ -274,11 +296,13 @@ sub filter_occurrences_by_distances {
 	my ( $self, @records ) = @_;
 	INFO "filtering ".scalar(@records)." occurrences on outliers by mean pairwise distance";
 	
-	# instantiate object to compute all Great Circle distances
+	# instantiate object to compute all Haversine distances
 	my $gis = GIS::Distance->new;
-	$gis->formula('GreatCircle');
+	$gis->formula('GIS::Distance::Formula::Haversine::Fast');
 	
 	# all vs all
+	my $progress;
+	$progress = Term::ProgressBar->new($#records) if get_logger()->level() <= $INFO;
 	my ( %dist, @means );
 	for my $i ( 0 .. $#records ) {
 		
@@ -297,6 +321,7 @@ sub filter_occurrences_by_distances {
 		}
 		$dist{$src_id} = sum(@dists)/scalar(@dists);
 		push @means, $dist{$src_id};
+		$progress->update($i) if get_logger()->level() <= $INFO;
 	}
 	INFO "\tcomputed all pairwise great circle distances";
 	

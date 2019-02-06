@@ -9,14 +9,15 @@ use Log::Log4perl qw(:easy);
 
 # these are the constructor arguments for the occurrence filter
 my %cargs = (
-	'outdir'   => undef,                        # where to write occurrences, per species, as CSV
-	'dbfile'   => $Bin . '/../data/sql/tgd.db', # location of the sqlite database
-	'shpfile'  => undef,                        # location of the shape file
-	'mindate'  => undef,                        # minimum eventDate, in ISO8601 format
-	'maxdate'  => undef,                        # maximum ...
-	'subsp'    => 1,                            # whether to expand subspecies
-	'thresh'   => 9**9**9,                      # multiplier of stdev of average pairwise dist, threshold for outliers
-	'basis'    => [                             # basisOfRecord to include
+	'outdir'    => undef,                        # where to write occurrences, per species, as CSV
+	'dbfile'    => $Bin . '/../data/sql/tgd.db', # location of the sqlite database
+	'shpfile'   => undef,                        # location of the shape file
+	'mindate'   => undef,                        # minimum eventDate, in ISO8601 format
+	'maxdate'   => undef,                        # maximum ...
+	'subsp'     => 1,                            # whether to expand subspecies
+	'precision' => 2,                            # precision in decimal arc degrees
+	'thresh'    => 9**9**9,                      # multiplier of stdev of average pairwise dist, threshold for outliers
+	'basis'     => [                             # basisOfRecord to include
 		'PRESERVED_SPECIMEN',
 		'HUMAN_OBSERVATION',
 		'MACHINE_OBSERVATION',
