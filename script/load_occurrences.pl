@@ -49,7 +49,11 @@ LINE: while(<$fh>) {
 		next LINE if $record{'basis_of_record'} =~ /UNKNOWN/;
 		
 		# now persist the record
-		$rs->create(\%record);
+		my $row = $rs->find_or_new(\%record);
+		if ( !$row->in_storage ) {
+			$row->insert;
+			DEBUG "created new row for occurrence ".$record{'gbif_id'};
+		}
 		DEBUG $counter . ': ' . Dumper(\%record) unless ++$counter % 10_000;
 	}
 }
