@@ -13,7 +13,7 @@ use File::Temp qw(tempfile);
 # process command line arguments
 my $infile;   # zip file downloaded from GBIF
 my $outfile;  # simplified occurrences as TSV
-my $sdb;
+my $sdb;      # GBIF backbone, i.e. https://www.dropbox.com/s/kxfnag9k1imb0le/gbif-backbone-synonyms.db?dl=0
 GetOptions(
 	'infile=s'   => \$infile,
 	'outfile=s'  => \$outfile,
