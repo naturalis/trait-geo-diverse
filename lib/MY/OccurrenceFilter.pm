@@ -7,7 +7,7 @@ use Geo::ShapeFile;
 use Geo::ShapeFile::Point;
 use Term::ProgressBar;
 use FindBin qw($Bin);
-use List::Util qw(sum);
+use List::Util qw(sum shuffle);
 use Log::Log4perl qw(:easy);
 use Statistics::Descriptive;
 
@@ -86,6 +86,7 @@ sub new {
 	 	'maxdate'   => undef,
 	 	'thresh'    => 9**9**9,
 	 	'precision' => 2,
+	 	'sample'    => 1000,
 	 	'basis'     => [ 
 	 		'PRESERVED_SPECIMEN',
 			'HUMAN_OBSERVATION',
@@ -144,6 +145,15 @@ sub get_occurrences_for_species {
 		}		
 	}
 	INFO "\tfetched ".scalar(@occurrences)." unfiltered occurrences from database";	
+	
+	# sub sample
+	if ( $self->sample and scalar(@occurrences) > $self->sample ) {
+		my $n = $self->sample - 1;
+		my @sample = shuffle(@occurrences);
+		@sample = @sample[ 0 .. $n ];
+		@occurrences = @sample;
+		INFO "\thave ".scalar(@occurrences)." after subsampling ".$self->sample." records";
+	}
 	
 	# filter on basis_of_record
 	my %bor = map { $_ => 1 } @{ $self->basis };

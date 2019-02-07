@@ -13,6 +13,7 @@ perl -I../lib extract_occurrences.pl \
 	--mindate=1900-01-01 \
 	--maxdate=2018-12-31 \
 	--precision=2 \
+	--sample=1000 \
 	--basis=PRESERVED_SPECIMEN \
 	--basis=HUMAN_OBSERVATION \
 	--basis=MACHINE_OBSERVATION \
@@ -31,5 +32,6 @@ perl -I../lib extract_occurrences.pl \
 # --mindate   - occurrences onwards from this date are included, yyyy-mm-dd
 # --maxdate   - occurrences up till this date are included, yyyy-mm-dd
 # --precision - precision in arc degrees
+# --sample    - initial randomized sample of records to keep
 # --basis     - occurrences with this basis_of_record are included
 # --verbose   - provide more feedback

@@ -16,6 +16,7 @@ my %cargs = (
 	'maxdate'   => undef,                        # maximum ...
 	'subsp'     => 1,                            # whether to expand subspecies
 	'precision' => 2,                            # precision in decimal arc degrees
+	'sample'    => 1000,
 	'thresh'    => 9**9**9,                      # multiplier of stdev of average pairwise dist, threshold for outliers
 	'basis'     => [                             # basisOfRecord to include
 		'PRESERVED_SPECIMEN',
